@@ -1,0 +1,23 @@
+<mat-toolbar class="bg-dark">
+  <mat-toolbar-row class="row">
+    <div class="col-2 text-white">
+      Vladimir Antin
+    </div>
+    <div class="col-2 offset-2">
+      <button mat-icon-button class="mx-4" *ngFor="let n of navItems"
+          [routerLink]="[n.route]"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+         (mouseleave)="n.showHover=false"
+         (mouseenter)="n.showHover=true">
+        <ng-container *ngIf="!n.showHover">
+          <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
+          <mat-icon *ngIf="n.svgIcon" [svgIcon]="n.svgIcon" class="text-white"></mat-icon>
+        </ng-container>
+        <ng-container *ngIf="n.showHover">
+          <span class="text-white-50">{{n.hover}}</span>
+        </ng-container>
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

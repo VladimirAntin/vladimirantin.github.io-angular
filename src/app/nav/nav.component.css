@@ -1,0 +1,6 @@
+button {
+  outline: none;
+}
+button.active {
+  border-bottom: 3px solid red;
+}
