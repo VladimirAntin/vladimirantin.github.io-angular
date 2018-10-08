@@ -3,3 +3,11 @@
 @import "~bootstrap/dist/css/bootstrap-grid.min.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+.w-40{
+  width: 40% !important;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+}
