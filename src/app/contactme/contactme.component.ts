@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ContactService} from './contact.service';
+
 
 @Component({
   selector: 'app-contactme',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactmeComponent implements OnInit {
 
-  constructor() { }
+  sendObj = {
+    name: '',
+    email: '',
+    text: '',
+  };
 
-  ngOnInit() {
+  constructor(private _contact: ContactService) { }
+
+  ngOnInit() {}
+
+  send() {
+    this._contact.updateMessages(this.sendObj);
   }
 
 }
