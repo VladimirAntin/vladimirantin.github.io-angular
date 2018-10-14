@@ -4,11 +4,15 @@ import {MatButtonModule, MatIconModule, MatInputModule} from '@angular/material'
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 import {ContactmeComponent} from '../contactme/contactme.component';
+import {ProjectsComponent} from '../projects/projects.component';
+import {SkillsComponent} from '../skills/skills.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'contact-me', component: ContactmeComponent}
+  { path: 'contact', component: ContactmeComponent},
+  { path: 'projects', component: ProjectsComponent},
+  { path: 'skills', component: SkillsComponent}
 
 ];
 

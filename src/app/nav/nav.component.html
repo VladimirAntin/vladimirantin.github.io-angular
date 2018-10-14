@@ -4,7 +4,7 @@
       Vladimir Antin
     </div>
     <div class="col-2 offset-2">
-      <button mat-icon-button class="mx-4" *ngFor="let n of navItems"
+      <button class="mx-4 btn btn-outline-dark rounded-circle" *ngFor="let n of navItems"
           [routerLink]="[n.route]"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}"
@@ -12,7 +12,9 @@
          (mouseenter)="n.showHover=true">
         <ng-container *ngIf="!n.showHover">
           <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
-          <mat-icon *ngIf="n.svgIcon" [svgIcon]="n.svgIcon" class="text-white"></mat-icon>
+          <mat-icon *ngIf="n.customIcon" class="text-white">
+            <span [ngClass]="n.customIcon"></span>
+          </mat-icon>
         </ng-container>
         <ng-container *ngIf="n.showHover">
           <span class="text-white-50">{{n.hover}}</span>

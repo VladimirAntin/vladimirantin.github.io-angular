@@ -2,5 +2,9 @@ button {
   outline: none;
 }
 button.active {
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid red !important;
+}
+
+button.active:hover {
+  border-radius: unset;
 }

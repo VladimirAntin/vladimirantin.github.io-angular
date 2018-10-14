@@ -10,9 +10,9 @@ export class NavComponent implements OnInit {
 
   navItems = [
     {icon: 'home', hover: 'Home', showHover: false, route: ''},
-    {svgIcon: 'skills', hover: 'Skills', showHover: false, route: '/skills'},
+    {customIcon: 'icon-skills', hover: 'Skills', showHover: false, route: '/skills'},
     {icon: 'cloud', hover: 'Projects', showHover: false, route: '/projects'},
-    {svgIcon: 'email', hover: 'Contact me', showHover: false, route: '/contact-me'},
+    {customIcon: 'icon-email', hover: 'Contact', showHover: false, route: '/contact'},
   ];
 
   constructor(private _r: Router) { }
