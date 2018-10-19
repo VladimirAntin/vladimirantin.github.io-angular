@@ -42,5 +42,9 @@ export class AppComponent {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon('skills', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/skills.svg'));
     iconRegistry.addSvgIcon('email', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/email.svg'));
+    iconRegistry.addSvgIcon('java', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/java.svg'));
+    iconRegistry.addSvgIcon('ts', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/typescript.svg'));
+    iconRegistry.addSvgIcon('js', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/js.svg'));
+    iconRegistry.addSvgIcon('angular', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/angular.svg'));
   }
 }

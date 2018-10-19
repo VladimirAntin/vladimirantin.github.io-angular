@@ -12,3 +12,30 @@
   margin: auto;
   width: 60%;
 }
+
+
+.mat-progress-spinner.dark circle {
+  stroke: black !important;
+}
+.mat-progress-spinner.dark .mat-badge-content {
+  background-color: black !important;
+}
+.mat-progress-spinner.gold circle {
+  stroke: gold !important;
+}
+.mat-progress-spinner.gold .mat-badge-content {
+  background-color: gold !important;
+  color: black !important;
+}
+.mat-progress-spinner.red circle {
+  stroke: red !important;
+}
+.mat-progress-spinner.red .mat-badge-content {
+  background-color: red !important;
+}
+.mat-progress-spinner.blue circle {
+  stroke: #007bffe0 !important;
+}
+.mat-progress-spinner.blue .mat-badge-content {
+  background-color: #007bffe0 !important;
+}

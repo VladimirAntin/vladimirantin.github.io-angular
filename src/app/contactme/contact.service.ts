@@ -20,10 +20,14 @@ export class ContactService {
     return this._http.put<ContactInterface>(`${this.rootUrl}/bins/jcooh`, req);
   }
 
-  updateMessages(message: {email, name, text}) {
+  updateMessages(message: {email, name, text}, callback?) {
     this.get().subscribe(a => {
       a.messages.push(message);
-      this.update(a).subscribe();
+      this.update(a).subscribe(m => {
+        if (callback) {
+          callback(m);
+        }
+      });
     });
   }
 }

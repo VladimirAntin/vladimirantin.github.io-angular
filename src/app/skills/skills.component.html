@@ -1,4 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <img width="300" alt="Angular Logo" src="assets/work-in-progress.png">
-</div>
+<div class="container-fluid center">
+  <mat-grid-list cols="4" class="row justify-content-center m-lg-2 bg-light" style="opacity: 0.5; border-radius: 2em">
+      <mat-grid-tile *ngFor="let s of skills">
+        <mat-card *ngIf="s!=null">
+            <mat-card-header>
+              <div mat-card-avatar>
+                  <mat-icon [svgIcon]="s.icon"></mat-icon>
+              </div>
+              <mat-card-title>{{s.name}}</mat-card-title>
+            </mat-card-header>
+            <mat-progress-spinner
+              [matBadge]="s.value"
+              [ngClass]="s.class"
+              mode="determinate"
+              [value]="s.value">
+            </mat-progress-spinner>  
+            <mat-card-content>
+            </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  

@@ -8,8 +8,6 @@ import {NavModule} from './nav/nav.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ContactmeModule} from './contactme/contactme.module';
 import {SharedModule} from './shared/shared.module';
-import { ProjectsComponent } from './projects/projects.component';
-import { SkillsComponent } from './skills/skills.component';
 import {ProjectsModule} from './projects/projects.module';
 import {SkillsModule} from './skills/skills.module';
 
