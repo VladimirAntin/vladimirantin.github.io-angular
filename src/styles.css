@@ -13,6 +13,9 @@
   width: 60%;
 }
 
+.min-h-60 {
+  min-height: 60vh !important;
+}
 
 .mat-progress-spinner.dark circle {
   stroke: black !important;
@@ -39,3 +42,11 @@
 .mat-progress-spinner.blue .mat-badge-content {
   background-color: #007bffe0 !important;
 }
+
+.mat-progress-spinner.green circle {
+  stroke: darkgreen !important;
+}
+.mat-progress-spinner.green .mat-badge-content {
+  background-color: darkgreen !important;
+}
+

@@ -1,12 +1,12 @@
-<div class="container-fluid center">
-  <mat-grid-list cols="4" class="row justify-content-center m-lg-2 bg-light" style="opacity: 0.5; border-radius: 2em">
-      <mat-grid-tile *ngFor="let s of skills">
-        <mat-card *ngIf="s!=null">
+<div class="container-fluid">
+  <div class="row justify-content-center m-lg-5 bg-light min-h-60" style="opacity: 0.5; border-radius: 2em">
+    <div *ngFor="let s of skills" class="col-lg-3 col-md">
+        <mat-card *ngIf="s!=null" class="m-2">
             <mat-card-header>
               <div mat-card-avatar>
                   <mat-icon [svgIcon]="s.icon"></mat-icon>
               </div>
-              <mat-card-title>{{s.name}}</mat-card-title>
+              <mat-card-title><i>{{s.name}}</i></mat-card-title>
             </mat-card-header>
             <mat-progress-spinner
               [matBadge]="s.value"
@@ -14,10 +14,14 @@
               mode="determinate"
               [value]="s.value">
             </mat-progress-spinner>  
-            <mat-card-content>
+            <mat-card-content class="mt-3">
+              <mat-chip-list *ngIf="s.pattern">
+                  <mat-chip *ngFor="let p of s.pattern">{{p}}</mat-chip>
+              </mat-chip-list>  
             </mat-card-content>
-          </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+        </mat-card>
+        <mat-card *ngIf="s==null" class="offset-lg-3"></mat-card>
+    </div>    
   </div>
+</div>
   

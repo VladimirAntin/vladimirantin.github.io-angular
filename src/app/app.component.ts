@@ -46,5 +46,6 @@ export class AppComponent {
     iconRegistry.addSvgIcon('ts', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/typescript.svg'));
     iconRegistry.addSvgIcon('js', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/js.svg'));
     iconRegistry.addSvgIcon('angular', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/angular.svg'));
+    iconRegistry.addSvgIcon('spring', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/spring.svg'));
   }
 }
