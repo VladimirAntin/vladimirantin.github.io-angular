@@ -3,7 +3,7 @@
 @import "~bootstrap/dist/css/bootstrap-grid.min.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "assets/css/style.css";
-
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 .w-40{
   width: 40% !important;
 }

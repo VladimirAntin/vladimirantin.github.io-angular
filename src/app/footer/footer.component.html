@@ -1,0 +1,10 @@
+<div id="footer" class="bg-dark text-light">
+  <div class="container">
+      <div class="text-left">
+          <button mat-icon-button *ngFor="let item of actions" (click)="item.action()" [matTooltip]="item.name">
+              <mat-icon><span><i [class]="item.class"></i></span></mat-icon>
+          </button>
+      </div>
+      <div class="text-center"><i class="far fa-copyright"></i> 2018 Vladimir Antin</div>    
+  </div>
+</div>

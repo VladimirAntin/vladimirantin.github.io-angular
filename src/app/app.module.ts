@@ -10,13 +10,14 @@ import {ContactmeModule} from './contactme/contactme.module';
 import {SharedModule} from './shared/shared.module';
 import {ProjectsModule} from './projects/projects.module';
 import {SkillsModule} from './skills/skills.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent, HomeComponent
   ],
   imports: [
-    BrowserModule, ParticlesModule, SharedModule, ProjectsModule, SkillsModule,
+    BrowserModule, ParticlesModule, SharedModule, ProjectsModule, SkillsModule, FooterModule,
     NavModule, ContactmeModule, HttpClientModule
   ],
   providers: [],
