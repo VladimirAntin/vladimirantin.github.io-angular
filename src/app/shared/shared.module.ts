@@ -34,7 +34,7 @@ const appRoutes: Routes = [
       clockwise: false,
       startFromZero: true,
       animation: true,
-      animationDuration: 50,
+      animationDuration: 200,
     }),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule
