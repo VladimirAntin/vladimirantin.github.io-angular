@@ -1,8 +1,8 @@
 <mat-toolbar class="bg-dark">
   <mat-toolbar-row class="row d-none d-md-flex">
-    <div class="col-2 text-white mt-2">
+    <div class="col-2 text-white mt-2 mb-2">
       <h1>Vladimir Antin</h1>
-      <span class="text-white-50 mt-4">Full-stack developer</span>
+      <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
     </div>
     <div class="col-2 offset-2">
       <button class="mx-4 btn btn-outline-dark rounded-circle" *ngFor="let n of navItems"
@@ -27,9 +27,9 @@
     <button mat-icon-button [matMenuTriggerFor]="menu" class="text-white">
       <mat-icon>menu</mat-icon>
     </button>
-    <div class="col-2 text-white mt-2">
+    <div class="col-2 text-white mt-2 mb-2">
       <h1>Vladimir Antin</h1>
-      <span class="text-white-50 mt-4">Full-stack developer</span>
+      <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
     </div>
     <mat-menu #menu="matMenu" class="bg-dark">
       <button mat-menu-item *ngFor="let n of navItems"
