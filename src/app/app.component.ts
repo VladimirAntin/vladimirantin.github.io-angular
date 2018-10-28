@@ -9,6 +9,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'app';
+  clientHeight: number;
 
   myStyle = {
     'position': 'fixed',
@@ -40,6 +41,7 @@ export class AppComponent {
   };
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    this.clientHeight = (window.innerHeight / 100) * 90;
     iconRegistry.addSvgIcon('skills', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/skills.svg'));
     iconRegistry.addSvgIcon('email', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/email.svg'));
     iconRegistry.addSvgIcon('java', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/java.svg'));

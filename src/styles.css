@@ -8,6 +8,10 @@
   width: 40% !important;
 }
 
+.h-90{
+  height: 90% !important;
+}
+
 .center {
   margin: auto;
   width: 60%;
@@ -15,74 +19,6 @@
 
 .min-h-60 {
   min-height: 60vh !important;
-}
-
-.mat-progress-spinner.dark circle {
-  stroke: black !important;
-}
-.mat-progress-spinner.dark .mat-badge-content {
-  background-color: black !important;
-}
-.mat-progress-spinner.gold circle {
-  stroke: gold !important;
-}
-.mat-progress-spinner.gold .mat-badge-content {
-  background-color: gold !important;
-  color: black !important;
-}
-.mat-progress-spinner.red circle {
-  stroke: red !important;
-}
-.mat-progress-spinner.red .mat-badge-content {
-  background-color: red !important;
-}
-.mat-progress-spinner.blue circle {
-  stroke: #007bffe0 !important;
-}
-.mat-progress-spinner.blue .mat-badge-content {
-  background-color: #007bffe0 !important;
-}
-
-.mat-progress-spinner.green circle {
-  stroke: #6aab27 !important;
-}
-.mat-progress-spinner.green .mat-badge-content {
-  background-color: #6aab27 !important;
-}
-
-.mat-progress-spinner.gray circle {
-  stroke: gray !important;
-}
-.mat-progress-spinner.gray .mat-badge-content {
-  background-color: gray !important;
-}
-
-.mat-progress-spinner.orange circle {
-  stroke: sandybrown !important;
-}
-.mat-progress-spinner.orange .mat-badge-content {
-  background-color: sandybrown !important;
-}
-
-.mat-progress-spinner.bootstrap circle {
-  stroke: #453a5f !important;
-}
-.mat-progress-spinner.bootstrap .mat-badge-content {
-  background-color: #453a5f !important;
-}
-
-.mat-progress-spinner.php circle {
-  stroke: #5468a0 !important;
-}
-.mat-progress-spinner.php .mat-badge-content {
-  background-color: #5468a0 !important;
-}
-
-.mat-progress-spinner.python circle {
-  stroke: blue !important;
-}
-.mat-progress-spinner.python .mat-badge-content {
-  background-color: blue !important;
 }
 
 

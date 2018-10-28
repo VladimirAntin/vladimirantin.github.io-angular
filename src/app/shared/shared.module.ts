@@ -12,7 +12,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
-
+import {NgCircleProgressModule} from 'ng-circle-progress';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'contact', component: ContactmeComponent},
@@ -24,11 +24,24 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
+    NgCircleProgressModule.forRoot({
+      radius: 60,
+      space: -10,
+      outerStrokeWidth: 10,
+      innerStrokeColor: '#e7e8ea',
+      innerStrokeWidth: 10,
+      showSubtitle: false,
+      clockwise: false,
+      startFromZero: true,
+      animation: true,
+      animationDuration: 50,
+    }),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule
   ],
   declarations: [],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatTooltipModule,
-  MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule]
+  MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
+  NgCircleProgressModule]
 })
 export class SharedModule { }

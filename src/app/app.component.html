@@ -1,4 +1,6 @@
-<app-nav></app-nav>
-<router-outlet></router-outlet>
+<div [ngStyle]="{'min-height': clientHeight + 'px'}">
+    <app-nav></app-nav>
+    <router-outlet></router-outlet>        
+</div>
 <app-footer></app-footer>
 <particles [style]="myStyle" [params]="myParams"></particles>
