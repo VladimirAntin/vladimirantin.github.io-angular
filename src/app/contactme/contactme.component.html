@@ -1,5 +1,13 @@
-<div class="container center animated fadeInUp slow">
-  <div class="row justify-content-center m-lg-5 bg-light" style="opacity: 0.5; border-radius: 2em">
+<div class="container center animated zoomIn slow mt-5">
+  <div class="row mb-3">
+    <div class="col-lg-3 col-md">
+      <img class="img-thumbnail radius-2 shadow-lg" src="assets/img/profile.jpg">
+    </div>
+    <div class="col-lg-9 d-none d-md-flex bg-light radius-2 opacity-5">
+        <span></span>
+    </div>
+  </div>
+  <div class="row justify-content-center m-lg-5 bg-light radius-2 opacity-5">
     <form class="col m-4" autocomplete="off" name="sendForm" role="form"
           novalidate #sendForm="ngForm" (submit)="send()">
       <div class="row">

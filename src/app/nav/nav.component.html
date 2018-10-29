@@ -1,11 +1,11 @@
-<mat-toolbar class="bg-dark">
+<mat-toolbar class="bg-black">
   <mat-toolbar-row class="row d-none d-md-flex">
     <div class="col-2 text-white mt-2 mb-2">
       <h1>Vladimir Antin</h1>
       <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
     </div>
     <div class="col-2 offset-2">
-      <button class="mx-4 btn btn-outline-dark rounded-circle" *ngFor="let n of navItems"
+      <button class="mx-4 btn btn-dark rounded-circle bg-black" *ngFor="let n of navItems"
           [routerLink]="[n.route]"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}"
@@ -18,7 +18,7 @@
           </mat-icon>
         </ng-container>
         <ng-container *ngIf="n.showHover">
-          <span class="text-white-50">{{n.hover}}</span>
+          <span class="text-white">{{n.hover}}</span>
         </ng-container>
       </button>
     </div>

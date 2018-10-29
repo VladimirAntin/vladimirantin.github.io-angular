@@ -23,3 +23,14 @@
   min-height: 60vh !important;
 }
 
+.radius-2{
+  border-radius: 2em;
+}
+
+.opacity-5 {
+  opacity: 0.5;
+}
+
+.bg-black {
+  background-color: black;
+}
