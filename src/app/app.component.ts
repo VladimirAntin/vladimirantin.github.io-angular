@@ -41,7 +41,7 @@ export class AppComponent {
   };
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    this.clientHeight = (window.innerHeight / 100) * 90;
+    this.clientHeight = (window.innerHeight / 100) * 85;
     iconRegistry.addSvgIcon('skills', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/skills.svg'));
     iconRegistry.addSvgIcon('email', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/email.svg'));
     iconRegistry.addSvgIcon('java', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/java.svg'));

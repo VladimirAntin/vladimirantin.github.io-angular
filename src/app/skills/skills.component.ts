@@ -29,4 +29,8 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() { }
 
+  quotient(b: number) {
+    return b % 2;
+  }
+
 }
