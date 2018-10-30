@@ -6,39 +6,4 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~animate.css/animate.min.css";
 
-.w-40{
-  width: 40% !important;
-}
-
-.h-90{
-  height: 90% !important;
-}
-
-.center {
-  margin: auto;
-  width: 60%;
-}
-
-.min-h-60 {
-  min-height: 60vh !important;
-}
-
-.radius-2{
-  border-radius: 2em;
-}
-
-.opacity-5 {
-  opacity: 0.5;
-}
-
-.bg-black {
-  background-color: black;
-}
-
-.contact {
-  
-}
-.contact:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
+@import "scss/style.scss";
