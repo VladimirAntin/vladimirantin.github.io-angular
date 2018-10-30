@@ -34,3 +34,11 @@
 .bg-black {
   background-color: black;
 }
+
+.contact {
+  
+}
+.contact:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

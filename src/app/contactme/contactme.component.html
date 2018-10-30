@@ -1,10 +1,23 @@
 <div class="container center animated zoomIn slow mt-5">
-  <div class="row mb-3">
-    <div class="col-lg-3 col-md">
+  <div class="row mb-2">
+    <div class="col-lg-3 col-md mt-2">
       <img class="img-thumbnail radius-2 shadow-lg" src="assets/img/profile.jpg">
     </div>
-    <div class="col-lg-9 d-none d-md-flex bg-light radius-2 opacity-5">
-        <span></span>
+    <div class="col-lg-9 bg-light radius-2 opacity-5 mt-2">
+        <div class="m-3">
+            <p class="text-center"><b>Contact Me</b></p>
+            <p class="text-black-50 animated zoomInDown slow">
+              I'm happy to answer any questions you have or provide you with an estimate.
+              Just send me a message in the form below with any questions you may have.
+            </p>
+            <div class="row">
+              <div *ngFor="let c of contacts" 
+                      class="animated zoomInRight slow contact text-black-50 col-lg-6 col-md-12">
+                <i class="{{c.icon}}"></i>
+                <i class="ml-2">{{c.content}}</i>
+              </div>
+            </div>
+        </div>
     </div>
   </div>
   <div class="row justify-content-center m-lg-5 bg-light radius-2 opacity-5">

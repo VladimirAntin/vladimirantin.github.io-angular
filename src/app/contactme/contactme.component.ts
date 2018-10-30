@@ -17,6 +17,10 @@ export class ContactmeComponent implements OnInit {
     text: '',
   };
   @ViewChild('sendForm') sendForm: NgForm;
+  contacts = [
+    {icon: 'fa fa-phone-square', content: '+381 61 627 91 51'},
+    {icon: 'fa fa-envelope-square', content: 'antin502@gmail.com'},
+  ];
 
   constructor(private _contact: ContactService, private snackBar: MatSnackBar) { }
 
