@@ -1,6 +1,6 @@
 <div class="container-fluid mt-5">
   <div class="row justify-content-center m-lg-5 min-h-60" style="background-color:rgba(255,255,255,0.2); border-radius: 2em">
-    <div *ngFor="let s of skills; let i = index" class="col-6 col-lg-2 animated slow" [ngClass]="{'zoomInLeft':quotient(i+1)==1, 'zoomInRight':quotient(i+1)==0}">
+    <div *ngFor="let s of skills; let i = index" class="col-md col-lg-2 animated slow" [ngClass]="{'zoomInLeft':quotient(i+1)==1, 'zoomInRight':quotient(i+1)==0}">
         <mat-card *ngIf="s!=null" class="m-2 h-90">
             <mat-card-header>
               <div mat-card-avatar>

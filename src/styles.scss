@@ -7,3 +7,12 @@
 @import "~animate.css/animate.min.css";
 
 @import "scss/style.scss";
+
+body {
+    overflow-x: hidden !important;
+}
+
+.bg-blue {
+    background-color: rgba(32, 21, 197, 0.37);
+    color: snow;
+}

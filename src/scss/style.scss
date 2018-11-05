@@ -43,4 +43,16 @@ $mobile-tablet: 800px;
   cursor: pointer;
 }
 
- 
+#home {
+  background-color: rgba(255, 255, 255, 0.2);
+  min-width: 90vw !important;
+  min-height: 83vh !important;
+  padding-top: 4em !important;
+
+  @media only screen and (max-width: $mobile-tablet) {
+    p {
+      font-size: 1.2em !important;
+    }
+  }
+  
+}
