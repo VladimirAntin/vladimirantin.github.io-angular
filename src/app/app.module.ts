@@ -11,6 +11,8 @@ import {SharedModule} from './shared/shared.module';
 import {ProjectsModule} from './projects/projects.module';
 import {SkillsModule} from './skills/skills.module';
 import { FooterModule } from './footer/footer.module';
+import { TypingAnimationDirective } from './typed/typing-animation.directive';
+import {TypingAnimationModule} from './typed/typing-animation-module';
 
 @NgModule({
   declarations: [

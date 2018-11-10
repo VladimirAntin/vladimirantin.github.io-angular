@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ContactService} from './contact.service';
 import {MatSnackBar} from '@angular/material';
 import {NgForm} from '@angular/forms';
-
 
 @Component({
   selector: 'app-contactme',
@@ -16,6 +15,7 @@ export class ContactmeComponent implements OnInit {
     email: '',
     text: '',
   };
+  @Input() styleDIV = {};
   @ViewChild('sendForm') sendForm: NgForm;
   contacts = [
     {icon: 'fa fa-phone-square', content: '+381 61 627 91 51'},

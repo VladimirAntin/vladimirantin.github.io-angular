@@ -19,9 +19,9 @@ export class SkillsComponent implements OnInit {
     {value: 70, name: 'Git', icon: 'icon-git', color: 'sandybrown'},
     {value: 80, name: 'jQuery', icon: 'icon-jquery', color: '#007bffe0'},
     {value: 60, name: 'HTML', icon: 'icon-html', color: 'sandybrown', pattern: ['HTML5'], spans: this.generateArray(5)},
-    {value: 46, name: 'CSS', icon: 'icon-css', color: 'blue', pattern: ['CSS3'], spans: this.generateArray(9)},
-    {value: 15, name: 'PHP', icon: 'icon-php', color: '#5468a0', spans: this.generateArray(2)},
-    {value: 28, name: 'Python', icon: 'icon-python', color: 'blue', spans: this.generateArray(5)},
+    {value: 46, name: 'CSS', icon: 'icon-css', color: 'blue', pattern: ['CSS3', 'Sass', 'Less'], spans: this.generateArray(9)},
+    {value: 15, name: 'PHP', icon: 'icon-php', color: '#5468a0', pattern: ['Laravel'], spans: this.generateArray(2)},
+    {value: 28, name: 'Python', icon: 'icon-python', color: 'blue', pattern: ['Flask'], spans: this.generateArray(5)},
     {value: 72, name: 'AngularJS', icon: 'icon-angularjs', color: 'red', spans: this.generateArray(5)},
     {value: 26, name: 'MongoDB', icon: 'icon-mongodb', color: '#6aab27', spans: this.generateArray(5)},
   ];
