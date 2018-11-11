@@ -5,7 +5,7 @@
     <div class="container pb-5">
         <div class="animated zoomInUp w-100">
             <p class="display-2 bg-blue text-center radius-2">
-              <span typingAnimation [typeSpeed]="40" [startDelay]="1000" (complete)="complete.work=true" [hideCursorOnComplete]="true">
+              <span [ng-typed]="{speed: 40, timeout: 1000, hideCursorOnComplete: true}"  (complete)="complete.work=true">
                 Full Stack Website Developer
               </span>
             </p>

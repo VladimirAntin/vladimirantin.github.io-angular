@@ -1,0 +1,33 @@
+<div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
+  <div class="row">
+    <div class="col-4 offset-2">
+      <pre class="animated zoomInUp slower">
+        <ngx-json-viewer [json]="formatJSON()" [expanded]="false"></ngx-json-viewer>
+      </pre>
+    </div>
+    <div class="col-4">
+        <p *ngFor="let i of items">
+            <span [ng-typed]="obj" (complete)="complete.text=true">
+              {{obj.text}}
+            </span>
+          </p>        
+    </div>  
+  </div>
+  <div class="center">
+      <div class="row animated zoomInLeft slow">
+        <div class="col-3">
+            <mat-form-field>
+                <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
+            </mat-form-field>    
+            <mat-form-field>
+                <input matInput placeholder="Timeout" [(ngModel)]="obj.timeout" type="number">
+            </mat-form-field>    
+            <mat-form-field class="w-100">
+                <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
+            </mat-form-field>    
+              <mat-checkbox [(ngModel)]="obj.hideCursorOnComplete">Hide cursor on complete</mat-checkbox>
+            <button class="btn btn-outline-dark" (click)="reset()">Reset</button>    
+        </div>
+      </div>
+  </div>
+</div>

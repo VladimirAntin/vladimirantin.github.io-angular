@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: {img: string, name: string}[] = [
-    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS'},
-    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS'},
-    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS'},
-    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS'},
+  projects: {img: string, name: string, style?, link: string}[] = [
+    {img: 'assets/icons/tech/angular.svg', name: 'Ng Typed', style: {width: '5em'}, link: 'ng-typed'},
+    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS', link: ''},
+    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS', link: ''},
+    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS', link: ''},
+    {img: 'assets/work-in-progress.png', name: 'WORK IN PROGRESS', link: ''},
   ];
 
   constructor() { }

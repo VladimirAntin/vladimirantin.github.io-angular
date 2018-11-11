@@ -17,9 +17,7 @@
     "eofline": true,
     "forin": true,
     "import-blacklist": [
-      true,
-      "rxjs",
-      "rxjs/Rx"
+      true
     ],
     "import-spacing": true,
     "indent": [
@@ -121,7 +119,7 @@
       true,
       "attribute",
       ["app",""],
-      "camelCase"
+      ["camelCase", "kebab-case"]
     ],
     "component-selector": [
       true,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule, MatIconModule, MatInputModule, MatExpansionModule,
-  MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule} from '@angular/material';
+  MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatCheckboxModule} from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 import {ContactmeComponent} from '../contactme/contactme.component';
@@ -13,13 +13,16 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import {NgCircleProgressModule} from 'ng-circle-progress';
-import {TypingAnimationModule} from '../typed/typing-animation-module';
+import {NgTypedModule} from 'ng-typed-test';
 import {VarDirective} from './var.directive';
+import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'contact', component: ContactmeComponent},
   { path: 'projects', component: ProjectsComponent},
+  { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
   { path: 'skills', component: SkillsComponent}
 
 ];
@@ -39,13 +42,13 @@ const appRoutes: Routes = [
       animation: true,
       animationDuration: 200,
     }),
-    BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatMenuModule, MatExpansionModule,
+    BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
-    TypingAnimationModule
+    NgTypedModule, NgxJsonViewerModule
   ],
   declarations: [VarDirective],
-  exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatTooltipModule,
-  MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
-  NgCircleProgressModule, TypingAnimationModule, VarDirective]
+  exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
+    MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
+  NgCircleProgressModule, NgTypedModule, VarDirective, NgxJsonViewerModule]
 })
 export class SharedModule { }

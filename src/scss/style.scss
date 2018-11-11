@@ -56,3 +56,20 @@ $mobile-tablet: 800px;
   }
   
 }
+
+#project {
+  min-width: 90vw !important;
+  min-height: 83vh !important;
+  padding-top: 4em !important;
+
+  textarea {
+    resize: none;
+  }
+
+  @media only screen and (max-width: $mobile-tablet) {
+    p {
+      font-size: 1.2em !important;
+    }
+  }
+  
+}

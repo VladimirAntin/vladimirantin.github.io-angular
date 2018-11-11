@@ -7,7 +7,7 @@
         <div class="m-3">
             <p class="text-center animated flipInX" *ngIf="complete.contactText"><b>Contact Me</b></p>
             <p class="text-black-50 animated zoomInDown slow">
-              <span typingAnimation [startDelay]="1000" (complete)="complete.contactText=true" [typeSpeed]="40">
+              <span ng-typed [ng-typed]="{speed: 40, timeout: 1000}" (complete)="complete.contactText=true">
                 I'm happy to answer any questions you have or provide you with an estimate.
                 Just send me a message in the form below with any questions you may have.
               </span>
