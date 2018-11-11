@@ -16,7 +16,6 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
 import {NgTypedModule} from 'ng-typed-test';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
-import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -44,11 +43,11 @@ const appRoutes: Routes = [
     }),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
-    NgTypedModule, NgxJsonViewerModule
+    NgTypedModule
   ],
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
-  NgCircleProgressModule, NgTypedModule, VarDirective, NgxJsonViewerModule]
+  NgCircleProgressModule, NgTypedModule, VarDirective]
 })
 export class SharedModule { }

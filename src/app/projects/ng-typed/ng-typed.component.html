@@ -1,9 +1,23 @@
 <div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
-  <div class="row">
+  <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-typed</h1>
+  <div class="row pb-5">
     <div class="col-4 offset-2">
-      <pre class="animated zoomInUp slower">
-        <ngx-json-viewer [json]="formatJSON()" [expanded]="false"></ngx-json-viewer>
-      </pre>
+      <code class="animated zoomInUp slower p-4">
+        <pre>{{formatJSON()}}</pre>  
+      </code>
+      <div class="animated zoomInLeft slow center">
+          <mat-form-field class="w-100">
+              <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
+          </mat-form-field>    
+          <mat-form-field class="w-100">
+              <input matInput placeholder="Timeout" [(ngModel)]="obj.timeout" type="number">
+          </mat-form-field>    
+          <mat-form-field class="w-100">
+              <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
+          </mat-form-field>    
+          <mat-checkbox [(ngModel)]="obj.hideCursorOnComplete" class="w-100">Hide cursor on complete</mat-checkbox>
+          <button mat-stroked-button class="rounded w-50" (click)="reset()">Reset</button>    
+      </div>
     </div>
     <div class="col-4">
         <p *ngFor="let i of items">
@@ -12,22 +26,5 @@
             </span>
           </p>        
     </div>  
-  </div>
-  <div class="center">
-      <div class="row animated zoomInLeft slow">
-        <div class="col-3">
-            <mat-form-field>
-                <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
-            </mat-form-field>    
-            <mat-form-field>
-                <input matInput placeholder="Timeout" [(ngModel)]="obj.timeout" type="number">
-            </mat-form-field>    
-            <mat-form-field class="w-100">
-                <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
-            </mat-form-field>    
-              <mat-checkbox [(ngModel)]="obj.hideCursorOnComplete">Hide cursor on complete</mat-checkbox>
-            <button class="btn btn-outline-dark" (click)="reset()">Reset</button>    
-        </div>
-      </div>
   </div>
 </div>
