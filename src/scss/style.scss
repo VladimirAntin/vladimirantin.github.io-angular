@@ -67,7 +67,7 @@ $mobile-tablet: 800px;
   }
 
   @media only screen and (max-width: $mobile-tablet) {
-    p {
+    p, span {
       font-size: 1.2em !important;
     }
   }

@@ -13,7 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import {NgCircleProgressModule} from 'ng-circle-progress';
-import {NgTypedModule} from 'ng-typed-test';
+import {NgTypedModule} from 'ng-typed';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
 

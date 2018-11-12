@@ -1,7 +1,7 @@
 <div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
   <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-typed</h1>
   <div class="row pb-5">
-    <div class="col-4 offset-2">
+    <div class="col-lg-4 offset-lg-2 col-sm-12">
       <code class="animated zoomInUp slower p-4">
         <pre>{{formatJSON()}}</pre>  
       </code>
@@ -19,7 +19,7 @@
           <button mat-stroked-button class="rounded w-50" (click)="reset()">Reset</button>    
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-lg-4 col-sm-12">
         <p *ngFor="let i of items">
             <span [ng-typed]="obj" (complete)="complete.text=true">
               {{obj.text}}
