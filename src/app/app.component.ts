@@ -48,7 +48,6 @@ export class AppComponent {
     router: Router) {
       router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
-          console.log(router)
           const title = this.getTitle(router.routerState, router.routerState.root).join('-');
           _title.setTitle(`Vladimir Antin | ${title}`);
         }
