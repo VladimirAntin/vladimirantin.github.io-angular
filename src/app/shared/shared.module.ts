@@ -18,11 +18,11 @@ import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'contact', component: ContactmeComponent},
-  { path: 'projects', component: ProjectsComponent},
+  { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
+  { path: 'contact', component: ContactmeComponent, data: {title: 'Contact me'}},
+  { path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
-  { path: 'skills', component: SkillsComponent}
+  { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}}
 
 ];
 
