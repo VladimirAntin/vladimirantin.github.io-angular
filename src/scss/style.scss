@@ -73,3 +73,14 @@ $mobile-tablet: 800px;
   }
   
 }
+
+
+.mat-card:hover {
+  cursor: pointer;
+  outline: none;
+  text-decoration: underline;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+}
+.mat-card:hover::after {
+  opacity: 1;
+}

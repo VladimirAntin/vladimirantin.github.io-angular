@@ -1,13 +1,10 @@
 <div class="container animated zoomIn mt-5">
   <div class="row bg-light opacity-5 m-5 p-5 radius-2" *ngFor="let p of projects">
-      <mat-card class="col-lg-4 col-md text-center">
+      <mat-card class="col-lg-4 col-md text-center mat-elevation-z2" [routerLink]="[p.link]">
           <mat-card-header>
             <mat-card-title>{{p.name}}</mat-card-title>
           </mat-card-header>
           <img mat-card-image [src]="p.img" [ngStyle]="p.style" class="mx-auto img-fluid">
-          <mat-card-actions>
-            <button mat-button [routerLink]="[p.link]">DEMO</button>
-          </mat-card-actions>
         </mat-card>
     <!-- <div class="col-lg-4 col-md">
         <img class="img-thumbnail radius-2" [src]="p.img">
