@@ -10,9 +10,17 @@
 
 body {
     overflow-x: hidden !important;
+    background-color: rgb(10, 10, 10);
 }
 
 .bg-blue {
     background-color: rgba(32, 21, 197, 0.37);
     color: snow;
+}
+
+.bg-light-50 {
+    background-color: rgba(255, 255, 255, 0.30);
+}
+.bg-light-80 {
+    background-color: rgba(255, 255, 255, 0.80);
 }

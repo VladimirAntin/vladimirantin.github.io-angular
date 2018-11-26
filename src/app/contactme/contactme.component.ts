@@ -21,10 +21,12 @@ export class ContactmeComponent implements OnInit {
     {icon: 'fa fa-phone-square', content: '+381 61 627 91 51'},
     {icon: 'fa fa-envelope-square', content: 'antin502@gmail.com'},
   ];
-
+  contactForm = false;
   constructor(private _contact: ContactService, private snackBar: MatSnackBar) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => this.contactForm = true, 900);
+  }
 
   send() {
     this._contact.updateMessages(this.sendObj, (m) => {

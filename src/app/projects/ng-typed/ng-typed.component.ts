@@ -27,11 +27,13 @@ export class NgTypedComponent implements OnInit {
 
   items = [1];
   index = 1;
-
+  links = [
+    {onclick: () => this.open('https://www.npmjs.com/package/ng-typed'), name: 'NPM', color: 'danger', icon: 'npm'},
+    {onclick: () => this.open('https://github.com/vladimirantin/ng-typed'), name: 'GitHub', color: 'warning', icon: 'github'},
+  ];
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   formatJSON() {
     const retVal = Object.assign({}, this.obj);
@@ -43,6 +45,10 @@ export class NgTypedComponent implements OnInit {
     this.items = [];
     this.index++;
     this.items.push(this.index);
+  }
+
+  private open(a: string) {
+    window.open(a, '_blank');
   }
 
 }

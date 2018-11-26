@@ -1,5 +1,6 @@
 
 $mobile-tablet: 800px;
+$mobile: 450px;
 
 .w-40 {
   width: 40% !important;
@@ -26,6 +27,12 @@ $mobile-tablet: 800px;
   min-height: 60vh !important;
 }
 
+.w-sm-6 {
+  @media only screen and (max-width: $mobile) {
+    width: 6em;
+  }
+}
+
 .radius-2{
   border-radius: 2em;
 }
@@ -44,7 +51,6 @@ $mobile-tablet: 800px;
 }
 
 #home {
-  background-color: rgba(255, 255, 255, 0.2);
   min-width: 90vw !important;
   min-height: 83vh !important;
   padding-top: 4em !important;

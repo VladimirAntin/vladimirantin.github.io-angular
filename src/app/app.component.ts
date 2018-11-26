@@ -21,16 +21,16 @@ export class AppComponent {
     'left': 0,
     'right': 0,
     'bottom': 0,
-    'opacity': 0.4
+    'opacity': 0.6
   };
 
   myParams = {
     particles: {
       number: {
-        value: 100,
+        value: 50,
       },
       color: {
-        value: '#ff0000'
+        value: '#fff'
       },
       shape: {
         type: 'triangle',

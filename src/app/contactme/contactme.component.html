@@ -1,18 +1,18 @@
-<div class="container-fluid center animated zoomIn slow mt-5" [ngStyle]="styleDIV" *ngVar="{contactText: false} as complete">
+<div class="container-fluid center animated zoomIn slow mt-5" [ngStyle]="styleDIV">
   <div class="row mb-2">
     <div class="col-lg-3 col-md mt-2">
       <img class="img-thumbnail radius-2 shadow-lg" src="assets/img/profile.jpg">
     </div>
     <div class="col-lg-9 bg-light radius-2 opacity-5 mt-2">
         <div class="m-3">
-            <p class="text-center animated flipInX" *ngIf="complete.contactText"><b>Contact Me</b></p>
+            <p class="text-center animated flipInX" *ngIf="contactForm"><b>Contact Me</b></p>
             <p class="text-black-50 animated zoomInDown slow">
-              <span ng-typed [ng-typed]="{speed: 40, timeout: 1000}" (complete)="complete.contactText=true">
+              <span ng-typed [ng-typed]="{speed: 20, timeout: 1000}">
                 I'm happy to answer any questions you have or provide you with an estimate.
                 Just send me a message in the form below with any questions you may have.
               </span>
             </p>
-            <div class="row" *ngIf="complete.contactText">
+            <div class="row" *ngIf="contactForm">
               <div *ngFor="let c of contacts" 
                       class="animated zoomInRight slow contact text-black-50 col-lg-6 col-md-12">
                 <i class="{{c.icon}}"></i>
@@ -22,7 +22,7 @@
         </div>
     </div>
   </div>
-  <div class="row justify-content-center m-lg-5 bg-light radius-2 opacity-5" *ngIf="complete.contactText">
+  <div class="row justify-content-center m-lg-5 bg-light radius-2 opacity-5" *ngIf="contactForm">
     <form class="col m-4 animated zoomInUp" autocomplete="off" name="sendForm" role="form"
           novalidate #sendForm="ngForm" (submit)="send()">
       <div class="row">

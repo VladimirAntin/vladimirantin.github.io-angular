@@ -1,3 +1,10 @@
+<ul class="nav justify-content-end bg-light">
+  <li class="nav-item m-2 mr-3" *ngFor="let item of links">
+    <button class="btn btn-lg btn-{{item.color}}" matTooltip="{{item.name}}" (click)="item.onclick()">
+      <i class="fab fa-{{item.icon}}"></i>
+    </button>
+  </li>
+</ul>
 <div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
   <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-typed</h1>
   <div class="row pb-5">
