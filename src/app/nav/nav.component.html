@@ -10,9 +10,11 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}"
          (mouseleave)="n.showHover=false"
-         (mouseenter)="n.showHover=true">
+         (mouseenter)="n.showHover=true"
+      (click)="n.click()">
         <ng-container *ngIf="!n.showHover">
           <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
+          <i *ngIf="n.fa" [class]="n.fa"></i>
           <mat-icon *ngIf="n.customIcon" class="text-white">
             <span [ngClass]="n.customIcon"></span>
           </mat-icon>

@@ -16,14 +16,15 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
 import {NgTypedModule} from 'ng-typed';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
+import {CvComponent} from '../cv/cv.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
   { path: 'contact', component: ContactmeComponent, data: {title: 'Contact me'}},
   { path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
-  { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}}
-
+  { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
+  { path: 'cv', component: CvComponent, data: {title: 'CV'}}
 ];
 
 @NgModule({

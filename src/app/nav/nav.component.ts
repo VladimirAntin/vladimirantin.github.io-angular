@@ -13,6 +13,7 @@ export class NavComponent implements OnInit {
     {customIcon: 'icon-skills', hover: 'Skills', showHover: false, route: '/skills'},
     {icon: 'cloud', hover: 'Projects', showHover: false, route: '/projects'},
     {customIcon: 'icon-email', hover: 'Contact', showHover: false, route: '/contact'},
+    {fa: 'fas fa-file-pdf', hover: 'CV', showHover: false, route: '/cv'},
   ];
 
   constructor(private _r: Router) { }

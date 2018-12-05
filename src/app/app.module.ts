@@ -11,16 +11,18 @@ import {SharedModule} from './shared/shared.module';
 import {ProjectsModule} from './projects/projects.module';
 import {SkillsModule} from './skills/skills.module';
 import { FooterModule } from './footer/footer.module';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent
+    AppComponent, HomeComponent, CvComponent
   ],
   imports: [
     BrowserModule, ParticlesModule, SharedModule, ProjectsModule, SkillsModule, FooterModule,
     NavModule, ContactmeModule, HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: []
 })
 export class AppModule { }
