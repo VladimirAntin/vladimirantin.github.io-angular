@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vxe2fr');
+  src:  url('fonts/icomoon.eot?vxe2fr#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vxe2fr') format('truetype'),
+    url('fonts/icomoon.woff?vxe2fr') format('woff'),
+    url('fonts/icomoon.svg?vxe2fr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cv:before {
+  content: "\e936";
+  color: #fff;
+}
+.icon-angular .path1:before {
+  content: "\e900";
+  color: rgb(226, 50, 55);
+}
+.icon-angular .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(181, 46, 49);
+}
+.icon-angular .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-angularjs .path1:before {
+  content: "\e903";
+  color: rgb(179, 179, 179);
+}
+.icon-angularjs .path2:before {
+  content: "\e904";
+  margin-left: -0.9482421875em;
+  color: rgb(166, 18, 13);
+}
+.icon-angularjs .path3:before {
+  content: "\e905";
+  margin-left: -0.9482421875em;
+  color: rgb(221, 27, 22);
+}
+.icon-angularjs .path4:before {
+  content: "\e906";
+  margin-left: -0.9482421875em;
+  color: rgb(242, 242, 242);
+}
+.icon-angularjs .path5:before {
+  content: "\e907";
+  margin-left: -0.9482421875em;
+  color: rgb(179, 179, 179);
+}
+.icon-bootstrap .path1:before {
+  content: "\e908";
+  color: rgb(86, 61, 124);
+}
+.icon-bootstrap .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-css .path1:before {
+  content: "\e90a";
+  color: rgb(38, 77, 228);
+}
+.icon-css .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(41, 101, 241);
+}
+.icon-css .path3:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(235, 235, 235);
+}
+.icon-css .path4:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(235, 235, 235);
+}
+.icon-css .path5:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(235, 235, 235);
+}
+.icon-css .path6:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-css .path7:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-css .path8:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-css .path9:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-git:before {
+  content: "\e913";
+  color: #f05133;
+}
+.icon-html .path1:before {
+  content: "\e914";
+  color: rgb(228, 77, 38);
+}
+.icon-html .path2:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(241, 101, 41);
+}
+.icon-html .path3:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-html .path4:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(235, 235, 235);
+}
+.icon-html .path5:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-java .path1:before {
+  content: "\e919";
+  color: rgb(219, 56, 14);
+}
+.icon-java .path2:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(219, 56, 14);
+}
+.icon-java .path3:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(115, 161, 251);
+}
+.icon-java .path4:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(115, 161, 251);
+}
+.icon-java .path5:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(115, 161, 251);
+}
+.icon-java .path6:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(115, 161, 251);
+}
+.icon-java .path7:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(115, 161, 251);
+}
+.icon-java .path8:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(115, 161, 251);
+}
+.icon-jquery:before {
+  content: "\e921";
+  color: #4082ae;
+}
+.icon-js .path1:before {
+  content: "\e922";
+  color: rgb(247, 223, 30);
+}
+.icon-js .path2:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material_design .path1:before {
+  content: "\e924";
+  color: rgb(117, 117, 117);
+}
+.icon-material_design .path2:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(189, 189, 189);
+}
+.icon-material_design .path3:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-mongodb .path1:before {
+  content: "\e927";
+  color: rgb(93, 64, 55);
+}
+.icon-mongodb .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(76, 175, 80);
+}
+.icon-mongodb .path3:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-mongodb .path4:before {
+  content: "\e92a";
+  margin-left: -1em;
+  color: rgb(76, 175, 80);
+}
+.icon-mongodb .path5:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(129, 199, 132);
+}
+.icon-mysql:before {
+  content: "\e92c";
+  color: #00546b;
+}
+.icon-php .path1:before {
+  content: "\e92d";
+  color: rgb(137, 147, 190);
+}
+.icon-php .path2:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(35, 37, 49);
+}
+.icon-python .path1:before {
+  content: "\e92f";
+  color: rgb(38, 77, 111);
+}
+.icon-python .path2:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(56, 118, 172);
+}
+.icon-python .path3:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(242, 242, 242);
+}
+.icon-python .path4:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(247, 205, 0);
+}
+.icon-python .path5:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(242, 242, 242);
+}
+.icon-spring:before {
+  content: "\e934";
+  color: #77bc1f;
+}
+.icon-typescript:before {
+  content: "\e935";
+  color: #007acc;
+}
+.icon-email:before {
+  content: "\e937";
+  color: #fff;
+}
+.icon-skills:before {
+  content: "\e938";
+  color: #fff;
+}
