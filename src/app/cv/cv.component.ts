@@ -12,4 +12,12 @@ export class CvComponent implements OnInit {
   ngOnInit() {
   }
 
+  startLoad() {
+    console.log('start');
+  }
+
+  completeCV() {
+    console.log('stop');
+  }
+
 }

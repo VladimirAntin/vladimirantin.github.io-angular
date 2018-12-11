@@ -17,6 +17,7 @@ import {NgTypedModule} from 'ng-typed';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
 import {CvComponent} from '../cv/cv.component';
+import {ngxProgress} from './variables';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
@@ -30,18 +31,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
-    NgCircleProgressModule.forRoot({
-      radius: 60,
-      space: -10,
-      outerStrokeWidth: 10,
-      innerStrokeColor: '#e7e8ea',
-      innerStrokeWidth: 10,
-      showSubtitle: false,
-      clockwise: false,
-      startFromZero: true,
-      animation: true,
-      animationDuration: 200,
-    }),
+    NgCircleProgressModule.forRoot(ngxProgress),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
     NgTypedModule

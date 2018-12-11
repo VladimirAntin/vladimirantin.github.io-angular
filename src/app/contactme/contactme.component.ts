@@ -2,6 +2,7 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ContactService} from './contact.service';
 import {MatSnackBar} from '@angular/material';
 import {NgForm} from '@angular/forms';
+import {MessageInterface} from './message.model';
 
 @Component({
   selector: 'app-contactme',
@@ -10,7 +11,7 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactmeComponent implements OnInit {
 
-  sendObj = {
+  sendObj: MessageInterface = {
     name: '',
     email: '',
     text: '',
@@ -29,7 +30,7 @@ export class ContactmeComponent implements OnInit {
   }
 
   send() {
-    this._contact.updateMessages(this.sendObj, (m) => {
+    this._contact.sendMessage(this.sendObj).subscribe( m => {
       this.snackBar.open('Thanks! Message has been sent.', 'OK', {
         duration: 4000, verticalPosition: 'top'
       });

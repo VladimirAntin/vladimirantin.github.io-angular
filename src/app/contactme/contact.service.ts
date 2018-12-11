@@ -1,33 +1,28 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from '../../../node_modules/rxjs';
-import {ContactInterface} from './contact.model';
+import {MessageInterface} from './message.model';
 
+// https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server/blob/master/README.md
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  private rootUrl = 'https://api.myjson.com';
+
+  // faker.github.io@gmail.com
+  private postMessage = 'https://script.google.com/macros/s/AKfycbzDs3L68KI1pYtWoNIihY7Y6L5JnKRwVdIlhYl9/exec';
 
   constructor(private _http: HttpClient) { }
 
-  get(): Observable<ContactInterface> {
-    return this._http.get<ContactInterface>(`${this.rootUrl}/bins/jcooh`);
+  sendMessage(req: MessageInterface): Observable<MessageInterface> {
+    const body = Object.keys(req)
+      .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(req[k])).join('&');
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { 'Content-Type': 'application/x-www-form-urlencoded' })
+    };
+    return this._http.post<MessageInterface>(this.postMessage, body, httpOptions);
   }
 
-  update(req: ContactInterface): Observable<ContactInterface> {
-    return this._http.put<ContactInterface>(`${this.rootUrl}/bins/jcooh`, req);
-  }
-
-  updateMessages(message: {email, name, text}, callback?) {
-    this.get().subscribe(a => {
-      a.messages.push(message);
-      this.update(a).subscribe(m => {
-        if (callback) {
-          callback(m);
-        }
-      });
-    });
-  }
 }
