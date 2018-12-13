@@ -23,7 +23,8 @@
               <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
           </mat-form-field>    
           <mat-checkbox [(ngModel)]="obj.hideCursorOnComplete" class="w-100">Hide cursor on complete</mat-checkbox>
-          <button mat-stroked-button class="rounded w-50" (click)="reset()">Reset</button>    
+          <mat-checkbox [(ngModel)]="obj.hideCursorOnStart" class="w-100">Hide cursor on start</mat-checkbox>
+          <button mat-stroked-button class="rounded w-50" (click)="reset()">Reset</button>
       </div>
     </div>
     <div class="col-lg-4 col-sm-12">
