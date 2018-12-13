@@ -18,12 +18,18 @@ import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
 import {CvComponent} from '../cv/cv.component';
 import {ngxProgress} from './variables';
+import {EbookComponent} from '../projects/ebook/ebook.component';
+import {EbookCategoriesComponent} from '../projects/ebook/ebook-categories/ebook-categories.component';
+import {EbookBooksComponent} from '../projects/ebook/ebook-books/ebook-books.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
   { path: 'contact', component: ContactmeComponent, data: {title: 'Contact me'}},
   { path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
+  { path: 'projects/ebook', component: EbookComponent, data: {title: 'Ebook'}},
+  { path: 'projects/ebook/categories', component: EbookCategoriesComponent, data: {title: 'Ebook (Categories)'}},
+  { path: 'projects/ebook/books', component: EbookBooksComponent, data: {title: 'Ebook (Books)'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
   { path: 'cv', component: CvComponent, data: {title: 'CV'}}
 ];

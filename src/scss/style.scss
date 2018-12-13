@@ -79,7 +79,18 @@ $mobile: 450px;
   }
   
 }
+#ebook {
+  min-width: 90vw !important;
+  min-height: 83vh !important;
+  padding-top: 4em !important;
+  background-image: url("/assets/ebook/background.jpeg") !important;
 
+  @media only screen and (max-width: $mobile-tablet) {
+    p, span {
+      font-size: 1.2em !important;
+    }
+  }
+}
 
 .mat-card:hover {
   cursor: pointer;
