@@ -2,9 +2,7 @@
   {
     "id": 0,
     "title": "Eneas, texte critique, publié par Jacques Salverda de Grave",
-    "author": [
-      "Enéas (Romance)"
-    ],
+    "author": "Enéas (Romance)",
     "keywords": [
       "OL17941058M",
       "Enéas (Romance)",
@@ -25,9 +23,7 @@
   {
     "id": 1,
     "title": "A celebration of life",
-    "author": [
-      "Trisha Romance"
-    ],
+    "author": "Trisha Romance",
     "keywords": [
       "OL14668557M",
       "Trisha Romance",
@@ -49,9 +45,7 @@
   {
     "id": 2,
     "title": "The romance of Sir Degrevant",
-    "author": [
-      "Degrevant (Romance)"
-    ],
+    "author": "Degrevant (Romance)",
     "keywords": [
       "OL19356306M",
       "Degrevant (Romance)",
@@ -71,9 +65,7 @@
   {
     "id": 3,
     "title": "The complete idiot's guide to romance",
-    "author": [
-      "Dr. Romance."
-    ],
+    "author": "Dr. Romance.",
     "keywords": [
       "OL3970635M",
       "0028636570",
@@ -104,9 +96,7 @@
   {
     "id": 4,
     "title": "Les mervelles de Rigomer von Jahen, altfranzössicher Artusroman des XIII. jahrhunderts nach der einzigen Aumale-handschrift in Chantilly",
-    "author": [
-      "Rigomer (Romance)"
-    ],
+    "author": "Rigomer (Romance)",
     "keywords": [
       "OL17062273M",
       "Rigomer (Romance)",
@@ -139,9 +129,7 @@
   {
     "id": 5,
     "title": "A Star for Christmas",
-    "author": [
-      "Trisha Romance"
-    ],
+    "author": "Trisha Romance",
     "keywords": [
       "OL11265088M",
       "9780887768361",
@@ -162,9 +150,7 @@
   {
     "id": 6,
     "title": "Desirable men",
-    "author": [
-      "Dr. Romance."
-    ],
+    "author": "Dr. Romance.",
     "keywords": [
       "OL992855M",
       "9780761506256",
@@ -197,9 +183,7 @@
   {
     "id": 7,
     "title": "A program to promote moral development through elementary school physical education",
-    "author": [
-      "Thomas John Romance"
-    ],
+    "author": "Thomas John Romance",
     "keywords": [
       "OL13552102M",
       "OL17698769M",
@@ -234,9 +218,7 @@
   {
     "id": 8,
     "title": "Le Roman de la rose ou de Guillaume de Dole, édité par Félix Lecoy",
-    "author": [
-      "Guillaume de Dole (Romance)"
-    ],
+    "author": "Guillaume de Dole (Romance)",
     "keywords": [
       "OL15449358M",
       "OL18967616M",
@@ -255,9 +237,7 @@
   {
     "id": 9,
     "title": "He calls her Doc",
-    "author": [
-      "Brady, Mary romance novelist."
-    ],
+    "author": "Brady, Mary romance novelist.",
     "keywords": [
       "OL24209288M",
       "OL24266024M",
@@ -302,11 +282,9 @@
     ]
   },
   {
-    "id": 20,
+    "id": 10,
     "title": "Candy-O",
-    "author": [
-      "CARS."
-    ],
+    "author": "CARS.",
     "keywords": [
       "OL19520034M",
       "CARS.",
@@ -319,11 +297,9 @@
     "publicationYear": 1979
   },
   {
-    "id": 21,
+    "id": 11,
     "title": "Door to door",
-    "author": [
-      "CARS."
-    ],
+    "author": "CARS.",
     "keywords": [
       "OL21671037M",
       "CARS.",
@@ -336,11 +312,9 @@
     "publicationYear": 1987
   },
   {
-    "id": 22,
+    "id": 12,
     "title": "Mutbrott, bestickning och korruptiv marknadsföring =",
-    "author": [
-      "Thorsten Cars"
-    ],
+    "author": "Thorsten Cars",
     "keywords": [
       "OL283967M",
       "OL3349518M",
@@ -373,11 +347,9 @@
     ]
   },
   {
-    "id": 23,
+    "id": 13,
     "title": "Cars & Parts Ultimate Collector Car Price Guide-2003 edition (Ultimate Collector Car Price Guide)",
-    "author": [
-      "Cars & Parts"
-    ],
+    "author": "Cars & Parts",
     "keywords": [
       "OL12139455M",
       "9781880524473",
@@ -392,11 +364,9 @@
     "publicationYear": 2002
   },
   {
-    "id": 24,
+    "id": 14,
     "title": "Sissi ou La Fatalité",
-    "author": [
-      "Jean Cars"
-    ],
+    "author": "Jean Cars",
     "keywords": [
       "OL12507803M",
       "226202068X",
@@ -411,11 +381,9 @@
     "publicationYear": 2003
   },
   {
-    "id": 25,
+    "id": 15,
     "title": "Le crime de mathilde",
-    "author": [
-      "Cars Guy"
-    ],
+    "author": "Cars Guy",
     "keywords": [
       "OL12514958M",
       "2290308048",
@@ -430,11 +398,9 @@
     "publicationYear": 2000
   },
   {
-    "id": 26,
+    "id": 16,
     "title": "The Jaguar E-Type 3.8 Series 1 Spare Parts Catalogue (Jaguar)",
-    "author": [
-      "Jaguar Cars"
-    ],
+    "author": "Jaguar Cars",
     "keywords": [
       "OL8221519M",
       "0837605377",
@@ -448,11 +414,9 @@
     "publicationYear": 1990
   },
   {
-    "id": 27,
+    "id": 17,
     "title": "The Jaguar E Type V12 Series 3 Roadster Spare Parts Catalogue (Jaguar)",
-    "author": [
-      "Jaguar Cars"
-    ],
+    "author": "Jaguar Cars",
     "keywords": [
       "OL8221507M",
       "9780837605197",
@@ -467,11 +431,9 @@
     "publicationYear": 1990
   },
   {
-    "id": 28,
+    "id": 18,
     "title": "Sm Discrete Event System Simulation S/M",
-    "author": [
-      "BANKS CARS"
-    ],
+    "author": "BANKS CARS",
     "keywords": [
       "OL10084736M",
       "9780132174565",
@@ -486,11 +448,9 @@
     "publicationYear": 1996
   },
   {
-    "id": 29,
+    "id": 19,
     "title": "Pressen inför rätta",
-    "author": [
-      "Thorsten Cars"
-    ],
+    "author": "Thorsten Cars",
     "keywords": [
       "OL3235632M",
       "9789118275210",
@@ -517,11 +477,9 @@
     ]
   },
   {
-    "id": 40,
+    "id": 20,
     "title": "Harbrace Handbook",
-    "author": [
-      "Web"
-    ],
+    "author": "Web",
     "keywords": [
       "OL10105939M",
       "0155169629",
@@ -535,12 +493,9 @@
     "publicationYear": 2002
   },
   {
-    "id": 41,
+    "id": 21,
     "title": "Black Belt Web Programming Methods",
-    "author": [
-      "Web Techniques",
-      "Web Tech"
-    ],
+    "author": "Web Techniques",
     "keywords": [
       "OL9482330M",
       "0879304979",
@@ -585,11 +540,9 @@
     ]
   },
   {
-    "id": 42,
+    "id": 22,
     "title": "Official Netscape Live 3D",
-    "author": [
-      "Richter Web"
-    ],
+    "author": "Richter Web",
     "keywords": [
       "OL12161258M",
       "9781566044820",
@@ -604,11 +557,9 @@
     "publicationYear": 1997
   },
   {
-    "id": 43,
+    "id": 23,
     "title": "Pure Sawdust",
-    "author": [
-      "Web Ruble"
-    ],
+    "author": "Web Ruble",
     "keywords": [
       "OL11725342M",
       "1413784534",
@@ -623,11 +574,9 @@
     "publicationYear": 2005
   },
   {
-    "id": 44,
+    "id": 24,
     "title": "The Lost Red Patriot",
-    "author": [
-      "Web Ruble"
-    ],
+    "author": "Web Ruble",
     "keywords": [
       "OL8497022M",
       "1424115191",
@@ -643,11 +592,9 @@
     "publicationYear": 2007
   },
   {
-    "id": 45,
+    "id": 25,
     "title": "Valley of the Birds (Music of the Spheres)",
-    "author": [
-      "Emerald Web"
-    ],
+    "author": "Emerald Web",
     "keywords": [
       "OL11105725M",
       "0870829084",
@@ -662,11 +609,9 @@
     "publicationYear": 1988
   },
   {
-    "id": 46,
+    "id": 26,
     "title": "Sound Trek (Music of the Spheres)",
-    "author": [
-      "Emerald Web"
-    ],
+    "author": "Emerald Web",
     "keywords": [
       "OL11105726M",
       "9780870829093",
@@ -681,11 +626,9 @@
     "publicationYear": 1988
   },
   {
-    "id": 47,
+    "id": 27,
     "title": "Whispered Visions (Music of the Spheres)",
-    "author": [
-      "Emerald Web"
-    ],
+    "author": "Emerald Web",
     "keywords": [
       "OL11105727M",
       "0870829106",
@@ -700,11 +643,9 @@
     "publicationYear": 1988
   },
   {
-    "id": 48,
+    "id": 28,
     "title": "Life 101",
-    "author": [
-      "Willyn Web"
-    ],
+    "author": "Willyn Web",
     "keywords": [
       "OL23201345M",
       "Willyn Web",
@@ -719,11 +660,9 @@
     "publicationYear": 2007
   },
   {
-    "id": 49,
+    "id": 29,
     "title": "The malignants conventicle, or, A learned speech spoken by M. VVeb, a citizen, to the rest of his society",
-    "author": [
-      "M Web"
-    ],
+    "author": "M Web",
     "keywords": [
       "OL15018618M",
       "M Web",

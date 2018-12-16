@@ -1,0 +1,91 @@
+#ebook {
+  min-width: 90vw !important;
+  min-height: 83vh !important;
+  padding-top: 4em !important;
+  background-image: url("/assets/ebook/background.jpeg") !important;
+
+  @media only screen and (max-width: $mobile-tablet) {
+    p, span {
+      font-size: 1.2em !important;
+    }
+  }
+}
+
+
+app-ebook, app-ebook-books, app-ebook-categories {
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar {
+    background-color: transparent;
+  }
+
+  .mat-table {
+    overflow-y: auto;
+    height: 42vh;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #D62929;
+  }
+
+}
+
+app-ebook {
+  .full-width {
+    width: 100%;
+  }
+
+  .f20{
+    font-size:20px
+  }
+
+  .width-90 {
+    width: 90%;
+  }
+  .center {
+    text-align: center;
+  }
+
+  .w45{
+    width: 45%;
+  }
+
+  .w30{
+    width: 30%;
+  }
+
+  mat-slide-toggle {
+    margin-top: 1em;
+  }
+  #bool_button {
+    margin-bottom: 2em;
+  }
+  .content{
+    margin-top: 2em;
+  }
+
+  .mat-list {
+    overflow-y: auto;
+    height: 42vh;
+  }
+
+  .highlight {
+    background-color: yellow;
+  }
+
+
+}

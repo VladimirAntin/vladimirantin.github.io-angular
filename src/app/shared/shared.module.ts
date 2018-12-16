@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule, MatIconModule, MatInputModule, MatExpansionModule,
-  MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatCheckboxModule} from '@angular/material';
+  MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule,
+  MatBadgeModule, MatTooltipModule, MatCheckboxModule} from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 import {ContactmeComponent} from '../contactme/contactme.component';

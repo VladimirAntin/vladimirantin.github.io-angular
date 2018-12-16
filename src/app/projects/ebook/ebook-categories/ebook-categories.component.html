@@ -1,13 +1,14 @@
 <div class="container-fluid" id="ebook">
   <div class="row">
-    <app-ebook-nav class="col-2 ml-3"></app-ebook-nav>
-    <div class="col-9 bg-white radius-2 p-5" style="opacity: .8">
+    <app-ebook-nav class="col-2 ml-3 d-lg-block d-md-none d-sm-none"></app-ebook-nav>
+    <div class="col-lg-9 bg-white radius-2 px-5 col-md-11 mx-md-2" style="opacity: .8">
+      <app-ebook-nav-toolbar></app-ebook-nav-toolbar>
       <mat-form-field class="w-100">
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
       </mat-form-field>
 
       <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" matSort>
+        <mat-table [dataSource]="dataSource" matSort>
 
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="w-75"> Name </th>
@@ -32,9 +33,9 @@
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;">
           </tr>
-        </table>
+        </mat-table>
 
-        <mat-paginator [pageSizeOptions]="[6,2,4]"></mat-paginator>
+        <mat-paginator [pageSizeOptions]="[10,20,50]"></mat-paginator>
       </div>
   </div>
 </div>

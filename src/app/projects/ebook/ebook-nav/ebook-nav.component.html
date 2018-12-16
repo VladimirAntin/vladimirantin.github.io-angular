@@ -7,7 +7,7 @@
     <button *ngFor="let nav of nav_items" [routerLink]="[nav.route]" class="btn btn-block"
             [ngClass]="{'btn-dark':_router.url===nav.route,
                'btn-outline-dark':_router.url!==nav.route}">
-      <div class="text-left pl-2">
+      <div class="text-left pl-1">
         <mat-icon matListIcon *ngIf="nav.icon">{{nav.icon}}</mat-icon>
         <i *ngIf="nav.fa_icon" class="{{'fas '+nav.fa_icon}}"></i>
         {{nav.name}}

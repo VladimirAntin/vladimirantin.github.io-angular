@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button class="d-lg-none d-md-block" [matMenuTriggerFor]="menu">
+      <mat-icon>menuu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let i of nav_items" [routerLink]="i.route" [disabled]="i.disabled">
+        <div class="text-left pl-1">
+          <mat-icon matListIcon *ngIf="i.icon">{{i.icon}}</mat-icon>
+          <i *ngIf="i.fa_icon" class="{{'pl-2 pr-3 fas '+i.fa_icon}}"></i>
+          {{i.name}}
+        </div>
+      </button>
+    </mat-menu>
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary" matTooltip="NOT IN DEMO" class="d-lg-block d-md-none d-sm-none">
+      <mat-icon>edit</mat-icon>
+      Change password
+    </button>
+    <button mat-raised-button color="primary" matTooltip="NOT IN DEMO" class="d-lg-block d-md-none d-sm-none">
+      <mat-icon>edit</mat-icon>
+      Edit profile
+    </button>
+<!--
+    <button mat-raised-button matTooltip="NOT IN DEMO" class="d-lg-block d-md-none d-sm-none">
+      Login
+      <mat-icon>input</mat-icon>
+    </button>
+-->
+    <button mat-raised-button color="warn" matTooltip="NOT IN DEMO" class="d-lg-block d-md-none d-sm-none">
+      Logout
+      <mat-icon>input</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
