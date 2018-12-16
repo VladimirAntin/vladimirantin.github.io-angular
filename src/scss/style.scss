@@ -61,7 +61,6 @@ $mobile: 450px;
       font-size: 1.2em !important;
     }
   }
-  
 }
 
 #project {
@@ -78,20 +77,30 @@ $mobile: 450px;
       font-size: 1.2em !important;
     }
   }
-  
 }
 
-.mat-card:hover {
+.mat-card-header:hover {
   cursor: pointer;
   outline: none;
   text-decoration: underline;
-  box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+  //box-shadow: 0 1em 2em rgba(0,0,0,0.3);
 }
 .mat-card:hover::after {
   opacity: 1;
 }
 
+app-projects {
+  .mat-card:hover {
+    cursor: pointer;
+    outline: none;
+    text-decoration: underline;
+    box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+  }
+  .mat-card:hover::after {
+    opacity: 1;
+  }
 
+}
 
 button, button:focus {
   outline: none;

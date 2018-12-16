@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatIconModule, MatInputModule, MatExpansionModule,
+import {
+  MatButtonModule, MatIconModule, MatInputModule, MatExpansionModule,
   MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule,
-  MatBadgeModule, MatTooltipModule, MatCheckboxModule} from '@angular/material';
+  MatBadgeModule, MatTooltipModule, MatCheckboxModule, MatListModule
+} from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 import {ContactmeComponent} from '../contactme/contactme.component';
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
   { path: 'projects/ebook/categories', component: EbookCategoriesComponent, data: {title: 'Ebook (Categories)'}},
   { path: 'projects/ebook/books', component: EbookBooksComponent, data: {title: 'Ebook (Books)'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
-  { path: 'cv', component: CvComponent, data: {title: 'CV'}}
+  { path: 'cv', component: CvComponent, data: {title: 'CV'}},
+  {path: '**', component: HomeComponent, data: {title: 'Portfolio'}}
 ];
 
 @NgModule({
@@ -41,11 +44,12 @@ const appRoutes: Routes = [
     NgCircleProgressModule.forRoot(ngxProgress),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
-    NgTypedModule
+    NgTypedModule, MatListModule
   ],
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
+    MatListModule,
   NgCircleProgressModule, NgTypedModule, VarDirective]
 })
 export class SharedModule { }
