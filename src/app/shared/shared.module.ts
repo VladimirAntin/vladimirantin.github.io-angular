@@ -35,7 +35,7 @@ const appRoutes: Routes = [
   { path: 'projects/ebook/books', component: EbookBooksComponent, data: {title: 'Ebook (Books)'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
   { path: 'cv', component: CvComponent, data: {title: 'CV'}},
-  {path: '**', component: HomeComponent, data: {title: 'Portfolio'}}
+  // {path: '**', component: HomeComponent, data: {title: 'Portfolio'}}
 ];
 
 @NgModule({
