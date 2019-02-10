@@ -12,7 +12,7 @@
       <code class="animated zoomInUp p-4">
         <pre>{{formatJSON()}}</pre>  
       </code>
-      <div class="animated zoomInLeft center">
+      <div class="row animated zoomInLeft center">
           <mat-form-field class="w-100">
               <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
           </mat-form-field>    
@@ -21,7 +21,7 @@
           </mat-form-field>    
           <mat-form-field class="w-100">
               <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
-          </mat-form-field>    
+          </mat-form-field>
           <mat-checkbox [(ngModel)]="obj.hideCursorOnComplete" class="w-100">Hide cursor on complete</mat-checkbox>
           <mat-checkbox [(ngModel)]="obj.hideCursorOnStart" class="w-100">Hide cursor on start</mat-checkbox>
           <button mat-stroked-button class="rounded w-50" (click)="reset()">Reset</button>
