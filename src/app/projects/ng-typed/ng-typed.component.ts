@@ -12,7 +12,7 @@ export class NgTypedComponent implements OnInit {
     speed: 0.1,
     timeout: 1000,
     hideCursorOnComplete: false,
-    hideCursorOnStart: false,
+    hideCursor: false,
     text:
     `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia, iusto nihil id, totam nemo perspiciatis rerum labore tenetur ab sint,

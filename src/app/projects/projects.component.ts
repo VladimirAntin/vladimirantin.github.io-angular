@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
     ],
       text: 'Ng Typed is lib for portfolio in Angular 6. This is simple type-on effect component for angular websites.'},
     {img: 'assets/ebook/ebook-project.png', name: 'eBook', link: './ebook',
-    text: 'eBook is web application. Application create with Spring Boot framework, Angular framework and use Lucene lib for searching index of books. '},
+    text: 'eBook is web application. Application created with Spring Boot framework, Angular framework and use Lucene lib for searching index of books. '},
   ];
 
   constructor() { }
