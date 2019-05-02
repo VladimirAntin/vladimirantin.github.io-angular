@@ -8,11 +8,16 @@
 
 @import "scss/style.scss";
 
+$bg-body: linear-gradient(to right, brown, orange,red,orange, brown);
+
 body {
     overflow-x: hidden !important;
-    background-color: rgb(10, 10, 10);
+    background-image: $bg-body;
 }
 
+.bg-body {
+    background-image: $bg-body;
+}
 .bg-blue {
     background-color: rgba(32, 21, 197, 0.37);
     color: snow;
@@ -26,3 +31,14 @@ body {
 }
 
 
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+}

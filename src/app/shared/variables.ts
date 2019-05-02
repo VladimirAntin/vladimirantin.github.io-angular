@@ -11,36 +11,3 @@ export const ngxProgress = {
   animation: true,
   animationDuration: 200,
 };
-
-
-export const particles = {
-  style : {
-    'position': 'fixed',
-    'width': '100%',
-    'height': '100%',
-    'z-index': -1,
-    'top': 0,
-    'left': 0,
-    'right': 0,
-    'bottom': 0,
-    'opacity': 0.6
-  },
-  params:  {
-    particles: {
-      number: {
-        value: 60,
-      },
-      color: {
-        value: '#fff'
-      },
-      shape: {
-        type: 'triangle',
-      },
-      move: {
-        speed: 6,
-        out_mode: 'bounce'
-      }
-    },
-    retina_detect: false
-  }
-};

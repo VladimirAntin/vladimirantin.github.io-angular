@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {ParticlesModule} from 'angular-particle';
 import {NavModule} from './nav/nav.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ContactmeModule} from './contactme/contactme.module';
@@ -18,7 +17,7 @@ import { CvComponent } from './cv/cv.component';
     AppComponent, HomeComponent, CvComponent
   ],
   imports: [
-    BrowserModule, ParticlesModule, SharedModule, ProjectsModule, SkillsModule, FooterModule,
+    BrowserModule, SharedModule, ProjectsModule, SkillsModule, FooterModule,
     NavModule, ContactmeModule, HttpClientModule
   ],
   providers: [],

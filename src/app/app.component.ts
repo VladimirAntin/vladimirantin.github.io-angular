@@ -1,18 +1,17 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer, Title} from '@angular/platform-browser';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import {particles} from './shared/variables';
+// import '../assets/js/particles.min.js';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   clientHeight: number;
-  parts = particles;
 
   @ViewChild('router')
   private routerOutlet: RouterOutlet;
@@ -38,6 +37,11 @@ export class AppComponent {
       data.push(... this.getTitle(state, state.firstChild(parent)));
     }
     return data;
+  }
+
+  ngOnInit() {
+    // particlesJS.load('particles', 'assets/particles.json', () => {});
+
   }
 
 }
