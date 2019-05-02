@@ -2,7 +2,6 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer, Title} from '@angular/platform-browser';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-// import '../assets/js/particles.min.js';
 
 @Component({
   selector: 'app-root',
@@ -40,8 +39,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // particlesJS.load('particles', 'assets/particles.json', () => {});
-
   }
 
 }

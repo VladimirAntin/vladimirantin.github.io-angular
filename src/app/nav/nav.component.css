@@ -2,7 +2,7 @@ button {
   outline: none;
 }
 button.active {
-  border-bottom: 3px solid red !important;
+  border-bottom: 3px solid white !important;
 }
 
 button.active:hover {

@@ -23,11 +23,20 @@ body {
     color: snow;
 }
 
+.bg-nav {
+    background: linear-gradient(brown,black);
+}
+
 .bg-light-50 {
     background-color: rgba(255, 255, 255, 0.30);
 }
 .bg-light-80 {
     background-color: rgba(255, 255, 255, 0.80);
+}
+
+.mat-card {
+    background: rgba(255, 255, 255, 0.86);
+    border-radius: 5px !important;
 }
 
 

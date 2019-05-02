@@ -5,7 +5,7 @@
       <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
     </div>
     <div class="col-5 center">
-      <button class="mx-4 btn btn-dark rounded-circle bg-black" *ngFor="let n of navItems"
+      <button class="mx-4 btn btn-dark rounded-circle bg-nav" *ngFor="let n of navItems"
           [routerLink]="[n.route]"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}"
@@ -31,7 +31,7 @@
       <h1>Vladimir Antin</h1>
       <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
     </div>
-    <mat-menu #menu="matMenu" class="bg-dark">
+    <mat-menu #menu="matMenu" class="bg-nav">
       <button mat-menu-item *ngFor="let n of navItems"
               [routerLink]="[n.route]"
               routerLinkActive="active"
