@@ -29,7 +29,11 @@ body {
 }
 
 .bg-nav {
-    background: linear-gradient(black, grey);
+    background: linear-gradient(black);
+    @media only screen and (max-width: $mobile-tablet) {
+        background: linear-gradient(black, grey);    
+    }
+
 }
 
 .bg-light-50 {
