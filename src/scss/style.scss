@@ -80,9 +80,7 @@ $mobile: 450px;
 }
 
 .mat-card-header:hover {
-  cursor: pointer;
   outline: none;
-  text-decoration: underline;
   //box-shadow: 0 1em 2em rgba(0,0,0,0.3);
 }
 .mat-card:hover::after {
@@ -91,9 +89,7 @@ $mobile: 450px;
 
 app-projects {
   .mat-card:hover {
-    cursor: pointer;
     outline: none;
-    text-decoration: underline;
     box-shadow: 0 1em 2em rgba(0,0,0,0.3);
   }
   .mat-card:hover::after {

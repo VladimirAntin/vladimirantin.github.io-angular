@@ -15,7 +15,6 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
-import {NgCircleProgressModule} from 'ng-circle-progress';
 import {NgTypedModule} from 'ng-typed';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
@@ -41,7 +40,6 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
-    NgCircleProgressModule.forRoot(ngxProgress),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
     NgTypedModule, MatListModule
@@ -49,7 +47,6 @@ const appRoutes: Routes = [
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
-    MatListModule,
-  NgCircleProgressModule, NgTypedModule, VarDirective]
+    MatListModule, NgTypedModule, VarDirective]
 })
 export class SharedModule { }

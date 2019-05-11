@@ -1,6 +1,6 @@
 <div class="container-fluid mt-5">
   <div class="row justify-content-center m-lg-5 min-h-60">
-    <div *ngFor="let s of skills; let i = index" class="col-6 col-lg-3 animated my-4" [ngClass]="{'zoomInLeft':quotient(i+1)==1, 'zoomInRight':quotient(i+1)==0}">
+    <div *ngFor="let s of skills; let i = index" class="col-12 col-lg-3 animated my-4" [ngClass]="{'zoomInLeft':quotient(i+1)==1, 'zoomInRight':quotient(i+1)==0}">
         <mat-card *ngIf="s!=null" class="m-2 p-3 h-100 text-center">
             <mat-card-header>
               <div mat-card-avatar>
@@ -10,11 +10,11 @@
                   </span>
                 </mat-icon>
               </div>
-              <mat-card-title><i>{{s.name}}</i></mat-card-title>
+              <mat-card-title class="row justify-content-around">
+                <i class="col">{{s.name}}</i>
+                <i class="col" [ngStyle]="{'color': s.color}">({{s.value}}%)</i>
+              </mat-card-title>
             </mat-card-header>
-            <circle-progress
-              [percent]="s.value"
-              [outerStrokeColor]="s.color" class="w-sm-6"></circle-progress>
             <mat-card-content class="mt-3">
               <mat-chip-list *ngIf="s.pattern">
                   <mat-chip *ngFor="let p of s.pattern">{{p}}</mat-chip>
