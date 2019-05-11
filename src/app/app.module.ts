@@ -11,14 +11,15 @@ import {ProjectsModule} from './projects/projects.module';
 import {SkillsModule} from './skills/skills.module';
 import { FooterModule } from './footer/footer.module';
 import { CvComponent } from './cv/cv.component';
-
+import { PdfViewerModule } from 'ng2-pdf-viewer'
+;
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, CvComponent
   ],
   imports: [
     BrowserModule, SharedModule, ProjectsModule, SkillsModule, FooterModule,
-    NavModule, ContactmeModule, HttpClientModule
+    NavModule, ContactmeModule, HttpClientModule, PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
