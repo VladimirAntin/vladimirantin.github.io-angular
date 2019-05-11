@@ -1,5 +1,5 @@
 
-iframe {
+iframe, object {
   min-height: 140vh;
   width: 100%;
 }

@@ -8,23 +8,28 @@
 
 @import "scss/style.scss";
 
-$bg-body: linear-gradient(to right, brown, orange,red,orange, brown);
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skill-icon {
+  font-family: 'icomoon' !important;
+}
+
+$bg-body: linear-gradient(black,lightblue, black);
 
 body {
     overflow-x: hidden !important;
     background-image: $bg-body;
 }
 
-.bg-body {
-    background-image: $bg-body;
-}
 .bg-blue {
     background-color: rgba(32, 21, 197, 0.37);
     color: snow;
 }
 
 .bg-nav {
-    background: linear-gradient(brown,black);
+    background: linear-gradient(black);
 }
 
 .bg-light-50 {
@@ -35,7 +40,7 @@ body {
 }
 
 .mat-card {
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 5px !important;
 }
 
@@ -50,4 +55,11 @@ body {
     right: 0;
     bottom: 0;
     opacity: 0.6;
+}
+
+.footer-tooltip {
+    font-style: italic;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+
 }

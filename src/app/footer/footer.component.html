@@ -1,7 +1,8 @@
-<div id="footer" class="bg-body text-light">
+<div id="footer" class="text-light">
   <div class="container">
       <div class="text-left">
-          <button mat-icon-button *ngFor="let item of actions" (click)="item.action()" [matTooltip]="item.name">
+          <button mat-icon-button *ngFor="let item of actions" (click)="item.action()" 
+          [matTooltip]="item.name" matTooltipClass="footer-tooltip">
               <mat-icon><span><i [class]="item.class"></i></span></mat-icon>
           </button>
       </div>
