@@ -24,26 +24,29 @@
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row class="row d-flex d-md-none">
-    <button mat-icon-button [matMenuTriggerFor]="menu" class="text-white">
+    <button mat-icon-button class="text-white" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <div class="col-2 text-white mt-2 mb-2">
       <h1>Vladimir Antin</h1>
       <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
     </div>
-    <mat-menu #menu="matMenu" class="bg-nav">
-      <button mat-menu-item *ngFor="let n of navItems"
-              [routerLink]="[n.route]"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}"
-              (mouseleave)="n.showHover=false"
-              (mouseenter)="n.showHover=true">
-        <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
-        <mat-icon *ngIf="n.customIcon" class="text-white">
-          <span [ngClass]="n.customIcon"></span>
-        </mat-icon>
-        <span class="text-white-50">{{n.hover}}</span>
-      </button>
-    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<mat-drawer-container class="drawer-container" [hasBackdrop]="true" [ngClass]="{'open': drawerOpened}">
+  <mat-drawer #drawer [mode]="'side'" [(opened)]=drawerOpened>
+    <mat-nav-list class="p-3">
+      <button mat-list-item *ngFor="let n of navItems" [routerLink]="[n.route]" (click)="drawer.toggle()"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-block btn-dark">
+        <span class="float-left text-white-50">{{n.hover}}</span>
+        <span class="float-right">
+          <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
+          <mat-icon *ngIf="n.customIcon" class="text-white">
+            <span [ngClass]="n.customIcon"></span>
+          </mat-icon>
+        </span>
+      </button>
+    </mat-nav-list>
+  </mat-drawer>
+</mat-drawer-container>

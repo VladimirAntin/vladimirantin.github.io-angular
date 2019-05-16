@@ -19,10 +19,10 @@ import {NgTypedModule} from 'ng-typed';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
 import {CvComponent} from '../cv/cv.component';
-import {ngxProgress} from './variables';
 import {EbookComponent} from '../projects/ebook/ebook.component';
 import {EbookCategoriesComponent} from '../projects/ebook/ebook-categories/ebook-categories.component';
 import {EbookBooksComponent} from '../projects/ebook/ebook-books/ebook-books.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
@@ -42,11 +42,11 @@ const appRoutes: Routes = [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
-    NgTypedModule, MatListModule
+    NgTypedModule, MatListModule, MatSidenavModule
   ],
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
-    MatListModule, NgTypedModule, VarDirective]
+    MatListModule, NgTypedModule, VarDirective, MatSidenavModule]
 })
 export class SharedModule { }

@@ -16,6 +16,8 @@ export class NavComponent implements OnInit {
     {customIcon: 'icon-email', hover: 'Contact', showHover: false, route: '/contact'},
   ];
 
+  drawerOpened = false;
+
   constructor(private _r: Router) { }
 
   ngOnInit() {
