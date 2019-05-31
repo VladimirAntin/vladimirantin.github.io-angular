@@ -17,8 +17,11 @@
               <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
           </mat-form-field>    
           <mat-form-field class="w-100">
-              <input matInput placeholder="Timeout" [(ngModel)]="obj.timeout" type="number">
-          </mat-form-field>    
+            <input matInput placeholder="Timeout" [(ngModel)]="obj.timeout" type="number">
+          </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Cursor Character" [(ngModel)]="obj.cursor" type="text">
+          </mat-form-field>
           <mat-form-field class="w-100">
               <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
           </mat-form-field>
