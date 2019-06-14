@@ -52,7 +52,6 @@ $mobile: 450px;
 }
 
 #home {
-  min-width: 90vw !important;
   min-height: 83vh !important;
   padding-top: 4em !important;
 
@@ -99,9 +98,14 @@ app-projects {
 }
 
 button, button:focus {
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
 }

@@ -1,6 +1,8 @@
-<div [ngStyle]="{'min-height': clientHeight + 'px'}">
-    <app-nav></app-nav>
-    <router-outlet></router-outlet>        
+<div [ngStyle]="{'min-height': clientHeight + 'px'}" class="row">
+    <app-nav class="col-lg-2 col-md-12"></app-nav>
+    <div class="col-lg-10 col-md-12">
+        <router-outlet></router-outlet>
+    </div>
 </div>
 <app-footer></app-footer>
 <!-- <div id="particles"></div> -->

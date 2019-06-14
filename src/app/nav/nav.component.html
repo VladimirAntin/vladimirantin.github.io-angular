@@ -1,29 +1,28 @@
 <mat-toolbar class="bg-transparent pb-3">
-  <mat-toolbar-row class="row d-none d-md-flex">
-    <div class="col-2 text-white mt-2 mb-2">
+  <mat-toolbar-row class="row d-none d-lg-flex">
+    <div class="col-12 text-white mt-2 mb-2">
       <h1>Vladimir Antin</h1>
       <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
-    </div>
-    <div class="col-5 center">
-      <button class="mx-4 btn btn-dark rounded-circle bg-nav" *ngFor="let n of navItems"
-          [routerLink]="[n.route]"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}"
-         (mouseleave)="n.showHover=false"
-         (mouseenter)="n.showHover=true">
-        <ng-container *ngIf="!n.showHover">
-          <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
-          <mat-icon *ngIf="n.customIcon" class="text-white">
-            <span [ngClass]="n.customIcon"></span>
-          </mat-icon>
-        </ng-container>
-        <ng-container *ngIf="n.showHover">
-          <span class="text-white">{{n.hover}}</span>
-        </ng-container>
-      </button>
+      <div class="mt-5">
+        <div *ngFor="let n of navItems" class="block">
+          <button class="btn bg-trnasparent my-3" [routerLink]="[n.route]"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
+            (mouseleave)="n.showHover=false" (mouseenter)="n.showHover=true">
+          <ng-container *ngIf="!n.showHover">
+            <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
+            <mat-icon *ngIf="n.customIcon" class="text-white">
+              <span [ngClass]="n.customIcon"></span>
+            </mat-icon>
+          </ng-container>
+          <ng-container *ngIf="n.showHover">
+            <span class="text-white">{{n.hover}}</span>
+          </ng-container>
+          </button>
+        </div>
+      </div>
     </div>
   </mat-toolbar-row>
-  <mat-toolbar-row class="row d-flex d-md-none">
+  <mat-toolbar-row class="row d-flex d-lg-none">
     <button mat-icon-button class="text-white" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>

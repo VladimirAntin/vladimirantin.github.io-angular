@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
           _title.setTitle(`Vladimir Antin | ${title}`);
         }
       });
-    this.clientHeight = (window.innerHeight / 100) * 85;
+    this.clientHeight = (window.innerHeight / 100) * 90;
     // iconRegistry.addSvgIcon('python', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/tehnology/python.svg'));
   }
 

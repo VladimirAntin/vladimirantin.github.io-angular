@@ -1,28 +1,64 @@
-<!-- <app-projects></app-projects>
-<app-skills *ngIf="show.skills"></app-skills>
-<app-contactme *ngIf="show.contact"></app-contactme> -->
-<div id="home" *ngVar="{work: false} as complete">
-    <div class="container pb-5">
-        <div class="animated zoomInUp w-100">
-            <p class="display-2 bg-blue text-center radius-2">
-              <span [ng-typed]="{speed: 50, timeout: 1000, hideCursorOnComplete: true}"  (complete)="complete.work=true">
-                Full Stack Website Developer
-              </span>
+<div id="home">
+  <div class="container-fluid pb-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="animated zoomInUp text-muted">
+          <p>
+            <i>&lt;information&gt;</i>
+          </p>
+          <!-- title -->
+          <div class="ml-5">
+            <p><i>&lt;position&gt;</i></p>
+            <p>
+              <span class="ml-5 fa-2x text-white" 
+                [ng-typed]="text('Full Stack developer')"
+                (complete)="complete.title=true"></span>
             </p>
+            <p><i>&lt;/postion&gt;</i></p>
+          </div>
+          <!-- /title -->
+          <!-- location -->
+          <p class="ml-5"><i>&lt;location&gt;</i></p>
+          <div class="ml-5">
+            <!-- city -->
+            <p class="ml-5">
+              <i>&lt;city&gt;</i>
+              <span *ngIf="complete.title">
+                <span class='mx-2 fa-2x text-white'
+                  [ng-typed]="text('Novi Sad')"
+                  (complete)="complete.city=true"></span>
+              </span>
+              <i>&lt;/city&gt;</i>
+            </p>
+            <!-- /city -->
+            <!-- country -->
+            <p class="ml-5">
+              <i>&lt;country&gt;</i>
+              <span *ngIf="complete.city">
+                <span class='mx-2 fa-2x  text-white'
+                  [ng-typed]="text('Serbia')"
+                  (complete)="complete.country=true"></span>
+              </span>
+              <i>&lt;/country&gt;</i>
+            </p>
+            <!-- /country -->
+          </div>
+          <p class="ml-5"><i>&lt;/location&gt;</i></p>
+          <!-- /location -->
+          <p><i>&lt;/information&gt;</i></p>
         </div>
-        <div class="row" *ngIf="complete.work">
-            <div class="animated zoomInLeft col-lg-6 col-md-12">
-                <p class="display-3 bg-blue text-center radius-2">
-                  Novi Sad
-                </p>
-            </div>
-            <div class="animated zoomInRight col-lg-6 col-md-12">
-                <p class="display-3 bg-blue text-center radius-2">
-                  Serbia
-                </p>
-            </div>                                    
-        <app-contactme [styleDIV]="{width:'80%'}" *ngIf="complete.work"></app-contactme>
       </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="m-4 p-4">
+          <h3 class="text-white font-italic">
+            "JavaScript is as related to Java as Carnival is to Car."
+          </h3>
+          <h4 class="text-muted"> - Kyle Simpson</h4>
+        </div>
+      </div>
+      <!-- <div class="col-12">
+          <app-contactme [styleDIV]="{width:'80%'}"></app-contactme>
+      </div> -->
     </div>
+  </div>
 </div>
-<div id="particles"></div>
