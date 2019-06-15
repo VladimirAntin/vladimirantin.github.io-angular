@@ -11,3 +11,15 @@ export const ngxProgress = {
   animation: true,
   animationDuration: 200,
 };
+
+
+export const ngTyped = {
+  speed: 80,
+  timeout: 500,
+  hideCursorOnComplete: true,
+  cursor: '_'
+};
+
+export function openExternalLink(url: string) {
+  window.open(url, '_blank');
+}

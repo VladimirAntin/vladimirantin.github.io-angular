@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ng-typed',
-  templateUrl: './ng-typed.component.html',
-  styleUrls: ['./ng-typed.component.css']
+  templateUrl: './ng-typed.component.html'
 })
 export class NgTypedComponent implements OnInit {
 

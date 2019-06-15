@@ -6,8 +6,7 @@ import {MessageInterface} from './message.model';
 
 @Component({
   selector: 'app-contactme',
-  templateUrl: './contactme.component.html',
-  styleUrls: ['./contactme.component.css']
+  templateUrl: './contactme.component.html'
 })
 export class ContactmeComponent implements OnInit {
 

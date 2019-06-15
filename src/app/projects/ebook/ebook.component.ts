@@ -7,8 +7,7 @@ import {EbookSearchService} from './ebook-search.service';
 
 @Component({
   selector: 'app-ebook',
-  templateUrl: './ebook.component.html',
-  styleUrls: ['./ebook.component.css']
+  templateUrl: './ebook.component.html'
 })
 export class EbookComponent implements OnInit {
 

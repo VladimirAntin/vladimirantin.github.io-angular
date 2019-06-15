@@ -1,5 +1,5 @@
 
-$mobile-tablet: 800px;
+$mobile-tablet: 820px;
 $mobile: 450px;
 @import "ebook";
 
@@ -54,8 +54,10 @@ $mobile: 450px;
 #home {
   min-height: 83vh !important;
   padding-top: 4em !important;
+  margin-top: 2em !important;
 
   @media only screen and (max-width: $mobile-tablet) {
+    font-size: 0.6rem;
     p {
       font-size: 1.2em !important;
     }
@@ -108,4 +110,9 @@ button, button:focus {
 
 .cursor-pointer {
   cursor: pointer !important;
+}
+
+
+.hover-link:hover {
+  border-bottom: 1px solid white !important;
 }

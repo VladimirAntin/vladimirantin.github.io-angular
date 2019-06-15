@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  templateUrl: './skills.component.html'
 })
 export class SkillsComponent implements OnInit {
 
@@ -16,7 +15,7 @@ export class SkillsComponent implements OnInit {
     {value: 70, name: 'Version Control', icon: 'icon-git', pattern: ['Git']},
     {value: 60, name: 'HTML', icon: 'icon-html', pattern: ['HTML5'], spans: this.generateArray(5)},
     {value: 46, name: 'CSS', icon: 'icon-css', pattern: ['CSS3', 'Sass', 'Less', 'Bootstrap', 'Material design'], spans: this.generateArray(9)},
-    { value: 15, name: '', icon: 'icon-php', pattern: ['Laravel'], spans: this.generateArray(8)},
+    {value: 15, name: '', icon: 'icon-php', pattern: ['Laravel'], spans: this.generateArray(8)},
     {value: 28, name: 'Python', icon: 'icon-python', pattern: ['Flask'], spans: this.generateArray(5)},
   ];
   constructor() { }

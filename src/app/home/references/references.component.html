@@ -1,0 +1,13 @@
+<div class="text-muted my-3">
+  <p class="mb-2"><i>&lt;links&gt;</i></p>
+  <!-- title -->
+  <div class="ml-4" *ngFor="let l of links; let i=index">
+    <span><i>&lt;link&gt;</i></span>
+    <a class="hover-link cursor-pointer text-white" (click)="l.action()" *ngIf="start && (i==0 || links[i-1].complete)">
+      <i class="mx-2 fa-2x"
+            [ng-typed]="text(l.name)" (complete)="l.complete=true"></i>
+    </a>
+    <span><i>&lt;/link&gt;</i></span>
+  </div>
+  <p class="mt-2"><i>&lt;/links&gt;</i></p>
+</div>

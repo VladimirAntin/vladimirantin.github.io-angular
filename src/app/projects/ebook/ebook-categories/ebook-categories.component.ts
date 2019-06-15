@@ -4,8 +4,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-ebook-categories',
-  templateUrl: './ebook-categories.component.html',
-  styleUrls: ['./ebook-categories.component.css']
+  templateUrl: './ebook-categories.component.html'
 })
 export class EbookCategoriesComponent implements OnInit {
 

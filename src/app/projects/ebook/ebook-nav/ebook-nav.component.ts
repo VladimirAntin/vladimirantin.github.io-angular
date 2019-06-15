@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-ebook-nav',
   templateUrl: './ebook-nav.component.html',
-  styleUrls: ['./ebook-nav.component.css']
+  styleUrls: ['./ebook-nav.component.scss']
 })
 export class EbookNavComponent implements OnInit {
 

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ebook-nav-toolbar',
   templateUrl: './ebook-nav-toolbar.component.html',
-  styleUrls: ['./ebook-nav-toolbar.component.css']
+  styleUrls: ['./ebook-nav-toolbar.component.scss']
 })
 export class EbookNavToolbarComponent implements OnInit {
 

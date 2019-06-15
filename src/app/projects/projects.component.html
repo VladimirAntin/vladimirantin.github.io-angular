@@ -24,13 +24,8 @@
   <div class="row bg-dark m-lg-5 m-2 p-5 radius-2 text-white animated fadeInUpBig">
     <p>Other projects:</p>
     <mat-list>
-      <mat-list-item>
-        <span class="text-white mr-2">1. View in my CV</span>
-        <a routerLink="/cv"><i class="fas fa-link"></i></a>
-      </mat-list-item>
-      <mat-list-item>
-        <span class="text-white mr-2">2. Contact me</span>
-        <a routerLink="/contact"><i class="fas fa-link"></i></a>
+      <mat-list-item *ngFor="let l of links">
+        <a [routerLink]="l.route" class="cursor-pointer text-white">{{l.name}}</a>
       </mat-list-item>
     </mat-list>
   </div>

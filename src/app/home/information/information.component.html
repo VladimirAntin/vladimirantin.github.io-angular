@@ -1,0 +1,39 @@
+<div class="text-muted">
+  <p><i>&lt;information&gt;</i></p>
+  <!-- title -->
+  <div class="ml-4">
+    <p><i>&lt;position&gt;</i></p>
+    <p class="text-white">
+      <span class="ml-5 fa-2x"
+            [ng-typed]="text('Full Stack developer')"
+            (complete)="complete.title=true"></span>
+    </p>
+    <p><i>&lt;/postion&gt;</i></p>
+  </div>
+  <!-- location -->
+  <p class="ml-4"><i>&lt;location&gt;</i></p>
+  <div class="ml-4">
+    <!-- city -->
+    <p class="ml-4">
+      <i>&lt;city&gt;</i>
+      <span *ngIf="complete.title" class="text-white">
+        <span class="mx-2 fa-2x"
+              [ng-typed]="text('Novi Sad')"
+              (complete)="complete.city=true"></span>
+      </span>
+      <i>&lt;/city&gt;</i>
+    </p>
+    <!-- country -->
+    <p class="ml-4">
+      <i>&lt;country&gt;</i>
+      <span *ngIf="complete.city" class="text-white">
+        <span class="mx-2 fa-2x"
+              [ng-typed]="text('Serbia')"
+              (complete)="complete.country=true; allComplete()"></span>
+      </span>
+      <i>&lt;/country&gt;</i>
+    </p>
+  </div>
+  <p class="ml-4"><i>&lt;/location&gt;</i></p>
+  <p><i>&lt;/information&gt;</i></p>
+</div>
