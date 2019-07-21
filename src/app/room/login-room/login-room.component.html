@@ -1,0 +1,20 @@
+<h1 mat-dialog-title class="text-center">Login</h1>
+<div mat-dialog-content (keypress)="submit($event)">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <mat-form-field class="w-100">
+        <input matInput [(ngModel)]="data.user.username" type="text" placeholder="Username">
+      </mat-form-field>
+    </div>
+    <div class="col-8">
+      <mat-form-field class="w-100">
+        <input matInput [(ngModel)]="data.user.password" type="password" placeholder="Password">
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions class="row justify-content-center">
+  <div class="col-8">
+    <button mat-mini-fab [mat-dialog-close]="data.user" class="bg-dark" cdkFocusInitial><i class="fa fa-paper-plane"></i></button>
+  </div>
+</div>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   MatButtonModule, MatIconModule, MatInputModule, MatExpansionModule,
   MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule,
-  MatBadgeModule, MatTooltipModule, MatCheckboxModule, MatListModule
+  MatBadgeModule, MatTooltipModule, MatCheckboxModule, MatListModule, MatDialogModule
 } from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
@@ -23,6 +23,8 @@ import {EbookComponent} from '../projects/ebook/ebook.component';
 import {EbookCategoriesComponent} from '../projects/ebook/ebook-categories/ebook-categories.component';
 import {EbookBooksComponent} from '../projects/ebook/ebook-books/ebook-books.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {LiveChatComponent} from '../room/live-chat/live-chat.component';
+import {RoomComponent} from '../room/room.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
@@ -34,6 +36,8 @@ const appRoutes: Routes = [
   { path: 'projects/ebook/books', component: EbookBooksComponent, data: {title: 'Ebook (Books)'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
   { path: 'cv', component: CvComponent, data: {title: 'CV'}},
+  { path: 'live-chat', component: RoomComponent, data: {title: 'Live-chat'}},
+  { path: 'live-chat/:name', component: LiveChatComponent, data: {title: 'Live-chat'}},
   // {path: '**', component: HomeComponent, data: {title: 'Portfolio'}}
 ];
 
@@ -42,11 +46,11 @@ const appRoutes: Routes = [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
-    NgTypedModule, MatListModule, MatSidenavModule
+    NgTypedModule, MatListModule, MatSidenavModule, MatDialogModule
   ],
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
-    MatListModule, NgTypedModule, VarDirective, MatSidenavModule]
+    MatListModule, NgTypedModule, VarDirective, MatSidenavModule, MatDialogModule]
 })
 export class SharedModule { }

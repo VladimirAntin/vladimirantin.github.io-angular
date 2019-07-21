@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
     {icon: 'cloud', hover: 'Projects', showHover: false, route: '/projects'},
     {customIcon: 'icon-cv', hover: 'CV', showHover: false, route: '/cv'},
     {customIcon: 'icon-email', hover: 'Contact', showHover: false, route: '/contact'},
+    {icon: 'chat', hover: 'Live chat', showHover: false, route: '/live-chat', classes: 'animated infinite pulse', demo: true},
   ];
 
   drawerOpened = false;

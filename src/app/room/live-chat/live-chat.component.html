@@ -1,0 +1,47 @@
+<div class="m-5 p-3 radius-2 container bg-white vh-75">
+  <div class="row justify-content-around">
+    <div class="col-4">
+      <h3>Messages</h3>
+    </div>
+    <div class="col-2">
+      <button class="btn btn-success rounded-circle" type="button"
+              (click)="room.active=!room.active" *ngIf="room.active" matTooltip="Change username">
+        <i class="fa fa-user"></i>
+      </button>
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="!room.active">
+    <div class="col-8">
+      <form ngForm autocomplete="off" class="row">
+        <mat-form-field class="col-10">
+          <input matInput placeholder="Your name" maxlength="30" name="text" [(ngModel)]="message.username">
+        </mat-form-field>
+        <button class="col btn btn-link" type="submit" (click)="room.active=!room.active"><i class="fa fa-paper-plane"></i></button>
+      </form>
+
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="room.active">
+    <div class="col-12" id="messages" #messagesTemplate [scrollTop]="changeScroller(messagesTemplate.scrollHeight)">
+        <div *ngFor="let m of messages" class="row my-1">
+          <div class="col-12" *ngIf="message.id && (message.id!==m.id)">
+            <img src="/assets/img/user.png" height="16" class="mx-3">
+            <span class="text-black-50">{{m.username}}</span>
+          </div>
+          <div class="radius-2 col-4"  matTooltip="{{m.createdAt | date: 'dd.MM.yyyy. HH:mm'}}"
+               [ngClass]="{'badge-primary':message.id && (message.id!==m.id),
+                'badge-danger offset-8':message.id && (message.id===m.id)}">
+              <span class="float-right font-08">{{m.text}}</span>
+          </div>
+        </div>
+    </div>
+    <div class="col-8">
+      <form ngForm autocomplete="off" class="row" (keypress)="clickEnter($event)">
+        <mat-form-field class="col-10">
+          <textarea matInput placeholder="Message" name="text" [(ngModel)]="message.text" style="resize: none"></textarea>
+        </mat-form-field>
+        <button class="col btn btn-link" type="submit" (click)="send()"><i class="fa fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</div>

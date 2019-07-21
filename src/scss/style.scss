@@ -11,6 +11,13 @@ $mobile: 450px;
   height: 90% !important;
 }
 
+.vh-75 {
+  height: 75vh !important;
+}
+.mvh-75 {
+  min-height: 75vh !important;
+}
+
 .center {
   margin: auto;
   width: 60%;
@@ -116,3 +123,8 @@ button, button:focus {
 .hover-link:hover {
   border-bottom: 1px solid white !important;
 }
+
+.font-08 {
+  font-size: 0.8em !important;
+}
+

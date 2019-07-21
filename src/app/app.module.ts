@@ -12,13 +12,16 @@ import { FooterModule } from './footer/footer.module';
 import { CvComponent } from './cv/cv.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import {HomeModule} from './home/home.module';
+import {RoomModule} from './room/room.module';
+
+
 @NgModule({
   declarations: [
     AppComponent, CvComponent
   ],
   imports: [
     BrowserModule, SharedModule, HomeModule, ProjectsModule, SkillsModule, FooterModule,
-    NavModule, ContactmeModule, HttpClientModule, PdfViewerModule
+    NavModule, ContactmeModule, HttpClientModule, PdfViewerModule, RoomModule
   ],
   providers: [],
   bootstrap: [AppComponent],
