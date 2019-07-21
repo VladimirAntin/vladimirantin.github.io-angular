@@ -14,8 +14,10 @@ export class LiveChatComponent implements OnInit {
   private groupName = '';
 
   message: Message = {
-    id: Math.random(),
-    username: '',
+    user: {
+      id: Math.random(),
+      username: ''
+    },
     isConnected: true,
     text: ''
   };
@@ -30,13 +32,14 @@ export class LiveChatComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('user')) {
-      this.message = JSON.parse(localStorage.getItem('user'));
+      this.message.user.username = JSON.parse(localStorage.getItem('user')).username;
+      this.message.user.id = JSON.parse(localStorage.getItem('user')).id;
     }
     this.groupName = this._act.snapshot.paramMap.get('name').trim();
     if (this.groupName === '') {
       this._router.navigateByUrl('/live-chat');
     }
-    setInterval(() => this.getMessages(), 1100);
+    setInterval(() => this.getMessages(), 1250);
   }
 
   private getMessages() {
@@ -50,9 +53,16 @@ export class LiveChatComponent implements OnInit {
   }
 
   send() {
-    this.message.createdAt = new Date();
-    this._ms.sendMessage(Object.assign({}, this.message), this.groupName);
-    this.message.text = '';
+    if (this.message.text.trim().length > 0) {
+      this.message.createdAt = new Date();
+      this._ms.sendMessage(Object.assign({}, this.message), this.groupName);
+      this.message.text = '';
+    }
+  }
+
+  register() {
+    this.room.active = true;
+    localStorage.setItem('user', JSON.stringify(this.message.user));
   }
 
   clickEnter(e) {

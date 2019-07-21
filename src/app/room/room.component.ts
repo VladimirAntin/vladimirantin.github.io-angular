@@ -26,7 +26,7 @@ export class RoomComponent implements OnInit {
   login() {
     const dialogRef = this.dialog.open(LoginRoomComponent, {
       width: '40vw',
-      data: {user: Object.assign({}, this.user)}
+      data: {user: {username: '', password: ''}}
     });
 
     dialogRef.afterClosed().subscribe(result => {
