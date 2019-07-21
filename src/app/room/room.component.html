@@ -1,29 +1,29 @@
-<div class="container m-5 p-3 radius-2 bg-white vh-75">
+<div class="container my-5 mx-3 p-3 radius-2 bg-white vh-80">
 
   <div class="row justify-content-around p-3">
-    <div class="col-4">
+    <div class="col-8">
       <mat-form-field class="w-100">
         <input matInput [(ngModel)]="groupName" type="text" placeholder="Group name" autocomplete="off">
       </mat-form-field>
       <div class="row justify-content-around">
         <button mat-mini-fab type="button" class="bg-dark" (click)="generateName()"><i class="fa fa-random"></i></button>
-        <button mat-mini-fab type="button" class="bg-primary" [routerLink]="['/live-chat', groupName]" [disabled]="groupName.length===0"><i class="fa fa-plus-circle"></i></button>
+        <button mat-mini-fab type="button" class="bg-primary" [routerLink]="['/live-chat', groupName.toLowerCase()]" [disabled]="groupName.length===0"><i class="fa fa-plus-circle"></i></button>
       </div>
     </div>
-    <div class="col-1">
+    <div class="col">
       <button mat-mini-fab type="button" class="bg-dark" (click)="login()"><i class="fa fa-sign-in-alt"></i></button>
     </div>
   </div>
 
-  <ul class="list-group">
+  <ul class="list-group" *ngIf="isAdmin()">
     <li class="list-group-item" *ngFor="let g of groupNames">
       <div class="row">
         <div class="col-10">
           {{g}}
         </div>
-        <div class="col-2 row justify-content-around">
+        <div class="col row justify-content-around">
           <button mat-mini-fab type="button" class="bg-secondary" [routerLink]="['/live-chat', g]">Join</button>
-          <button mat-mini-fab type="button" class="bg-danger" *ngIf="isAdmin()" (click)="deleteOne(g)"><i class="fa fa-trash"></i></button>
+          <button mat-mini-fab type="button" class="bg-danger" (click)="deleteOne(g)"><i class="fa fa-trash"></i></button>
         </div>
       </div>
     </li>

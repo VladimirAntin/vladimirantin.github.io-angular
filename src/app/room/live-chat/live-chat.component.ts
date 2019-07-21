@@ -36,7 +36,7 @@ export class LiveChatComponent implements OnInit {
     if (this.groupName === '') {
       this._router.navigateByUrl('/live-chat');
     }
-    setInterval(() => this.getMessages(), 1200);
+    setInterval(() => this.getMessages(), 1100);
   }
 
   private getMessages() {
