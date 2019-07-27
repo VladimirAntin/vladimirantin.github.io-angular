@@ -1,54 +1,62 @@
 <mat-toolbar class="bg-transparent pb-3">
-  <mat-toolbar-row class="row d-none d-lg-flex">
-    <div class="col-12 text-white mt-2 mb-2">
-      <h1>Vladimir Antin</h1>
-      <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
-      <div class="mt-5">
-        <div *ngFor="let n of navItems" class="block {{n.classes? n.classes: ''}}">
-          <button class="btn bg-trnasparent my-3" [routerLink]="[n.route]"
-            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
-            (mouseleave)="n.showHover=false" (mouseenter)="n.showHover=true">
-            <ng-container *ngIf="!n.showHover">
-              <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
-              <mat-icon *ngIf="n.customIcon" class="text-white">
-                <span [ngClass]="n.customIcon"></span>
-              </mat-icon>
-            </ng-container>
-            <ng-container *ngIf="n.showHover">
-              <span class="text-white">{{n.hover}}</span>
-            </ng-container>
-            <p *ngIf="n.demo" class="badge badge-dark">DEMO</p>
-          </button>
-        </div>
-      </div>
-    </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row class="row d-flex d-lg-none">
-    <button mat-icon-button class="text-white" (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <div class="col-2 text-white mt-2 mb-2">
-      <h1>Vladimir Antin</h1>
-      <span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
-    </div>
-  </mat-toolbar-row>
+	<mat-toolbar-row class="row d-none d-lg-flex">
+		<div class="col-12 text-white mt-2 mb-2">
+			<div class="row">
+				<div class="col-3">
+					<img src="assets/va.png" height="50">
+				</div>
+				<div class="col-9">
+					<h1>Vladimir Antin</h1>
+					<span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
+				</div>
+			</div>
+			<div class="mt-5">
+				<div *ngFor="let n of navItems" class="block {{n.classes? n.classes: ''}}">
+					<button class="btn bg-trnasparent my-3" [routerLink]="[n.route]" routerLinkActive="active"
+						[routerLinkActiveOptions]="{exact: true}" (mouseleave)="n.showHover=false"
+						(mouseenter)="n.showHover=true">
+						<ng-container *ngIf="!n.showHover">
+							<mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
+							<mat-icon *ngIf="n.customIcon" class="text-white">
+								<span [ngClass]="n.customIcon"></span>
+							</mat-icon>
+						</ng-container>
+						<ng-container *ngIf="n.showHover">
+							<span class="text-white">{{n.hover}}</span>
+						</ng-container>
+						<p *ngIf="n.demo" class="badge badge-dark">DEMO</p>
+					</button>
+				</div>
+			</div>
+		</div>
+	</mat-toolbar-row>
+	<mat-toolbar-row class="row d-flex d-lg-none">
+		<button mat-icon-button class="text-white" (click)="drawer.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<div class="col-2 text-white mt-2 mb-2">
+			<h1>Vladimir Antin</h1>
+			<span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
+		</div>
+	</mat-toolbar-row>
 </mat-toolbar>
 
 <mat-drawer-container class="drawer-container" [hasBackdrop]="true" [ngClass]="{'open': drawerOpened}">
-  <mat-drawer #drawer [mode]="'side'" [(opened)]=drawerOpened>
-    <mat-nav-list class="p-3">
-      <button mat-list-item [routerLink]="[n.route]" (click)="drawer.toggle()" *ngFor="let n of navItems"
-              routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-block btn-dark {{n.classes? n.classes: ''}}">
-        <span class="float-left text-white-50">{{n.hover}}</span>
-        <span class="float-right">
-        <mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
-        <mat-icon *ngIf="n.customIcon" class="text-white">
-          <span [ngClass]="n.customIcon"></span>
-        </mat-icon>
-      </span>
-        <br>
-        <span *ngIf="n.demo" class="badge badge-dark">DEMO</span>
-      </button>
-    </mat-nav-list>
-  </mat-drawer>
+	<mat-drawer #drawer [mode]="'side'" [(opened)]=drawerOpened>
+		<mat-nav-list class="p-3">
+			<button mat-list-item [routerLink]="[n.route]" (click)="drawer.toggle()" *ngFor="let n of navItems"
+				routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+				class="btn btn-block btn-dark {{n.classes? n.classes: ''}}">
+				<span class="float-left text-white-50">{{n.hover}}</span>
+				<span class="float-right">
+					<mat-icon *ngIf="n.icon" class="text-white">{{n.icon}}</mat-icon>
+					<mat-icon *ngIf="n.customIcon" class="text-white">
+						<span [ngClass]="n.customIcon"></span>
+					</mat-icon>
+				</span>
+				<br>
+				<span *ngIf="n.demo" class="badge badge-dark">DEMO</span>
+			</button>
+		</mat-nav-list>
+	</mat-drawer>
 </mat-drawer-container>
