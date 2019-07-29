@@ -3,7 +3,7 @@
     <div class="col-lg-3 col-4-md mt-2">
       <img class="img-thumbnail radius-2 shadow-lg" src="assets/img/profile.jpg">
     </div>
-    <div class="col-lg-9 bg-light radius-2 opacity-5 mt-2">
+    <div class="col-lg-9 bg-light radius-2 opacity-9 mt-2">
         <div class="m-3" *ngIf="contactForm">
             <p class="text-center animated flipInX"><b>Contact Me</b></p>
             <p class="text-black-50 animated zoomInDown">
@@ -22,7 +22,7 @@
         </div>
     </div>
   </div>
-  <div class="row justify-content-center m-lg-5 bg-light radius-2 opacity-5" *ngIf="contactForm">
+  <div class="row justify-content-center m-lg-5 bg-light radius-2 opacity-9" *ngIf="contactForm">
     <form class="col m-4 animated zoomInUp" autocomplete="off" name="sendForm" role="form"
           novalidate #sendForm="ngForm" (submit)="send()">
       <div class="row">
