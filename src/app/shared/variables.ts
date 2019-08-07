@@ -14,7 +14,7 @@ export const ngxProgress = {
 
 
 export const ngTyped = {
-  speed: 40,
+  speed: 30,
   timeout: 500,
   hideCursorOnComplete: true,
   cursor: '_'

@@ -1,4 +1,4 @@
-<div class="container animated zoomIn mt-5" *ngVar="{text: false} as complete">
+<div class="container animated zoomIn mt-5">
   <div class="row bg-dark m-lg-5 m-2 p-5 radius-2" *ngFor="let p of projects">
       <mat-card class="col-lg-4 col-md-12 text-center mat-elevation-z4 bg-light-50 rounded cursor-pointer"
                 [routerLink]="[p.link]">
@@ -8,8 +8,9 @@
           <img mat-card-image [src]="p.img" [ngStyle]="p.style" class="mx-auto img-fluid">
       </mat-card>
     <div class="col text-light mt-2">
-      <span ng-typed [ng-typed]="{speed: 20, timeout: 1000, hideCursorOnComplete: true, text: p.text}" (complete)="complete.text=true"></span>
-      <div class="row mt-5" *ngIf="complete.text">
+      <span *ngIf="p.ngTyped" ng-typed [ng-typed]="{speed: 20, timeout: 1000, hideCursorOnComplete: true, text: p.text}"></span>
+      <span *ngIf="!p.ngTyped">{{p.text}}</span>
+      <div class="row mt-5">
         <div class="col-lg-6 col-md-12"></div>
         <div class="col-lg col-md-12 animated fadeInRight">
           <ng-container *ngFor="let item of p.external">
