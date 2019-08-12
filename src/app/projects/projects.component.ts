@@ -24,6 +24,9 @@ export class ProjectsComponent implements OnInit {
       name: 'eBook',
       link: './ebook',
       ngTyped: false,
+      external: [
+        { onclick: () => this.open('https://gitlab.com/antin502/ebook'), name: 'GitLab', color: 'warning', icon: 'gitlab' }
+      ],
       text: 'eBook is web application. Application created with Spring Boot framework, Angular framework and use Lucene lib for searching index of books. '
     },
   ];
