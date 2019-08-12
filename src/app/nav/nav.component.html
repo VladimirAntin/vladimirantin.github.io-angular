@@ -12,7 +12,7 @@
 			</div>
 			<div class="mt-5">
 				<div *ngFor="let n of navItems" class="block {{n.classes? n.classes: ''}}">
-					<button class="btn bg-transparent my-3 h-2-5em" [routerLink]="[n.route]" routerLinkActive="active"
+					<button class="btn bg-transparent my-3 h-3em" [routerLink]="[n.route]" routerLinkActive="active"
 						[routerLinkActiveOptions]="{exact: true}" (mouseleave)="n.showHover=false"
 						(mouseenter)="n.showHover=true">
 						<ng-container *ngIf="!n.showHover">
