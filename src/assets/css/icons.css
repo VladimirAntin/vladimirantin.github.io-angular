@@ -26,17 +26,67 @@
 
 .icon-db .path1:before {
   content: "\e923";
-  color: rgb(131, 41, 42);
+  color: rgb(84, 94, 115);
 }
 .icon-db .path2:before {
   content: "\e924";
   margin-left: -1em;
-  color: rgb(179, 178, 178);
+  color: rgb(56, 69, 79);
 }
 .icon-db .path3:before {
   content: "\e925";
   margin-left: -1em;
-  color: rgb(4, 7, 7);
+  color: rgb(56, 69, 79);
+}
+.icon-db .path4:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(56, 69, 79);
+}
+.icon-db .path5:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(85, 96, 128);
+}
+.icon-db .path6:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(85, 96, 128);
+}
+.icon-db .path7:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(85, 96, 128);
+}
+.icon-db .path8:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(145, 186, 225);
+}
+.icon-db .path9:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(134, 151, 203);
+}
+.icon-db .path10:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(134, 151, 203);
+}
+.icon-db .path11:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(134, 151, 203);
+}
+.icon-db .path12:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(72, 160, 220);
+}
+.icon-db .path13:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(177, 211, 239);
 }
 .icon-php .path1:before {
   content: "\e900";
