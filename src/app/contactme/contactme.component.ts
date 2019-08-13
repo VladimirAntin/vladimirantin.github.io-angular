@@ -16,7 +16,7 @@ export class ContactmeComponent implements OnInit {
     text: '',
   };
   @Input() styleDIV = {};
-  @ViewChild('sendForm') sendForm: NgForm;
+  @ViewChild('sendForm', { static: false }) sendForm: NgForm;
   contacts = [
     {icon: 'fa fa-phone-square', content: '+381 61 627 91 51'},
     {icon: 'fa fa-envelope-square', content: 'antin502@gmail.com'},

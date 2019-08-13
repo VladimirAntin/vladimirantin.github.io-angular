@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   clientHeight: number;
 
-  @ViewChild('router')
+  @ViewChild('router', {static: false})
   private routerOutlet: RouterOutlet;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private _title: Title,

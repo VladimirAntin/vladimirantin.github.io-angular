@@ -12,8 +12,8 @@ export class EbookBooksComponent implements OnInit {
   displayedColumns: string[] = ['title', 'author', 'categories', 'year', 'options'];
   dataSource: MatTableDataSource<Ebook>;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
