@@ -9,19 +9,18 @@ import {SharedModule} from './shared/shared.module';
 import {ProjectsModule} from './projects/projects.module';
 import {SkillsModule} from './skills/skills.module';
 import { FooterModule } from './footer/footer.module';
-import { CvComponent } from './cv/cv.component';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import {HomeModule} from './home/home.module';
 import {RoomModule} from './room/room.module';
+import { CvModule } from './cv/cv.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent, CvComponent
+    AppComponent
   ],
   imports: [
     BrowserModule, SharedModule, HomeModule, ProjectsModule, SkillsModule, FooterModule,
-    NavModule, ContactmeModule, HttpClientModule, PdfViewerModule, RoomModule
+    NavModule, ContactmeModule, HttpClientModule, RoomModule, CvModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -25,7 +25,7 @@
     <div class="col-12 font-08" id="messages" #messagesTemplate [scrollTop]="changeScroller(messagesTemplate.scrollHeight)">
         <div *ngFor="let m of messages; let i=index" class="row my-1">
           <div class="col-12" *ngIf="message.user.id && (message.user.id!==m.user.id)">
-            <img src="/assets/img/user.png" height="16" class="mx-3">
+            <img defaultImage="assets/img/load.gif" lazyLoad="/assets/img/user.png" height="16" class="mx-3">
             <span class="text-black-50">{{m.user.username}}</span>
           </div>
           <div class="radius-2 col-6"  matTooltip="{{m.createdAt | date: 'dd.MM.yyyy. HH:mm'}}"

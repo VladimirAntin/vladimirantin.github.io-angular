@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   MatButtonModule, MatIconModule, MatInputModule, MatExpansionModule,
   MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule,
-  MatBadgeModule, MatTooltipModule, MatCheckboxModule, MatListModule, MatDialogModule
+  MatBadgeModule, MatTooltipModule, MatCheckboxModule, MatListModule, MatDialogModule, MatToolbarModule
 } from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
@@ -25,6 +25,7 @@ import {EbookBooksComponent} from '../projects/ebook/ebook-books/ebook-books.com
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {LiveChatComponent} from '../room/live-chat/live-chat.component';
 import {RoomComponent} from '../room/room.component';
+import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image'; // <-- include intersectionObserverPreset
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
@@ -45,12 +46,14 @@ const appRoutes: Routes = [
   imports: [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
-    MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule,
-    NgTypedModule, MatListModule, MatSidenavModule, MatDialogModule
+    MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatToolbarModule,
+    NgTypedModule, MatListModule, MatSidenavModule, MatDialogModule, LazyLoadImageModule.forRoot({
+      preset: intersectionObserverPreset // <-- tell LazyLoadImage that you want to use IntersectionObserver
+    }),
   ],
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
-    MatTooltipModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
-    MatListModule, NgTypedModule, VarDirective, MatSidenavModule, MatDialogModule]
+    MatTooltipModule, MatToolbarModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
+    MatListModule, NgTypedModule, VarDirective, MatSidenavModule, MatDialogModule, LazyLoadImageModule]
 })
 export class SharedModule { }

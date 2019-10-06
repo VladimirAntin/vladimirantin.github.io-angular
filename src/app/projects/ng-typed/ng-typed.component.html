@@ -1,21 +1,22 @@
-<ul class="nav justify-content-end bg-light">
-  <li class="nav-item m-2 mr-3" *ngFor="let item of links">
-    <button class="btn btn-lg btn-{{item.color}}" matTooltip="{{item.name}}" (click)="item.onclick()">
-      <i class="fab fa-{{item.icon}}"></i>
-    </button>
-  </li>
-</ul>
-<div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
-  <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-typed</h1>
-  <div class="row pb-5">
-    <div class="col-lg-4 offset-lg-2 col-sm-12">
-      <code class="animated zoomInUp p-4">
-        <pre>{{formatJSON()}}</pre>  
-      </code>
-      <div class="row animated zoomInLeft center">
+<div class="container-fluid mt-5">
+  <ul class="nav justify-content-end bg-light">
+    <li class="nav-item m-2 mr-3" *ngFor="let item of links">
+      <button class="btn btn-lg btn-{{item.color}}" matTooltip="{{item.name}}" (click)="item.onclick()">
+        <i class="fab fa-{{item.icon}}"></i>
+      </button>
+    </li>
+  </ul>
+  <div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
+    <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-typed</h1>
+    <div class="row pb-5">
+      <div class="col-lg-4 offset-lg-2 col-sm-12">
+        <code class="animated zoomInUp p-4">
+          <pre>{{formatJSON()}}</pre>  
+        </code>
+        <div class="row animated zoomInLeft center">
           <mat-form-field class="w-100">
-              <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
-          </mat-form-field>    
+            <input matInput placeholder="Speed" [(ngModel)]="obj.speed" type="number">
+          </mat-form-field>
           <mat-form-field class="w-100">
             <input matInput placeholder="Timeout" [(ngModel)]="obj.timeout" type="number">
           </mat-form-field>
@@ -23,19 +24,21 @@
             <input matInput placeholder="Cursor Character" [(ngModel)]="obj.cursor" type="text">
           </mat-form-field>
           <mat-form-field class="w-100">
-              <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
+            <textarea matInput placeholder="Text" [(ngModel)]="obj.text" rows="8"></textarea>
           </mat-form-field>
           <mat-checkbox [(ngModel)]="obj.hideCursorOnComplete" class="w-100">Hide cursor on complete</mat-checkbox>
           <mat-checkbox [(ngModel)]="obj.hideCursor" class="w-100">Hide cursor</mat-checkbox>
           <button mat-stroked-button class="rounded w-50" (click)="reset()">Reset</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <p *ngFor="let i of items">
+          <span [ng-typed]="obj" (complete)="complete.text=true">
+            {{obj.text}}
+          </span>
+        </p>
       </div>
     </div>
-    <div class="col-lg-4 col-sm-12">
-        <p *ngFor="let i of items">
-            <span [ng-typed]="obj" (complete)="complete.text=true">
-              {{obj.text}}
-            </span>
-          </p>        
-    </div>  
   </div>
+
 </div>

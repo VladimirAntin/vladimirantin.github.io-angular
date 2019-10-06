@@ -5,7 +5,7 @@
           <mat-card-header>
             <mat-card-title>{{p.name}}</mat-card-title>
           </mat-card-header>
-          <img mat-card-image [src]="p.img" [ngStyle]="p.style" class="mx-auto img-fluid">
+          <img mat-card-image defaultImage="assets/img/load.gif" [lazyLoad]="p.img" [ngStyle]="p.load? p.style: {'width':'5em'}" (onLoad)="p.load=true" class="mx-auto img-fluid">
       </mat-card>
     <div class="col text-light mt-2">
       <span *ngIf="p.ngTyped" ng-typed [ng-typed]="{speed: 20, timeout: 1000, hideCursorOnComplete: true, text: p.text}"></span>

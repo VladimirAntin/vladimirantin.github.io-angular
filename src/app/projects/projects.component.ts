@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: { img: string, name: string, style?, link: string, text?, external?: any[], ngTyped: boolean }[] = [
+  projects: { img: string, name: string, style?, link: string, text?, external?: any[], ngTyped: boolean, load: boolean }[] = [
     {
       img: 'assets/icons/tech/angular.svg',
       ngTyped: true,
       name: 'Ng Typed',
       style: { width: '5em' },
       link: 'ng-typed',
+      load: false,
       external: [
         { onclick: () => this.open('https://www.npmjs.com/package/ng-typed'), name: 'NPM', color: 'danger', icon: 'npm' },
         { onclick: () => this.open('https://github.com/vladimirantin/ng-typed'), name: 'GitHub', color: 'warning', icon: 'github' }
@@ -24,6 +25,8 @@ export class ProjectsComponent implements OnInit {
       name: 'eBook',
       link: './ebook',
       ngTyped: false,
+      style: {},
+      load: false,
       external: [
         { onclick: () => this.open('https://gitlab.com/antin502/ebook'), name: 'GitLab', color: 'warning', icon: 'gitlab' }
       ],
