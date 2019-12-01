@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -6,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: { img: string, name: string, style?, link: string, text?, external?: any[], ngTyped: boolean, load: boolean }[] = [
+  projects: { img: string, name: string, style?, onclick: () => void, text?, external?: any[], ngTyped: boolean, load: boolean }[] = [
     {
       img: 'assets/icons/tech/angular.svg',
       ngTyped: true,
       name: 'Ng Typed',
       style: { width: '5em' },
-      link: 'ng-typed',
+      onclick: () => this._router.navigateByUrl('projects/ng-typed'),
       load: false,
       external: [
         { onclick: () => this.open('https://www.npmjs.com/package/ng-typed'), name: 'NPM', color: 'danger', icon: 'npm' },
@@ -22,15 +23,26 @@ export class ProjectsComponent implements OnInit {
     },
     {
       img: 'assets/ebook/ebook-project.png',
-      name: 'eBook',
-      link: './ebook',
+      name: 'eBook (Heroku)',
+      onclick: () => this.open('https://ebook-antin.herokuapp.com/'),
       ngTyped: false,
       style: {},
       load: false,
       external: [
-        { onclick: () => this.open('https://gitlab.com/antin502/ebook'), name: 'GitLab', color: 'warning', icon: 'gitlab' }
+        { onclick: () => this.open('https://gitlab.com/antin502/ebook'), name: 'GitLab', color: 'warning', icon: 'gitlab' },
+        { onclick: () => this.open('https://github.com/VladimirAntin/ebook'), name: 'GitHub', color: 'light', icon: 'github' }
       ],
-      text: 'eBook is web application. Application created with Spring Boot framework, Angular framework and use Lucene lib for searching index of books. '
+      text: 'eBook is web application. Application created with Spring Boot framework, Angular framework and use Lucene lib for searching index of books.'
+    },
+    {
+      img: 'assets/elearning/elearning-project.png',
+      name: 'eLearning (Heroku)',
+      onclick: () => this.open('https://elearning-antin.herokuapp.com/'),
+      ngTyped: false,
+      style: {},
+      load: false,
+      external: [],
+      text: 'eLearning is web application. Application created with Spring Boot framework, Angular framework and use websockets for live chat.'
     },
   ];
 
@@ -39,7 +51,7 @@ export class ProjectsComponent implements OnInit {
     { name: '2. Contact me', route: '/contact' }
   ];
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }

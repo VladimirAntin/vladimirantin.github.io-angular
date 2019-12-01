@@ -19,22 +19,16 @@ import {NgTypedModule} from 'ng-typed';
 import {VarDirective} from './var.directive';
 import { NgTypedComponent } from '../projects/ng-typed/ng-typed.component';
 import {CvComponent} from '../cv/cv.component';
-import {EbookComponent} from '../projects/ebook/ebook.component';
-import {EbookCategoriesComponent} from '../projects/ebook/ebook-categories/ebook-categories.component';
-import {EbookBooksComponent} from '../projects/ebook/ebook-books/ebook-books.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {LiveChatComponent} from '../room/live-chat/live-chat.component';
 import {RoomComponent} from '../room/room.component';
-import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image'; // <-- include intersectionObserverPreset
+import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
   { path: 'contact', component: ContactmeComponent, data: {title: 'Contact me'}},
   { path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
-  { path: 'projects/ebook', component: EbookComponent, data: {title: 'Ebook'}},
-  { path: 'projects/ebook/categories', component: EbookCategoriesComponent, data: {title: 'Ebook (Categories)'}},
-  { path: 'projects/ebook/books', component: EbookBooksComponent, data: {title: 'Ebook (Books)'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
   { path: 'cv', component: CvComponent, data: {title: 'CV'}},
   { path: 'live-chat', component: RoomComponent, data: {title: 'Live-chat'}},
@@ -48,7 +42,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatToolbarModule,
     NgTypedModule, MatListModule, MatSidenavModule, MatDialogModule, LazyLoadImageModule.forRoot({
-      preset: intersectionObserverPreset // <-- tell LazyLoadImage that you want to use IntersectionObserver
+      preset: intersectionObserverPreset
     }),
   ],
   declarations: [VarDirective],
