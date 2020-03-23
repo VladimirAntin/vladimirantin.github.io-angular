@@ -2,6 +2,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer, Title} from '@angular/platform-browser';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import {InitService} from "./init.service";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
   private routerOutlet: RouterOutlet;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private _title: Title,
-    router: Router) {
+    router: Router, private _init: InitService) {
       router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           const title = this.getTitle(router.routerState, router.routerState.root).join('-');
@@ -38,6 +39,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._init.heroku();
   }
 
 }
