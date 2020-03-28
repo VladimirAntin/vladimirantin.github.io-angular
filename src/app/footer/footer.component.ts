@@ -13,6 +13,7 @@ export class FooterComponent implements OnInit {
     { action: () => openExternalLink('https://www.linkedin.com/in/vladimir-antin'), class: 'fab fa-linkedin', name: 'Vladimir Antin'},
     { action: () => openExternalLink('https://www.instagram.com/kami.1196'), class: 'fab fa-instagram', name: 'kami.1196'},
   ];
+  currentYear = new Date();
 
   constructor() { }
 
