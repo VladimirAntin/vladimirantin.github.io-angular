@@ -1,0 +1,14 @@
+
+
+.mat-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 5px !important;
+}
+
+.mat-card-header:hover {
+  outline: none;
+  //box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+}
+.mat-card:hover::after {
+  opacity: 1;
+}

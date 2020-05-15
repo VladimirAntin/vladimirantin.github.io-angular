@@ -1,0 +1,13 @@
+
+#home {
+  min-height: 83vh !important;
+  padding-top: 4em !important;
+  margin-top: 2em !important;
+
+  @media only screen and (max-width: $mobile-tablet) {
+    font-size: 0.6rem;
+    p {
+      font-size: 1.2em !important;
+    }
+  }
+}

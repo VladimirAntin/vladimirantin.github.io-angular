@@ -1,136 +1,19 @@
 
-$mobile-tablet: 820px;
-$mobile: 450px;
-
-.w-40 {
-  width: 40% !important;
-}
-
-.h-90 {
-  height: 90% !important;
-}
-
-.vh-75 {
-  height: 75vh !important;
-}
-.vh-80 {
-  min-height: 80vh !important;
-}
-
-.center {
-  margin: auto;
-  width: 60%;
-
-  @media only screen and (max-width: $mobile-tablet) {
-    width: 95%;
-    .img-thumbnail {
-      width: 40%;
-      margin-left: 30%
-    }
-  }
-}
-
-.min-h-60 {
-  min-height: 60vh !important;
-}
-
-.w-sm-6 {
-  @media only screen and (max-width: $mobile) {
-    width: 6em;
-  }
-}
-
-.radius-2{
-  border-radius: 2em;
-}
-
-.opacity-5 {
-  opacity: 0.5;
-}
-
-.bg-black {
-  background-color: black;
-}
-
-.contact:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-#home {
-  min-height: 83vh !important;
-  padding-top: 4em !important;
-  margin-top: 2em !important;
-
-  @media only screen and (max-width: $mobile-tablet) {
-    font-size: 0.6rem;
-    p {
-      font-size: 1.2em !important;
-    }
-  }
-}
-
-#project {
-  min-height: 83vh !important;
-  padding-top: 4em !important;
-
-  textarea {
-    resize: none;
-  }
-
-  @media only screen and (max-width: $mobile-tablet) {
-    p, span {
-      font-size: 1.2em !important;
-    }
-  }
-}
-
-.mat-card-header:hover {
-  outline: none;
-  //box-shadow: 0 1em 2em rgba(0,0,0,0.3);
-}
-.mat-card:hover::after {
-  opacity: 1;
-}
-
-app-projects {
-  .mat-card:hover {
-    outline: none;
-    box-shadow: 0 1em 2em rgba(0,0,0,0.3);
-  }
-  .mat-card:hover::after {
-    opacity: 1;
-  }
-
-}
-
-button, button:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.spacer {
-  flex: 1 1 auto;
-}
-
-.cursor-pointer {
-  cursor: pointer !important;
-}
+@import "variable";
+@import "background";
+@import "button";
+@import "cv";
+@import "footer";
+@import "navigation";
+@import "home";
+@import "hover";
+@import "mat-card";
+@import "opacity";
+@import "project";
+@import "size";
+@import "skill";
+@import "tooltip";
+@import "utils";
 
 
-.hover-link:hover {
-  border-bottom: 1px solid white !important;
-}
 
-.font-08 {
-  font-size: 0.8em !important;
-}
-
-
-.opacity-9 {
-  opacity: .9;
-}
-
-.h-3em {
-  height: 3em !important;
-}

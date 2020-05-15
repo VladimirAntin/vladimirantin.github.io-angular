@@ -1,0 +1,13 @@
+
+button, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button.active {
+  border-bottom: 3px solid white !important;
+}
+
+button.active:hover {
+  border-radius: unset;
+}

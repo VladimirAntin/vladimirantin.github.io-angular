@@ -1,0 +1,31 @@
+
+
+body {
+  overflow-x: hidden !important;
+  background-image: $bg-body;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+
+.bg-blue {
+  background-color: rgba(32, 21, 197, 0.37);
+  color: snow;
+}
+
+.bg-nav {
+  background: linear-gradient(black);
+  @media only screen and (max-width: $mobile-tablet) {
+    background: linear-gradient(black, grey);
+  }
+
+}
+
+.bg-light-50 {
+  background-color: rgba(255, 255, 255, 0.30);
+}
+.bg-light-80 {
+  background-color: rgba(255, 255, 255, 0.80);
+}

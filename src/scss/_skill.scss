@@ -1,0 +1,9 @@
+
+.skill-icon {
+  font-family: 'icomoon' !important;
+  filter: grayscale(1);
+  &:hover {
+    filter: none;
+    transition: filter .5s;
+  }
+}

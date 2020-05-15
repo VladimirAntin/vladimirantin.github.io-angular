@@ -1,0 +1,29 @@
+
+.w-40 {
+  width: 40% !important;
+}
+
+.h-90 {
+  height: 90% !important;
+}
+
+.vh-75 {
+  height: 75vh !important;
+}
+.vh-80 {
+  min-height: 80vh !important;
+}
+
+.min-h-60 {
+  min-height: 60vh !important;
+}
+
+.w-sm-6 {
+  @media only screen and (max-width: $mobile) {
+    width: 6em;
+  }
+}
+
+.h-3em {
+  height: 3em !important;
+}

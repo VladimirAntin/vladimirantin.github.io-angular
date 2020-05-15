@@ -1,0 +1,16 @@
+
+.drawer-container {
+  background: transparent;
+  position: fixed;
+  &.open {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+mat-drawer {
+  height: 100vh !important;
+  width: 50vw !important;
+  position: fixed;
+  background: rgba(255,255,255, 0.8);
+}

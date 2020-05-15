@@ -2,61 +2,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap-grid.min.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
-@import "assets/css/style.css";
+@import "assets/css/style";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~animate.css/animate.min.css";
 
-@import "scss/style.scss";
+@import "scss/style";
 
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.skill-icon {
-  font-family: 'icomoon' !important;
-}
-
-$bg-body: url('assets/img/background.png');
-
-body {
-    overflow-x: hidden !important;
-    background-image: $bg-body;
-}
-
-.bg-blue {
-    background-color: rgba(32, 21, 197, 0.37);
-    color: snow;
-}
-
-.bg-nav {
-    background: linear-gradient(black);
-    @media only screen and (max-width: $mobile-tablet) {
-        background: linear-gradient(black, grey);    
-    }
-
-}
-
-.bg-light-50 {
-    background-color: rgba(255, 255, 255, 0.30);
-}
-.bg-light-80 {
-    background-color: rgba(255, 255, 255, 0.80);
-}
-
-.mat-card {
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 5px !important;
-}
-
-.footer-tooltip {
-    font-style: italic;
-    background: transparent;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.header-tooltip {
-    background: none;
-    color: black !important;
-    font-style: italic;
-    font-family: 'Montserrat', sans-serif;
-}
