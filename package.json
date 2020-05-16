@@ -35,6 +35,10 @@
     "ng2-pdf-viewer": "^5.2.4",
     "npm": "^6.10.1",
     "rxjs": "^6.0.0",
+    "net": "^1.0.2",
+    "quill": "^1.3.7",
+    "sockjs-client": "^1.3.0",
+    "stompjs": "^2.3.3",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

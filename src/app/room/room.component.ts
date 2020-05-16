@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MessageService} from './live-chat/message.service';
+import {Group, GroupService} from './group.service';
 import {MatDialog} from '@angular/material';
 import {LoginRoomComponent} from './login-room/login-room.component';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-room',
@@ -9,18 +10,14 @@ import {LoginRoomComponent} from './login-room/login-room.component';
 })
 export class RoomComponent implements OnInit {
 
-  groupNames: string[] = [];
+  groups: Group[] = [];
   groupName = '';
   user = {username: '', password: ''};
 
-  constructor(private _ms: MessageService, private dialog: MatDialog) { }
+  constructor(private _group: GroupService, private dialog: MatDialog, private _router: Router) { }
 
   ngOnInit() {
-    this.getGroups();
-  }
-
-  private getGroups() {
-    this._ms.getGroups().subscribe(g => this.groupNames = g);
+    this._group.getAll().subscribe(s => this.groups = s.body);
   }
 
   login() {
@@ -36,14 +33,17 @@ export class RoomComponent implements OnInit {
     });
   }
 
-  isAdmin() {
-    return this.user.username === 'admin' && this.user.password === 'admin';
+  createChat() {
+    this._group.post({name: this.groupName}).subscribe(() => this._router.navigate(['/live-chat', this.groupName]))
   }
 
-  deleteOne(group) {
-    this._ms.deletGroup(group).subscribe((t) => {
-      t.subscribe(() => this.getGroups());
-    });
+  deleteOne(g: Group) {
+    const index = this.groups.indexOf(g);
+    this._group.removeOne(g.id).subscribe(() => this.groups.splice(index, 1));
+  }
+
+  isAdmin() {
+    return this.user.username === 'admin' && this.user.password === 'admin';
   }
 
   generateName() {

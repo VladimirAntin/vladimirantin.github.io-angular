@@ -23,7 +23,7 @@
   </div>
   <div class="row justify-content-center" *ngIf="room.active">
     <div class="col-12 font-08" id="messages" #messagesTemplate [scrollTop]="changeScroller(messagesTemplate.scrollHeight)">
-        <div *ngFor="let m of messages; let i=index" class="row my-1">
+        <div *ngFor="let m of messages; let i=index" class="row my-1" #messagesElement>
           <div class="col-12" *ngIf="message.user.id && (message.user.id!==m.user.id)">
             <img defaultImage="assets/img/load.gif" lazyLoad="/assets/img/user.png" height="16" class="mx-3">
             <span class="text-black-50">{{m.user.username}}</span>

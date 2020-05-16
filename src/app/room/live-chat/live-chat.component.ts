@@ -1,7 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {Message} from './message.model';
-import {MessageService} from './message.service';
+import {Group, GroupService} from '../group.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Message, MessageService} from "./message.service";
+import {UserService} from "../user.service";
+import {WsService} from "../../websocket/ws.service";
+import {ChatWsService} from "./chat.ws.service";
+import {MessageListenerService} from "../../websocket/message-listener.service";
+import {WsListenerService} from "../../websocket/ws-listener.service";
 
 @Component({
   selector: 'app-live-chat',
@@ -15,59 +20,81 @@ export class LiveChatComponent implements OnInit {
 
   message: Message = {
     user: {
-      id: Math.random(),
       username: ''
     },
-    isConnected: true,
     text: ''
   };
 
   room = {active: false};
+  group: Group;
   private scroller: number[] = [];
   changeScroller = (t) => {
     this.scroller.push(t);
     return this.scroller[0];
   }
-  constructor(private _ms: MessageService, private _act: ActivatedRoute, private _router: Router) {}
-
-  ngOnInit() {
-    if (localStorage.getItem('user')) {
-      this.message.user.username = JSON.parse(localStorage.getItem('user')).username;
-      this.message.user.id = JSON.parse(localStorage.getItem('user')).id;
-    }
+  constructor(private _groups: GroupService, private _act: ActivatedRoute, private _router: Router,
+              private _user: UserService, private _message: MessageService, private _chat: ChatWsService,
+              private _ws: WsService, private _messageLister: MessageListenerService, private _wsListener: WsListenerService) {
     this.groupName = this._act.snapshot.paramMap.get('name').trim();
-    if (this.groupName === '') {
-      this._router.navigateByUrl('/live-chat');
-    }
-    setInterval(() => this.getMessages(), 1250);
-  }
-
-  private getMessages() {
-    this._ms._count(this.groupName).subscribe(count => {
-      if (count !== this.messages.length) {
-        this._ms.getMessages(this.groupName).subscribe(m => {
-          this.messages = m;
-        });
+    _wsListener.isConnected().subscribe(c => {
+      if (!c) { // lost connection
+        this._ws.connect(this.groupName);
       }
     });
+      _messageLister.receiveMessage().subscribe(s => {
+        this.loadMessages()
+      });
+  }
+
+  ngOnInit() {
+    this._ws.connect(this.groupName);
+    this._groups.getOne(this.groupName).subscribe(res => {
+      if (!res) {this.getBack()}
+      this.group = res;
+      this.putUserIfExist();
+    }, () => this.getBack());
+  }
+
+  getBack() {
+    this._router.navigate(['/live-chat'])
   }
 
   send() {
     if (this.message.text.trim().length > 0) {
       this.message.createdAt = new Date();
-      this._ms.sendMessage(Object.assign({}, this.message), this.groupName);
+      this.message.group = this.group;
+      this._chat.send(this.groupName, Object.assign({}, this.message));
       this.message.text = '';
+    }
+  }
+  putUserIfExist() {
+    const user = this._user.getLoggedInUser();
+    if (user) {
+      this.message.user = user;
+      this.room.active = true;
+      this.loadMessages();
+    } else {
+      this.room.active = false;
     }
   }
 
   register() {
-    this.room.active = true;
-    localStorage.setItem('user', JSON.stringify(this.message.user));
+    this._user.registerUser(this.message.user.username).subscribe(() => this.putUserIfExist());
   }
 
   clickEnter(e) {
     if (e.keyCode === 13) {
       this.send();
     }
+  }
+
+  private loadMessages() {
+    this._groups.getMessages(this.groupName).subscribe(res => {
+      this.messages = res;
+      setTimeout(() => {
+        const objDiv = document.getElementById("messages");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }, 200)
+    });
   }
 }

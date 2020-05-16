@@ -1,11 +1,4 @@
 <div class="container my-5 mx-3 p-3 radius-2 bg-white vh-80">
-  <div class="text-center text-warning">
-    <i class="fa fa-exclamation-triangle animated flash infinite"></i>
-    <p class="text-left">
-      Warning: This isn't real websocket application. This is using JSON file and HTTP protocol for communication.
-      You need to have a good internet connection (e.g. Wifi).
-    </p>
-  </div>
   <div class="row justify-content-center p-3">
     <div class="col-8">
       <mat-form-field class="w-100">
@@ -17,7 +10,7 @@
         <i class="fa fa-random"></i>
         Generate random name
       </button>
-      <button type="button" class="btn btn-outline-primary" [routerLink]="['/live-chat', groupName]" [disabled]="groupName.length===0">
+      <button type="button" class="btn btn-outline-primary" (click)="createChat()" [disabled]="groupName.length===0">
         <i class="fa fa-plus-circle"></i>
         Create chat
       </button>
@@ -26,13 +19,13 @@
     </div>
   </div>
   <ul class="list-group" *ngIf="isAdmin()">
-    <li class="list-group-item" *ngFor="let g of groupNames">
+    <li class="list-group-item" *ngFor="let g of groups">
       <div class="row">
         <div class="col-8">
-          {{g}}
+          {{g.name}}
         </div>
         <div class="col-4 row justify-content-around">
-          <button mat-mini-fab type="button" class="bg-secondary" [routerLink]="['/live-chat', g]">Join</button>
+          <button mat-mini-fab type="button" class="bg-secondary" [routerLink]="['/live-chat', g.name]">Join</button>
           <button mat-mini-fab type="button" class="bg-danger" (click)="deleteOne(g)"><i class="fa fa-trash"></i></button>
         </div>
       </div>
