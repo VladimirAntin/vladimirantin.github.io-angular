@@ -1,8 +1,10 @@
 
-.skill-icon {
-  font-family: 'icomoon' !important;
-  filter: grayscale(1);
-  &:hover {
+.skills {
+  .skill-icon {
+    font-family: 'icomoon' !important;
+    filter: grayscale(1);
+  }
+  &:hover .skill-icon {
     filter: none;
     transition: filter .5s;
   }

@@ -12,11 +12,13 @@ import { FooterModule } from './footer/footer.module';
 import {HomeModule} from './home/home.module';
 import {RoomModule} from './room/room.module';
 import { CvModule } from './cv/cv.module';
+import { ParticlesComponent } from './particles/particles.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ParticlesComponent
   ],
   imports: [
     BrowserModule, SharedModule, HomeModule, ProjectsModule, SkillsModule, FooterModule,

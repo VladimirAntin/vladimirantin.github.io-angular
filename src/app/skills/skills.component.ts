@@ -13,10 +13,7 @@ export class SkillsComponent implements OnInit {
       pattern: ['npm', 'ES5', 'ES6', 'TypeScript', 'Angular 2+', 'AngularJS', 'jQuery', 'VueJS', 'WebSocket'], spans: this.generateArray(2)},
     {name: 'Database', icon: 'icon-db', pattern: ['MongoDB', 'MySQL'],  spans: this.generateArray(13)},
     {name: 'Version Control', icon: 'icon-git', pattern: ['Git']},
-    {name: 'HTML', icon: 'icon-html', pattern: ['HTML5'], spans: this.generateArray(5)},
     {name: 'CSS', icon: 'icon-css', pattern: ['CSS3', 'Sass', 'Less', 'Bootstrap', 'Material design'], spans: this.generateArray(9)},
-    {name: '', icon: 'icon-php', pattern: ['Laravel'], spans: this.generateArray(8)},
-    {name: 'Python', icon: 'icon-python', pattern: ['Flask'], spans: this.generateArray(5)},
   ];
   constructor() { }
 

@@ -7,4 +7,9 @@ iframe, object {
 .cv {
   display: block;
   max-width: 100vw;
+  filter: grayscale(1);
+  &:hover {
+    filter: none;
+  }
+
 }

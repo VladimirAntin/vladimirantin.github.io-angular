@@ -3,8 +3,10 @@
   <!-- title -->
   <div class="ml-4" *ngFor="let l of links; let i=index">
     <span><i>&lt;link&gt;</i></span>
-    <a class="hover-link cursor-pointer text-white" (click)="l.action()">
-      <i class="mx-2 fa-2x">{{l.name}}</i>
+    <a class="cursor-pointer text-white" (click)="l.action()">
+      <span class="hover-link mx-2">
+        <i class="fa-2x">{{l.name}}</i>
+      </span>
     </a>
     <span><i>&lt;/link&gt;</i></span>
   </div>
