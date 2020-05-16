@@ -10,13 +10,38 @@
     </p>
     <p><i>&lt;/postion&gt;</i></p>
   </div>
+  <!-- languages -->
+  <p class="ml-4"><i>&lt;languages&gt;</i></p>
+  <div class="ml-4">
+    <!-- backend -->
+    <p class="ml-4">
+      <i>&lt;backend&gt;</i>
+      <span *ngIf="complete.title" class="text-white">
+        <span class="mx-2 fa-2x"
+              [ng-typed]="text('Java')"
+              (complete)="complete.backend=true; allComplete()"></span>
+      </span>
+      <i>&lt;/backend&gt;</i>
+    </p>
+    <!-- frontend -->
+    <p class="ml-4">
+      <i>&lt;frontend&gt;</i>
+      <span *ngIf="complete.backend" class="text-white">
+        <span class="mx-2 fa-2x"
+              [ng-typed]="text('Javascript')"
+              (complete)="complete.frontend=true"></span>
+      </span>
+      <i>&lt;/frontend&gt;</i>
+    </p>
+    <p><i>&lt;/languages&gt;</i></p>
+  </div>
   <!-- location -->
   <p class="ml-4"><i>&lt;location&gt;</i></p>
   <div class="ml-4">
     <!-- city -->
     <p class="ml-4">
       <i>&lt;city&gt;</i>
-      <span *ngIf="complete.title" class="text-white">
+      <span *ngIf="complete.frontend" class="text-white">
         <span class="mx-2 fa-2x"
               [ng-typed]="text('Novi Sad')"
               (complete)="complete.city=true"></span>

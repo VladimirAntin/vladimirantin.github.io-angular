@@ -9,6 +9,8 @@ export class InformationComponent implements OnInit {
 
   complete = {
     title: false,
+    backend: false,
+    frontend: false,
     city: false,
     country: false
   };
