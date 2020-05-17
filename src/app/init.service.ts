@@ -8,7 +8,8 @@ export class InitService {
 
   private links = [
     'https://elearning-antin.herokuapp.com/',
-    'https://ebook-antin.herokuapp.com/'
+    'https://ebook-antin.herokuapp.com/',
+    "https://antin-chat.herokuapp.com/"
   ];
   constructor(private _http: HttpClient) { }
 
