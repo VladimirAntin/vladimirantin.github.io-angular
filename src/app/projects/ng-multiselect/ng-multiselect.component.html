@@ -1,0 +1,67 @@
+<div class="container-fluid mt-5">
+  <ul class="nav justify-content-end bg-light">
+    <li class="nav-item m-2 mr-3" *ngFor="let item of links">
+      <button class="btn btn-lg btn-{{item.color}}" matTooltip="{{item.name}}" (click)="item.onclick()">
+        <i class="fab fa-{{item.icon}}"></i>
+      </button>
+    </li>
+  </ul>
+  <div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
+    <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-multiselect</h1>
+
+    <div class="row">
+      <div class="col-2">
+        <form action="">
+          <ng-multiselect [dataList]="list"
+                          placeholder="Title"
+                          [compareWith]="compareWith"
+                          [(selectedValues)]="selected"
+                          [formatter]="formatter">
+          </ng-multiselect>
+        </form>
+      </div>
+      <div class="col-4">
+        <form action="">
+          <ng-multiselect [dataList]="list"
+                          [compareWith]="compareWith"
+                          [(selectedValues)]="selected"
+                          [options]="{hide: {selectedItems: true}}"
+                          [formatter]="formatter">
+          </ng-multiselect>
+        </form>
+      </div>
+      <div class="col-3">
+        <form action="">
+          <ng-multiselect [dataList]="list"
+                          [compareWith]="compareWith"
+                          [(selectedValues)]="selected"
+                          [options]="{hide: {search: true, selectionAll: true}}"
+                          [formatter]="formatter">
+          </ng-multiselect>
+        </form>
+      </div>
+      <div class="col-3">
+        <form action="">
+          <ng-multiselect [dataList]="list"
+                          [compareWith]="compareWith"
+                          [(selectedValues)]="selected"
+                          select-all-text="" unselect-all-text="">
+          </ng-multiselect>
+        </form>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-4">
+        <code class="animated zoomInUp p-4">
+          <pre>{{formatJSON(option2)}}</pre>
+        </code>
+      </div>
+      <div class="col-3">
+        <code class="animated zoomInUp p-4">
+          <pre>{{formatJSON(option3)}}</pre>
+        </code>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+</div>

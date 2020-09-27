@@ -22,6 +22,19 @@ export class ProjectsComponent implements OnInit {
       text: 'Ng Typed is lib for portfolio in Angular 6. This is simple type-on effect component for angular websites.'
     },
     {
+      img: 'assets/icons/tech/angular.svg',
+      ngTyped: true,
+      name: 'Ng Multiselect',
+      style: { width: '5em' },
+      onclick: () => this._router.navigateByUrl('projects/ng-multiselect'),
+      load: false,
+      external: [
+        { onclick: () => this.open('https://www.npmjs.com/package/@antin502/ng-multiselect'), name: 'NPM', color: 'danger', icon: 'npm' },
+        { onclick: () => this.open('https://github.com/vladimirantin/ng-multiselect'), name: 'GitHub', color: 'warning', icon: 'github' }
+      ],
+      text: 'Ng Multiselect is lib for Angular.'
+    },
+    {
       img: 'assets/ebook/ebook-project.png',
       name: 'eBook (Heroku)',
       onclick: () => this.open('https://ebook-antin.herokuapp.com/'),
