@@ -10,7 +10,7 @@
     <h1 class="text-center text-primary contact m-2 pb-5">./projects/ng-multiselect</h1>
 
     <div class="row">
-      <div class="col-2">
+      <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
         <form action="">
           <ng-multiselect [dataList]="list"
                           placeholder="Title"
@@ -20,7 +20,7 @@
           </ng-multiselect>
         </form>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
         <form action="">
           <ng-multiselect [dataList]="list"
                           [compareWith]="compareWith"
@@ -29,8 +29,11 @@
                           [formatter]="formatter">
           </ng-multiselect>
         </form>
+        <code class="animated zoomInUp p-4">
+          <pre>{{formatJSON(option2)}}</pre>
+        </code>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
         <form action="">
           <ng-multiselect [dataList]="list"
                           [compareWith]="compareWith"
@@ -39,8 +42,11 @@
                           [formatter]="formatter">
           </ng-multiselect>
         </form>
+        <code class="animated zoomInUp p-4">
+          <pre>{{formatJSON(option3)}}</pre>
+        </code>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
         <form action="">
           <ng-multiselect [dataList]="list"
                           [compareWith]="compareWith"
@@ -49,18 +55,6 @@
           </ng-multiselect>
         </form>
       </div>
-      <div class="col-2"></div>
-      <div class="col-4">
-        <code class="animated zoomInUp p-4">
-          <pre>{{formatJSON(option2)}}</pre>
-        </code>
-      </div>
-      <div class="col-3">
-        <code class="animated zoomInUp p-4">
-          <pre>{{formatJSON(option3)}}</pre>
-        </code>
-      </div>
-      <div class="col-3"></div>
     </div>
   </div>
 
