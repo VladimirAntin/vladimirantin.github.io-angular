@@ -4,6 +4,7 @@ import {SharedModule} from '../shared/shared.module';
 import {ProjectsComponent} from './projects.component';
 import { NgTypedComponent } from './ng-typed/ng-typed.component';
 import { NgMultiselectComponent } from './ng-multiselect/ng-multiselect.component';
+import { SpringCoreComponent } from './spring-core/spring-core.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { NgMultiselectComponent } from './ng-multiselect/ng-multiselect.componen
     ProjectsComponent,
     NgTypedComponent,
     NgMultiselectComponent,
+    SpringCoreComponent,
   ],
   exports: [
     ProjectsComponent

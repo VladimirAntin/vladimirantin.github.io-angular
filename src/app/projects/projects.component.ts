@@ -9,6 +9,31 @@ export class ProjectsComponent implements OnInit {
 
   projects: { img: string, name: string, style?, onclick: () => void, text?, external?: any[], ngTyped: boolean, load: boolean }[] = [
     {
+      img: 'assets/icons/tech/java.svg',
+      ngTyped: false,
+      name: 'Spring Core',
+      style: { width: '5em' },
+      onclick: () => this._router.navigateByUrl('projects/spring-core'),
+      load: false,
+      external: [
+        { onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github' }
+      ],
+      text: 'Spring core is library for Spring boot framework. This is component generator.'
+    },
+    {
+      img: 'assets/icons/tech/angular.svg',
+      ngTyped: false,
+      name: 'Ng Multiselect',
+      style: { width: '5em' },
+      onclick: () => this._router.navigateByUrl('projects/ng-multiselect'),
+      load: false,
+      external: [
+        { onclick: () => this.open('https://www.npmjs.com/package/@antin502/ng-multiselect'), name: 'NPM', color: 'danger', icon: 'npm' },
+        { onclick: () => this.open('https://github.com/vladimirantin/ng-multiselect'), name: 'GitHub', color: 'warning', icon: 'github' }
+      ],
+      text: 'Ng Multiselect is lib for Angular.'
+    },
+    {
       img: 'assets/icons/tech/angular.svg',
       ngTyped: true,
       name: 'Ng Typed',
@@ -20,19 +45,6 @@ export class ProjectsComponent implements OnInit {
         { onclick: () => this.open('https://github.com/vladimirantin/ng-typed'), name: 'GitHub', color: 'warning', icon: 'github' }
       ],
       text: 'Ng Typed is lib for portfolio in Angular 6. This is simple type-on effect component for angular websites.'
-    },
-    {
-      img: 'assets/icons/tech/angular.svg',
-      ngTyped: true,
-      name: 'Ng Multiselect',
-      style: { width: '5em' },
-      onclick: () => this._router.navigateByUrl('projects/ng-multiselect'),
-      load: false,
-      external: [
-        { onclick: () => this.open('https://www.npmjs.com/package/@antin502/ng-multiselect'), name: 'NPM', color: 'danger', icon: 'npm' },
-        { onclick: () => this.open('https://github.com/vladimirantin/ng-multiselect'), name: 'GitHub', color: 'warning', icon: 'github' }
-      ],
-      text: 'Ng Multiselect is lib for Angular.'
     },
     {
       img: 'assets/ebook/ebook-project.png',

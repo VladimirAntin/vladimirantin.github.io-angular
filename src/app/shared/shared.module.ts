@@ -26,12 +26,15 @@ import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-ima
 import { ParticlesModule } from 'angular-particle';
 import {NgMultiselectComponent} from "../projects/ng-multiselect/ng-multiselect.component";
 import {NgMultiselectModule} from "@antin502/ng-multiselect";
+import {SpringCoreComponent} from "../projects/spring-core/spring-core.component";
+import {MatTabsModule} from "@angular/material/tabs";
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: {title: 'Portfolio'}},
   { path: 'contact', component: ContactmeComponent, data: {title: 'Contact me'}},
   { path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
+  { path: 'projects/spring-core', component: SpringCoreComponent, data: {title: 'Spring Core'}},
   { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
   { path: 'projects/ng-multiselect', component: NgMultiselectComponent, data: {title: 'Ng Multiselect'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},
@@ -45,14 +48,15 @@ const appRoutes: Routes = [
   imports: [
     CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
-    MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatToolbarModule,
+    MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatToolbarModule, MatTabsModule,
     NgTypedModule, NgMultiselectModule, MatListModule, MatSidenavModule, MatDialogModule, LazyLoadImageModule.forRoot({
       preset: intersectionObserverPreset
     }), ParticlesModule
   ],
   declarations: [VarDirective],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
-    MatTooltipModule, MatToolbarModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatBadgeModule,
+    MatTooltipModule, MatToolbarModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatTabsModule,
+    MatCardModule, MatBadgeModule,
     MatListModule, NgTypedModule, NgMultiselectModule, VarDirective, MatSidenavModule, MatDialogModule, LazyLoadImageModule, ParticlesModule]
 })
 export class SharedModule { }
