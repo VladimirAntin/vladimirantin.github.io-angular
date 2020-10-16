@@ -143,14 +143,14 @@ export const examples = [
 
     ], generator: [
       {
-        title: 'CustomRepository.java',
+        title: 'CustomRepo.java',
         text: `
       ...
       import com.github.vladimirantin.core.repo.CoreRepository;
       import org.springframework.stereotype.Repository;
 
       @Repository
-      public interface CustomRepository extends CoreRepository&lt;CustomEntity&gt; {
+      public interface CustomRepo extends CoreRepository&lt;CustomEntity&gt; {
         ...
       }`
       },
@@ -221,14 +221,14 @@ export const examples = [
 
     ], generator: [
       {
-        title: 'CustomRepository.java',
+        title: 'CustomRepo.java',
         text: `
       ...
       import com.github.vladimirantin.core.repo.CoreRepository;
       import org.springframework.stereotype.Repository;
 
       @Repository
-      public interface CustomRepository extends CoreRepository&lt;CustomEntity&gt; {
+      public interface CustomRepo extends CoreRepository&lt;CustomEntity&gt; {
         ...
       }`
       },
