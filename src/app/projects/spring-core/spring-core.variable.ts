@@ -421,7 +421,7 @@ export const docs = [
       };
 
       @Override
-      @Query("update #{#entityName} e set e.deleted=false")
+      @Query("update #{#entityName} e set e.deleted=true")
       @Transactional
       @Modifying
       void deleteAll();
