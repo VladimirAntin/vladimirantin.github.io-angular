@@ -391,17 +391,41 @@ export const docs = [
     @NoRepositoryBean
     public interface CoreRepository&lt;T extends CoreModel&gt; extends JpaRepository&lt;T, Long&gt; {
 
-        @Override
-        @Query("update #{#entityName} e set e.deleted=true where e.id = :id")
-        @Transactional
-        @Modifying
-        void deleteById(@Param("id") Long id);
+      @Override
+      @Query("update #{#entityName} e set e.deleted=true where e.id = :id")
+      @Transactional
+      @Modifying
+      void deleteById(@Param("id") Long id);
 
-        @Override
-        @Transactional
-        default void delete(T entity) {
-            deleteById(entity.getId());
-        }
+      @Override
+      @Transactional
+      default void delete(T entity) {
+          deleteById(entity.getId());
+      }
+
+      @Override
+      @Transactional
+      default void deleteAll(Iterable<? extends T> entities) {
+          entities.forEach(entitiy -> delete(entitiy));
+      }
+
+      @Override
+      @Transactional
+      default void deleteInBatch(Iterable<T> iterable) {
+          iterable.forEach(entitiy -> delete(entitiy));
+      }
+
+      @Override
+      default void deleteAllInBatch() {
+          deleteAll();
+      };
+
+      @Override
+      @Query("update #{#entityName} e set e.deleted=false")
+      @Transactional
+      @Modifying
+      void deleteAll();
+
     }`
   },
   {
@@ -478,12 +502,13 @@ export const docs = [
 
       /**
        * Delete one object
-       * @param id - Object id
+       * @param entity - Entity to delete
        */
-      public void delete(long id) {
-          log.info("Delete one by id: {} (entity: {}, repo: {})", id, getEntityName(), getRepoName());
-          repo.deleteById(id);
+      public void delete(E entity) {
+          log.info("Delete one by id: {} (entity: {}, repo: {})", entity.getId(), getEntityName(), getRepoName());
+          repo.delete(entity);
       }
+
     }`
   },
   {
@@ -704,10 +729,10 @@ export const docs = [
          */
         @DeleteMapping("/{id}")
         public ResponseEntity deleteOne(@PathVariable long id) {
-            service.delete(id);
+            ENTITY entity = (ENTITY) service.findOne(id);
+            service.delete(entity);
             return ResponseEntity.noContent().build();
         }
-
 
     }`
   },
