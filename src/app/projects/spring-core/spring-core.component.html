@@ -6,57 +6,61 @@
       </button>
     </li>
   </ul>
-  <div class="container-fluid bg-light" id="project" *ngVar="{text: false} as complete">
-    <h1 class="text-center text-primary contact m-2 pb-5">./projects/spring-core</h1>
-    <div class="row pb-5">
-      <div class="col-lg-4 col-sm-12">
-        <p>Dependency</p>
-        <code class="animated zoomInUp p-4">
-          <pre class="blue-text cursor-pointer" matTooltip="Copy" (click)="copyMessage(dependency)">{{dependency}}</pre>
-        </code>
-        <p>Processor</p>
-        <code class="animated zoomInUp p-4">
-          <pre class="blue-text cursor-pointer" matTooltip="Copy" (click)="copyMessage(path)">{{path}}</pre>
-        </code>
-      </div>
-      <div class="col-lg-8 col-sm-12">
-        <mat-tab-group>
-          <mat-tab label="{{e.title}}" *ngFor="let e of examples">
-            <div class="m-3" *ngIf="e.yourCode.length>0">
-              <h4 class="m-2">Your Code</h4>
-              <mat-tab-group>
-                <mat-tab label="{{cl.title}}" *ngFor="let cl of e.yourCode">
-                  <code>
-                    <pre [innerHTML]="cl.text"></pre>
-                  </code>
-                </mat-tab>
-              </mat-tab-group>
-            </div>
-            <div class="m-3" *ngIf="e.generator.length>0">
-              <h4 class="m-2">Generated Sources</h4>
-              <mat-tab-group>
-                <mat-tab label="{{cl.title}}" *ngFor="let cl of e.generator">
-                  <code>
-                    <pre [innerHTML]="cl.text"></pre>
-                  </code>
-                </mat-tab>
-              </mat-tab-group>
-            </div>
-          </mat-tab>
-          <mat-tab label="Docs">
-            <div class="m-3">
-              <mat-tab-group>
-                <mat-tab label="{{d.title}}" *ngFor="let d of docs">
-                  <code>
-                    <pre [innerHTML]="d.text"></pre>
-                  </code>
-                </mat-tab>
-              </mat-tab-group>
-            </div>
-          </mat-tab>
-        </mat-tab-group>
-      </div>
-    </div>
+  <div class="w-100 bg-light mx-1" id="project" *ngVar="{text: false} as complete">
+    <h1 class="text-center text-primary contact m-2">./projects/spring-core</h1>
+    <mat-tab-group>
+      <mat-tab label="{{v.title}}" *ngFor="let v of versions">
+        <div class="row pb-5 m-0">
+          <div class="col-lg-4 col-sm-12">
+            <p>Dependency</p>
+            <code class="animated zoomInUp p-4">
+              <pre class="blue-text cursor-pointer" matTooltip="Copy" (click)="copyMessage(v.dependency)">{{v.dependency}}</pre>
+            </code>
+            <p>Processor</p>
+            <code class="animated zoomInUp p-4">
+              <pre class="blue-text cursor-pointer" matTooltip="Copy" (click)="copyMessage(v.path)">{{v.path}}</pre>
+            </code>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <mat-tab-group>
+              <mat-tab label="{{e.title}}" *ngFor="let e of v.content.examples">
+                <div class="m-3" *ngIf="e.yourCode.length>0">
+                  <h4 class="m-2">Your Code</h4>
+                  <mat-tab-group>
+                    <mat-tab label="{{cl.title}}" *ngFor="let cl of e.yourCode">
+                      <code>
+                        <pre [innerHTML]="cl.text"></pre>
+                      </code>
+                    </mat-tab>
+                  </mat-tab-group>
+                </div>
+                <div class="m-3" *ngIf="e?.generator?.length>0">
+                  <h4 class="m-2">Generated Sources</h4>
+                  <mat-tab-group>
+                    <mat-tab label="{{cl.title}}" *ngFor="let cl of e?.generator">
+                      <code>
+                        <pre [innerHTML]="cl.text"></pre>
+                      </code>
+                    </mat-tab>
+                  </mat-tab-group>
+                </div>
+              </mat-tab>
+              <mat-tab label="Docs">
+                <div class="m-3">
+                  <mat-tab-group>
+                    <mat-tab label="{{d.title}}" *ngFor="let d of v.content.docs">
+                      <code>
+                        <pre [innerHTML]="d.text"></pre>
+                      </code>
+                    </mat-tab>
+                  </mat-tab-group>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 
 </div>

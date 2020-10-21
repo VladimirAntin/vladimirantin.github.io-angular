@@ -1,3 +1,5 @@
+import {b} from "./spring-core.const";
+
 export const examples = [
   {
     title: 'Example 1 (Without generator)', yourCode: [
@@ -5,13 +7,13 @@ export const examples = [
         title: 'CustomEntity.java',
         text: `
       ...
-      import com.github.vladimirantin.core.GlobalVariables;
-      import com.github.vladimirantin.core.model.CoreModel;
+      ${b('import com.github.vladimirantin.core.GlobalVariables;')}
+      ${b('import com.github.vladimirantin.core.model.CoreModel;')}
       import javax.persistence.Entity;
       import org.hibernate.annotations.Where;
 
       @Entity
-      @Where(clause = GlobalVariables.WHERE_CLAUSE)
+      ${b('@Where(clause = GlobalVariables.WHERE_CLAUSE)')}
       public class CustomEntity extends CoreModel {
 
         private String name;
@@ -23,7 +25,7 @@ export const examples = [
         title: 'CustomRepository.java',
         text: `
       ...
-      import com.github.vladimirantin.core.repo.CoreRepository;
+      ${b('import com.github.vladimirantin.core.repo.CoreRepository;')}
       import org.springframework.stereotype.Repository;
 
       @Repository
@@ -35,7 +37,7 @@ export const examples = [
         title: 'CustomService.java',
         text: `
       ...
-      import com.github.vladimirantin.core.service.CoreModelService;
+      ${b('import com.github.vladimirantin.core.service.CoreModelService;')}
       import org.springframework.stereotype.Service;
 
       @Service
@@ -47,7 +49,7 @@ export const examples = [
         title: 'CustomDTO.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.DTO.CoreDTO;
+      ${b('import com.github.vladimirantin.core.web.DTO.CoreDTO;')}
 
       public class CustomDTO extends CoreDTO {
 
@@ -61,7 +63,7 @@ export const examples = [
         title: 'CustomMapper.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.mapper.CoreMapperImpl;
+      ${b('import com.github.vladimirantin.core.web.mapper.CoreMapperImpl;')}
       import org.springframework.stereotype.Component;
 
       @Component
@@ -74,7 +76,7 @@ export const examples = [
         title: 'CustomController.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.rest.CoreRestController;
+      ${b('import com.github.vladimirantin.core.web.rest.CoreRestController;')}
       import org.springframework.web.bind.annotation.RequestMapping;
       import org.springframework.web.bind.annotation.RestController;
 
@@ -95,15 +97,15 @@ export const examples = [
         title: 'CustomEntity.java',
         text: `
       ...
-      import com.github.vladimirantin.core.GlobalVariables;
-      import com.github.vladimirantin.core.model.CoreModel;
+      ${b('import com.github.vladimirantin.core.GlobalVariables;')}
+      ${b('import com.github.vladimirantin.core.model.CoreModel;')}
       import javax.persistence.Entity;
       import org.hibernate.annotations.Where;
-      import com.github.vladimirantin.core.reflection.CoreImpl;
+      ${b('import com.github.vladimirantin.core.reflection.CoreImpl;')}
 
       @Entity
-      @Where(clause = GlobalVariables.WHERE_CLAUSE)
-      ${boldValue('@CoreImpl(DTO = CustomDTO.class, type = {CoreImpl.ImplType.REPO, CoreImpl.ImplType.SERVICE, CoreImpl.ImplType.MAPPER})')}
+      ${b('@Where(clause = GlobalVariables.WHERE_CLAUSE)')}
+      ${b('@CoreImpl(DTO = CustomDTO.class, type = {CoreImpl.ImplType.REPO, CoreImpl.ImplType.SERVICE, CoreImpl.ImplType.MAPPER})')}
       public class CustomEntity extends CoreModel {
 
         private String name;
@@ -115,7 +117,7 @@ export const examples = [
         title: 'CustomDTO.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.DTO.CoreDTO;
+      ${b('import com.github.vladimirantin.core.web.DTO.CoreDTO;')}
 
       public class CustomDTO extends CoreDTO {
 
@@ -129,7 +131,7 @@ export const examples = [
         title: 'CustomController.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.rest.CoreRestController;
+      ${b('import com.github.vladimirantin.core.web.rest.CoreRestController;')}
       import org.springframework.web.bind.annotation.RequestMapping;
       import org.springframework.web.bind.annotation.RestController;
 
@@ -146,7 +148,7 @@ export const examples = [
         title: 'CustomRepo.java',
         text: `
       ...
-      import com.github.vladimirantin.core.repo.CoreRepository;
+      ${b('import com.github.vladimirantin.core.repo.CoreRepository;')}
       import org.springframework.stereotype.Repository;
 
       @Repository
@@ -158,7 +160,7 @@ export const examples = [
         title: 'CustomService.java',
         text: `
       ...
-      import com.github.vladimirantin.core.service.CoreModelService;
+      ${b('import com.github.vladimirantin.core.service.CoreModelService;')}
       import org.springframework.stereotype.Service;
 
       @Service
@@ -170,7 +172,7 @@ export const examples = [
         title: 'CustomMapper.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.mapper.CoreMapperImpl;
+      ${b('import com.github.vladimirantin.core.web.mapper.CoreMapperImpl;')}
       import org.springframework.stereotype.Component;
 
       @Component
@@ -188,15 +190,15 @@ export const examples = [
         title: 'CustomEntity.java',
         text: `
       ...
-      import com.github.vladimirantin.core.GlobalVariables;
-      import com.github.vladimirantin.core.model.CoreModel;
+      ${b('import com.github.vladimirantin.core.GlobalVariables;')}
+      ${b('import com.github.vladimirantin.core.model.CoreModel;')}
       import javax.persistence.Entity;
       import org.hibernate.annotations.Where;
-      import com.github.vladimirantin.core.reflection.CoreImpl;
+      ${b('import com.github.vladimirantin.core.reflection.CoreImpl;')}
 
       @Entity
-      @Where(clause = GlobalVariables.WHERE_CLAUSE)
-      ${boldValue('@CoreImpl(DTO = CustomDTO.class)')} // or ${boldValue('@CoreImpl(DTO = CustomDTO.class, type = CoreImpl.ImplType.ALL)')}
+      ${b('@Where(clause = GlobalVariables.WHERE_CLAUSE)')}
+      ${b('@CoreImpl(DTO = CustomDTO.class)')} // or ${b('@CoreImpl(DTO = CustomDTO.class, type = CoreImpl.ImplType.ALL)')}
       public class CustomEntity extends CoreModel {
 
         private String name;
@@ -208,7 +210,7 @@ export const examples = [
         title: 'CustomDTO.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.DTO.CoreDTO;
+      ${b('import com.github.vladimirantin.core.web.DTO.CoreDTO;')}
 
       public class CustomDTO extends CoreDTO {
 
@@ -224,7 +226,7 @@ export const examples = [
         title: 'CustomRepo.java',
         text: `
       ...
-      import com.github.vladimirantin.core.repo.CoreRepository;
+      ${b('import com.github.vladimirantin.core.repo.CoreRepository;')}
       import org.springframework.stereotype.Repository;
 
       @Repository
@@ -236,7 +238,7 @@ export const examples = [
         title: 'CustomService.java',
         text: `
       ...
-      import com.github.vladimirantin.core.service.CoreModelService;
+      ${b('import com.github.vladimirantin.core.service.CoreModelService;')}
       import org.springframework.stereotype.Service;
 
       @Service
@@ -248,7 +250,7 @@ export const examples = [
         title: 'CustomMapper.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.mapper.CoreMapperImpl;
+      ${b('import com.github.vladimirantin.core.web.mapper.CoreMapperImpl;')}
       import org.springframework.stereotype.Component;
 
       @Component
@@ -261,12 +263,12 @@ export const examples = [
         title: 'CustomController.java',
         text: `
       ...
-      import com.github.vladimirantin.core.web.rest.CoreRestController;
+      ${b('import com.github.vladimirantin.core.web.rest.CoreRestController;')}
       import org.springframework.web.bind.annotation.RequestMapping;
       import org.springframework.web.bind.annotation.RestController;
 
       @RestController
-      ${boldValue('@RequestMapping("/api/entity_customs")')}
+      ${b('@RequestMapping("/api/entity_customs")')}
       public class CustomController extends CoreRestController&lt;CustomService, CustomMapper, CustomDTO, CustomEntity&gt; {
           ...
       }`
@@ -760,8 +762,3 @@ export const docs = [
     }`
   },
 ];
-
-
-function boldValue(s: string) {
-  return `<b class="font-12">${s}</b>;`;
-};

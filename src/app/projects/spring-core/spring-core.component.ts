@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {docs, examples} from "./spring-core.variable";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {dependency, path} from "./spring-core.const";
+import * as v1 from "./spring-core.v1.1";
+import * as v2 from "./spring-core.v1.2";
 
 @Component({
   selector: 'app-spring-core',
@@ -11,37 +13,10 @@ export class SpringCoreComponent implements OnInit {
   links = [
     {onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github'},
   ];
-  examples = examples;
-  docs = docs;
-  dependency = `
-    <dependency>
-        <groupId>com.github.vladimirantin</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>1.1</version>
-        <scope>provided</scope>
-    </dependency>`;
-  path = `
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <annotationProcessorPaths>
-                       <path>
-                            <groupId>com.github.vladimirantin</groupId>
-                            <artifactId>spring-core</artifactId>
-                            <version>1.1</version>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-          </path>
-        </plugins>
-    </build>`;
+  versions = [
+    {title: 'v1.1 (Core)', content: v1, dependency: dependency('1.1'), path: path('1.1')},
+    {title: 'v1.2 (AuditLog)', content: v2, dependency: dependency('1.2'), path: path('1.2')}
+  ]
   constructor(private _snackBar: MatSnackBar) {}
 
   ngOnInit() {
@@ -68,6 +43,5 @@ export class SpringCoreComponent implements OnInit {
       verticalPosition: 'top'
     });
   }
-
 
 }

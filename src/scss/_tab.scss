@@ -1,0 +1,15 @@
+.mat-tab-label, .mat-tab-label-active{
+  min-width: auto !important;
+  padding: 0.4rem 1rem !important;
+}
+
+.mat-tab-label-active {
+  opacity: 1 !important;
+  border: #007bff solid !important;
+  height: 2.3rem;
+  border-radius: 5rem;
+  margin-bottom: 0.2rem;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background: none !important;
+}
