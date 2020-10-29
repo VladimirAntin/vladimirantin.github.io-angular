@@ -28,6 +28,7 @@ import {NgMultiselectComponent} from "../projects/ng-multiselect/ng-multiselect.
 import {NgMultiselectModule} from "@antin502/ng-multiselect";
 import {SpringCoreComponent} from "../projects/spring-core/spring-core.component";
 import {MatTabsModule} from "@angular/material/tabs";
+import {TagComponent} from "./tag/tag.component";
 
 
 const appRoutes: Routes = [
@@ -53,10 +54,10 @@ const appRoutes: Routes = [
       preset: intersectionObserverPreset
     }), ParticlesModule
   ],
-  declarations: [VarDirective],
+  declarations: [VarDirective, TagComponent],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatToolbarModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatTabsModule,
-    MatCardModule, MatBadgeModule,
+    MatCardModule, MatBadgeModule, TagComponent,
     MatListModule, NgTypedModule, NgMultiselectModule, VarDirective, MatSidenavModule, MatDialogModule, LazyLoadImageModule, ParticlesModule]
 })
 export class SharedModule { }

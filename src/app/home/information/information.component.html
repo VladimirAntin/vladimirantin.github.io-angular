@@ -1,64 +1,51 @@
 <div class="text-muted">
-  <p><i>&lt;information&gt;</i></p>
-  <!-- title -->
-  <div class="ml-4">
-    <p><i>&lt;position&gt;</i></p>
-    <p class="text-white">
-      <span class="ml-5 fa-2x"
-            [ng-typed]="text('Full Stack developer')"
-            (complete)="complete.title=true"></span>
-    </p>
-    <p><i>&lt;/position&gt;</i></p>
-  </div>
-  <!-- languages -->
-  <p class="ml-4"><i>&lt;languages&gt;</i></p>
-  <div class="ml-4">
-    <!-- backend -->
-    <p class="ml-4">
-      <i>&lt;backend&gt;</i>
-      <span *ngIf="complete.title" class="text-white">
-        <span class="mx-2 fa-2x"
-              [ng-typed]="text('Java')"
-              (complete)="complete.backend=true; allComplete()"></span>
-      </span>
-      <i>&lt;/backend&gt;</i>
-    </p>
-    <!-- frontend -->
-    <p class="ml-4">
-      <i>&lt;frontend&gt;</i>
-      <span *ngIf="complete.backend" class="text-white">
-        <span class="mx-2 fa-2x"
-              [ng-typed]="text('Javascript')"
-              (complete)="complete.frontend=true"></span>
-      </span>
-      <i>&lt;/frontend&gt;</i>
-    </p>
-    <p><i>&lt;/languages&gt;</i></p>
-  </div>
-  <!-- location -->
-  <p class="ml-4"><i>&lt;location&gt;</i></p>
-  <div class="ml-4">
-    <!-- city -->
-    <p class="ml-4">
-      <i>&lt;city&gt;</i>
-      <span *ngIf="complete.frontend" class="text-white">
-        <span class="mx-2 fa-2x"
-              [ng-typed]="text('Novi Sad')"
-              (complete)="complete.city=true"></span>
-      </span>
-      <i>&lt;/city&gt;</i>
-    </p>
-    <!-- country -->
-    <p class="ml-4">
-      <i>&lt;country&gt;</i>
-      <span *ngIf="complete.city" class="text-white">
-        <span class="mx-2 fa-2x"
-              [ng-typed]="text('Serbia')"
-              (complete)="complete.country=true; allComplete()"></span>
-      </span>
-      <i>&lt;/country&gt;</i>
-    </p>
-  </div>
-  <p class="ml-4"><i>&lt;/location&gt;</i></p>
-  <p><i>&lt;/information&gt;</i></p>
+  <tag tagName="information" [inline]="false" contentClass="ml-4">
+    <tag tagName="position" [inline]="false">
+      <p class="text-white">
+        <span class="ml-5 fa-2x"
+              [ng-typed]="text('Full Stack developer')"
+              (complete)="complete.title=true"></span>
+      </p>
+    </tag>
+    <tag tagName="languages" [inline]="false" contentClass="ml-4">
+      <p class="ml-4">
+        <tag tagName="backend">
+          <span *ngIf="complete.title" class="text-white">
+          <span class="mx-2 fa-2x"
+                [ng-typed]="text('Java')"
+                (complete)="complete.backend=true; allComplete()"></span>
+          </span>
+        </tag>
+      </p>
+      <p class="ml-4">
+        <tag tagName="frontend">
+          <span *ngIf="complete.backend" class="text-white">
+          <span class="mx-2 fa-2x"
+                [ng-typed]="text('Javascript')"
+                (complete)="complete.frontend=true"></span>
+          </span>
+        </tag>
+      </p>
+    </tag>
+    <tag tagName="location" [inline]="false" contentClass="ml-4">
+      <p class="ml-4">
+        <tag tagName="city">
+          <span *ngIf="complete.frontend" class="text-white">
+          <span class="mx-2 fa-2x"
+                [ng-typed]="text('Novi Sad')"
+                (complete)="complete.city=true"></span>
+          </span>
+        </tag>
+      </p>
+      <p class="ml-4">
+        <tag tagName="country">
+          <span *ngIf="complete.city" class="text-white">
+          <span class="mx-2 fa-2x"
+                [ng-typed]="text('Serbia')"
+                (complete)="complete.country=true; allComplete()"></span>
+          </span>
+        </tag>
+      </p>
+    </tag>
+  </tag>
 </div>
