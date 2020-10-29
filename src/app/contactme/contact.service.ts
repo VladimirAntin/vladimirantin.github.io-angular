@@ -11,7 +11,7 @@ export class ContactService {
 
 
   // faker.github.io@gmail.com
-  private postMessage = 'https://script.google.com/macros/s/AKfycbzDs3L68KI1pYtWoNIihY7Y6L5JnKRwVdIlhYl9/exec';
+  private postMessage = 'https://script.google.com/macros/s/AKfycbzLjykCg_kIwSLaMX5fXn0Os2HtrQ-nEsRzxSv_WMStc7iu-rk/exec';
 
   constructor(private _http: HttpClient) { }
 
