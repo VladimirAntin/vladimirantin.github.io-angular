@@ -1,6 +1,6 @@
 export interface MessageInterface {
 
-  name: string;
+  name?: string;
   email: string;
   text: string;
 }

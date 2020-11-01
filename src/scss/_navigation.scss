@@ -12,10 +12,14 @@
     height: 100vh !important;
     width: 50vw !important;
     position: fixed;
-    background: rgba(255,255,255, 0.8);
+    background: rgba(255,255,255, 0.9);
   }
 
   .mat-drawer-backdrop {
     position: fixed !important;
   }
+}
+
+.nav-active {
+  border-bottom: #007bff solid !important;
 }

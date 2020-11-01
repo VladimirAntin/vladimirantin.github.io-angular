@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
 
   giveMeFB() {
     this.snackBar.openFromComponent(GiveMeFeedbackComponent, {
-      duration: 900000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: 'bg-light'
+      duration: 900000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: ['bg-light', 'm-2', 'border', 'border-info']
     });
   }
 }

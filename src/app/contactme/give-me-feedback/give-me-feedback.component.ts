@@ -12,7 +12,6 @@ import {Router} from "@angular/router";
 export class GiveMeFeedbackComponent {
 
   sendObj: MessageInterface = {
-    name: '',
     email: '',
     text: '',
   };

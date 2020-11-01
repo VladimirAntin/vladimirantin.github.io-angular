@@ -1,3 +1,5 @@
+import {NgxUiLoaderConfig} from "ngx-ui-loader/lib/utils/interfaces";
+import {PB_DIRECTION, POSITION, SPINNER} from "ngx-ui-loader";
 
 export const ngxProgress = {
   radius: 60,
@@ -22,4 +24,22 @@ export const ngTyped = {
 
 export function openExternalLink(url: string) {
   window.open(url, '_blank');
+}
+
+
+export const NGX_LOADER: NgxUiLoaderConfig = {
+  bgsType: SPINNER.ballScaleMultiple,
+  bgsPosition: POSITION.bottomRight,
+  bgsSize: 50,
+  bgsColor: '#fff',
+  fgsColor: '#fff',
+  overlayColor: 'rgba(40,40,40,0)',
+  fgsType: SPINNER.ballScaleMultiple,
+  fgsPosition: POSITION.bottomRight,
+  fgsSize: 50,
+  blur: 50,
+  hasProgressBar: true,
+  pbDirection: PB_DIRECTION.leftToRight,
+  pbColor: '#fff',
+  minTime: 1000
 }
