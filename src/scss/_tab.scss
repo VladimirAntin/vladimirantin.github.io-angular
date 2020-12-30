@@ -5,11 +5,12 @@
 
 .mat-tab-label-active {
   opacity: 1 !important;
-  border: #007bff solid !important;
-  height: 2.3rem;
-  border-radius: 5rem;
-  margin-bottom: 0.2rem;
+  border-bottom: #007bff solid !important;
 }
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
   background: none !important;
+}
+
+.mat-tab-label-container, .mat-tab-body {
+  z-index: unset !important;
 }

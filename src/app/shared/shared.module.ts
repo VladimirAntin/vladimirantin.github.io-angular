@@ -28,6 +28,9 @@ import {NgMultiselectComponent} from "../projects/ng-multiselect/ng-multiselect.
 import {NgMultiselectModule} from "@antin502/ng-multiselect";
 import {SpringCoreComponent} from "../projects/spring-core/spring-core.component";
 import {MatTabsModule} from "@angular/material/tabs";
+import {TagComponent} from "./tag/tag.component";
+import {NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule} from "ngx-ui-loader";
+import {NGX_LOADER} from "./variables";
 
 
 const appRoutes: Routes = [
@@ -51,12 +54,12 @@ const appRoutes: Routes = [
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatToolbarModule, MatTabsModule,
     NgTypedModule, NgMultiselectModule, MatListModule, MatSidenavModule, MatDialogModule, LazyLoadImageModule.forRoot({
       preset: intersectionObserverPreset
-    }), ParticlesModule
+    }), ParticlesModule, NgxUiLoaderModule.forRoot(NGX_LOADER), NgxUiLoaderHttpModule, NgxUiLoaderRouterModule
   ],
-  declarations: [VarDirective],
+  declarations: [VarDirective, TagComponent],
   exports: [MatIconModule, MatButtonModule, RouterModule, MatInputModule, FormsModule, HttpClientModule, MatChipsModule, MatCheckboxModule,
     MatTooltipModule, MatToolbarModule, MatSnackBarModule, MatMenuModule, MatExpansionModule, MatGridListModule, MatProgressSpinnerModule, MatTabsModule,
-    MatCardModule, MatBadgeModule,
+    MatCardModule, MatBadgeModule, TagComponent, NgxUiLoaderModule, NgxUiLoaderHttpModule, NgxUiLoaderRouterModule,
     MatListModule, NgTypedModule, NgMultiselectModule, VarDirective, MatSidenavModule, MatDialogModule, LazyLoadImageModule, ParticlesModule]
 })
 export class SharedModule { }

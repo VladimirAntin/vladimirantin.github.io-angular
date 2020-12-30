@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-10 text-dark">
+    Give me feedback
+  </div>
+  <div class="col-2">
+    <button class="btn float-right m-0 p-0" (click)="close()">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+</div>
+<form class="m-4" name="sendForm" role="form"
+      novalidate #sendForm="ngForm">
+  <div class="row">
+    <div class="col-12">
+      <mat-form-field class="w-100">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" name="email" class="text-dark"
+               required minlength="10" [(ngModel)]="sendObj.email">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="button" class="float-left btn btn-lg rounded-circle btn-outline-danger" [disabled]="sendForm.form.invalid" (click)="feedback(false)">
+      <i class="fa fa-thumbs-down"></i>
+    </button>
+    <button type="button" class="float-right btn btn-lg rounded-circle btn-outline-success" [disabled]="sendForm.form.invalid" (click)="feedback()">
+      <i class="fa fa-thumbs-up"></i>
+    </button>
+  </div>
+</form>

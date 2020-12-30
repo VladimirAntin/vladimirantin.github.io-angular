@@ -2,7 +2,10 @@
 
 body {
   overflow-x: hidden !important;
-  background-image: $bg-body;
+  @extend .bg-body;
+}
+.bg-body {
+  background-image: $bg-body !important;
 }
 
 .bg-black {

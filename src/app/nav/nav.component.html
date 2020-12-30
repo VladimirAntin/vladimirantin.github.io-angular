@@ -1,15 +1,7 @@
 <mat-toolbar class="bg-transparent pb-3">
 	<mat-toolbar-row class="row d-none d-lg-flex">
 		<div class="col-12 text-white mt-2 mb-2">
-			<div class="row animated flash">
-				<div class="col-3">
-					<img defaultImage="assets/img/load.gif" lazyLoad="assets/va.png" height="50">
-				</div>
-				<div class="col-9">
-					<h1>Vladimir Antin</h1>
-					<span class="text-white-50 mt-4 mb-4">Full-stack developer</span>
-				</div>
-			</div>
+			<app-nav-logo></app-nav-logo>
 			<div class="mt-5">
 				<div *ngFor="let n of navItems" class="block {{n.classes? n.classes: ''}}">
 					<button class="btn bg-transparent my-3 h-3em" [routerLink]="[n.route]" routerLinkActive="active"
@@ -45,7 +37,7 @@
 	<mat-drawer #drawer [mode]="'side'" [(opened)]=drawerOpened>
 		<mat-nav-list class="p-3">
 			<button mat-list-item [routerLink]="[n.route]" (click)="drawer.toggle()" *ngFor="let n of navItems"
-				routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+				routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact: true}"
 				class="btn btn-block btn-dark {{n.classes? n.classes: ''}}">
 				<span class="float-left text-white-50">{{n.hover}}</span>
 				<span class="float-right">

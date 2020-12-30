@@ -1,0 +1,7 @@
+<i class="tag-font" *ngIf="inline">&lt;{{tagName}}&gt;</i>
+<p *ngIf="!inline"><i class="tag-font">&lt;{{tagName}}&gt;</i></p>
+<div style="display: inline-block" class="{{contentClass}}">
+  <ng-content></ng-content>
+</div>
+<p *ngIf="!inline"><i class="tag-font">&lt;/{{tagName}}&gt;</i></p>
+<i class="tag-font" *ngIf="inline">&lt;/{{tagName}}&gt;</i>
