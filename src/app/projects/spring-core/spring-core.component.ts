@@ -11,6 +11,7 @@ import * as v2 from "./spring-core.v1.2";
 export class SpringCoreComponent implements OnInit {
 
   links = [
+    { onclick: () => this.open('https://mvnrepository.com/artifact/com.github.vladimirantin/spring-core'), name: 'Maven', color: 'primary', iconText: 'm' },
     {onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github'},
   ];
   versions = [

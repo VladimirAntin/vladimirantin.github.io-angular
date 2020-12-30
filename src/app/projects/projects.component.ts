@@ -16,7 +16,8 @@ export class ProjectsComponent implements OnInit {
       onclick: () => this._router.navigateByUrl('projects/spring-core'),
       load: false,
       external: [
-        { onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github' }
+        { onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github' },
+        { onclick: () => this.open('https://mvnrepository.com/artifact/com.github.vladimirantin/spring-core'), name: 'Maven', color: 'primary', iconText: 'm' }
       ],
       text: 'Spring core is library for Spring boot framework. This is component generator.'
     },

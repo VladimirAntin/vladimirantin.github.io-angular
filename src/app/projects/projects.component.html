@@ -15,8 +15,9 @@
         <div class="col-lg col-md-12 animated fadeInRight">
           <ng-container *ngFor="let item of p.external">
             <button class="btn btn-{{item.color}} m-2" matTooltip="{{item.name}}" (click)="item.onclick()">
-                <i class="fab fa-{{item.icon}}"></i>
-            </button>    
+                <i class="fab fa-{{item.icon}}" *ngIf="item?.icon"></i>
+                <i *ngIf="!item?.icon">{{item?.iconText}}</i>
+            </button>
           </ng-container>
         </div>
       </div>

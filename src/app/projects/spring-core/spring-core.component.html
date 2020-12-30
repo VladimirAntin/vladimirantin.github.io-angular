@@ -2,7 +2,8 @@
   <ul class="nav justify-content-end bg-light">
     <li class="nav-item m-2 mr-3" *ngFor="let item of links">
       <button class="btn btn-lg btn-{{item.color}}" matTooltip="{{item.name}}" (click)="item.onclick()">
-        <i class="fab fa-{{item.icon}}"></i>
+        <i class="fab fa-{{item.icon}}" *ngIf="item?.icon"></i>
+        <i *ngIf="!item?.icon">{{item?.iconText}}</i>
       </button>
     </li>
   </ul>
