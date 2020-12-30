@@ -16,8 +16,8 @@ export class ProjectsComponent implements OnInit {
       onclick: () => this._router.navigateByUrl('projects/spring-core'),
       load: false,
       external: [
-        { onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github' },
-        { onclick: () => this.open('https://mvnrepository.com/artifact/com.github.vladimirantin/spring-core'), name: 'Maven', color: 'primary', iconText: 'm' }
+        { onclick: () => this.open('https://mvnrepository.com/artifact/com.github.vladimirantin/spring-core'), name: 'Maven', color: 'primary', iconText: 'm' },
+        { onclick: () => this.open('https://github.com/vladimirantin/spring-core'), name: 'GitHub', color: 'warning', icon: 'github' }
       ],
       text: 'Spring core is library for Spring boot framework. This is component generator.'
     },
@@ -55,8 +55,8 @@ export class ProjectsComponent implements OnInit {
       style: {},
       load: false,
       external: [
-        { onclick: () => this.open('https://gitlab.com/antin502/ebook'), name: 'GitLab', color: 'warning', icon: 'gitlab' },
-        { onclick: () => this.open('https://github.com/VladimirAntin/ebook'), name: 'GitHub', color: 'light', icon: 'github' }
+        { onclick: () => this.open('https://gitlab.com/antin502/ebook'), name: 'GitLab', color: 'light', icon: 'gitlab' },
+        { onclick: () => this.open('https://github.com/VladimirAntin/ebook'), name: 'GitHub', color: 'warning', icon: 'github' }
       ],
       text: 'eBook is web application. Application created with Spring Boot framework, Angular framework and use Lucene lib for searching index of books.'
     },

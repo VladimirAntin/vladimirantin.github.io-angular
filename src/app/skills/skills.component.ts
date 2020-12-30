@@ -41,7 +41,7 @@ export class SkillsComponent implements OnInit {
       spans: this.generateArray(17)
     },
     {
-      name: 'I cam currently learn',
+      name: 'I am currently learning',
       icon: 'icon-learn',
       pattern: ['oAuth', 'GraphQL', 'Electron', 'Docker'],
       spans: this.generateArray(34)
