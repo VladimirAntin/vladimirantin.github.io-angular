@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -6,18 +6,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  skills: {name: string, icon: string, pattern?: string[], spans?: string[]}[] = [
-    {name: 'Java', icon: 'icon-java',
-      pattern: ['maven', 'Spring Boot', 'Hibernate', 'Spring security', 'Java8+', 'WebSocket'], spans: this.generateArray(8)},
-    {name: 'JavaScript', icon: 'icon-js',
-      pattern: ['npm', 'ES5', 'ES6', 'TypeScript', 'Angular 2+', 'AngularJS', 'jQuery', 'React native', 'React', 'VueJS', 'NestJS', 'WebSocket'], spans: this.generateArray(2)},
-    {name: 'Database', icon: 'icon-db', pattern: ['MongoDB', 'MySQL'],  spans: this.generateArray(13)},
+  skills: { name: string, icon: string, pattern?: string[], spans?: string[] }[] = [
+    {
+      name: 'Programming languages',
+      icon: 'icon-languages',
+      pattern: ['Java', 'JavaScript', 'TypeScript', 'HTML', 'CSS (Scss, less)', 'JSON', 'Basics of SQL', 'Basics of NoSQL'],
+      spans: this.generateArray(39)
+    },
+    {
+      name: 'Frameworks',
+      icon: 'icon-framework',
+      pattern: ['Spring boot', 'Angular', 'NestJS', 'React', 'React native'],
+      spans: this.generateArray(21)
+    },
+    {name: 'Database', icon: 'icon-db', pattern: ['MongoDB', 'MySQL'], spans: this.generateArray(13)},
+    {
+      name: 'Project Management',
+      icon: 'icon-project-management',
+      pattern: ['maven', 'npm'],
+      spans: this.generateArray(34)
+    },
+    {
+      name: 'IDE',
+      icon: 'icon-ide',
+      pattern: ['Intellij IDEA', 'WebStorm', 'Visual Studio Code', 'Eclipse', 'Sublime Text'],
+      spans: this.generateArray(39)
+    },
+    {name: 'Systems', icon: 'icon-os', pattern: ['Mac OSX', 'Linux', 'Windows'], spans: this.generateArray(40)},
     {name: 'Version Control', icon: 'icon-git', pattern: ['Git']},
-    {name: 'CSS', icon: 'icon-css', pattern: ['CSS3', 'Sass', 'Less', 'Bootstrap', 'Material design'], spans: this.generateArray(9)},
+    {
+      name: 'Other',
+      icon: 'icon-other',
+      pattern: ['WebSocket', 'REST', 'JWT', 'Bootstrap', 'Material design', 'Fontawesome icons', 'Material icons'],
+      spans: this.generateArray(17)
+    },
+    {
+      name: 'I cam currently learn',
+      icon: 'icon-learn',
+      pattern: ['oAuth', 'GraphQL', 'Electron', 'Docker'],
+      spans: this.generateArray(34)
+    },
   ];
-  constructor() { }
 
-  ngOnInit() { }
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
 
   quotient(b: number) {
     return b % 2;
