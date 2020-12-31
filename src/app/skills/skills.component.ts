@@ -29,7 +29,7 @@ export class SkillsComponent implements OnInit {
     {
       name: 'IDE',
       icon: 'icon-ide',
-      pattern: ['Intellij IDEA', 'WebStorm', 'Visual Studio Code', 'Eclipse', 'Sublime Text'],
+      pattern: ['IntelliJ IDEA', 'WebStorm', 'Visual Studio Code', 'Eclipse', 'Sublime Text'],
       spans: this.generateArray(39)
     },
     {name: 'Systems', icon: 'icon-os', pattern: ['Mac OSX', 'Linux', 'Windows'], spans: this.generateArray(40)},
