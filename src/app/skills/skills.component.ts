@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit {
       spans: this.generateArray(39)
     },
     {
-      name: 'Frameworks',
+      name: 'Frameworks and libraries',
       icon: 'icon-framework',
       pattern: ['Spring boot', 'Angular', 'NestJS', 'React', 'React native'],
       spans: this.generateArray(21)
