@@ -3,6 +3,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {dependency, path} from "./spring-core.const";
 import * as v1 from "./spring-core.v1.1";
 import * as v2 from "./spring-core.v1.2";
+import * as v3 from "./spring-core.v1.3";
 
 @Component({
   selector: 'app-spring-core',
@@ -16,7 +17,8 @@ export class SpringCoreComponent implements OnInit {
   ];
   versions = [
     {title: 'v1.1 (Core)', content: v1, dependency: dependency('1.1'), path: path('1.1')},
-    {title: 'v1.2 (AuditLog)', content: v2, dependency: dependency('1.2'), path: path('1.2')}
+    {title: 'v1.2 (AuditLog)', content: v2, dependency: dependency('1.2'), path: path('1.2')},
+    {title: 'v1.3 (Extended controller)', content: v3, dependency: dependency('1.3'), path: path('1.3')}
   ]
   constructor(private _snackBar: MatSnackBar) {}
 
