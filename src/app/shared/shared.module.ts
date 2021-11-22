@@ -58,7 +58,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes),
+    CommonModule, MatIconModule, MatButtonModule, MatInputModule, RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     BrowserAnimationsModule, FormsModule, HttpClientModule, MatSnackBarModule, MatCheckboxModule, MatMenuModule, MatExpansionModule,
     MatGridListModule, MatProgressSpinnerModule, MatCardModule, MatChipsModule, MatBadgeModule, MatTooltipModule, MatToolbarModule, MatTabsModule,
     NgTypedModule, NgMultiselectModule, MatListModule, MatSidenavModule, MatDialogModule, LazyLoadImageModule.forRoot({
