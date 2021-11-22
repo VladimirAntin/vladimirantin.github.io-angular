@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import {Component, OnInit, ContentChild} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer, Title} from '@angular/platform-browser';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   clientHeight: number;
 
-  @ViewChild('router', {static: false})
+  @ContentChild('router', {static: false})
   private routerOutlet: RouterOutlet;
 
   showParticles = !window.navigator.platform.toLowerCase().includes('mac')
