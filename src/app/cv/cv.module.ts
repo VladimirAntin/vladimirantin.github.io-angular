@@ -9,6 +9,6 @@ import {SharedModule} from '../shared/shared.module';
     CommonModule, SharedModule, PdfViewerModule
   ],
   declarations: [CvComponent],
-  exports: [CvComponent ]
+  exports: [CvComponent]
 })
 export class CvModule { }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatToolbarModule} from '@angular/material';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {NavComponent} from './nav.component';
 import {SharedModule} from '../shared/shared.module';
 import { NavLogoComponent } from './nav-logo/nav-logo.component';

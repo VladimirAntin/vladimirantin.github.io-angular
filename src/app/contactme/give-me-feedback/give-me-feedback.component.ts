@@ -1,9 +1,9 @@
 import {Component, ContentChild, Inject} from '@angular/core';
-import {MAT_SNACK_BAR_DATA, MatSnackBar} from "@angular/material/snack-bar";
 import {MessageInterface} from "../message.model";
 import {ContactService} from "../contact.service";
 import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
+import {MAT_SNACK_BAR_DATA, MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-give-me-feedback',
@@ -15,7 +15,7 @@ export class GiveMeFeedbackComponent {
     email: '',
     text: '',
   };
-  @ContentChild('sendForm', {static: false}) sendForm !: NgForm;
+  @ContentChild('sendForm') sendForm !: NgForm;
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any, private _contact: ContactService,
               private snackBar: MatSnackBar, private _router: Router) { }
 

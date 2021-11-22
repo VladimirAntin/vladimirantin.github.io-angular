@@ -1,6 +1,6 @@
 import {Component, ContentChild, Input, OnInit} from '@angular/core';
 import {ContactService} from './contact.service';
-import {MatSnackBar} from '@angular/material';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import {NgForm} from '@angular/forms';
 import {MessageInterface} from './message.model';
 
@@ -16,7 +16,7 @@ export class ContactmeComponent implements OnInit {
     text: '',
   };
   @Input() styleDIV = {};
-  @ContentChild('sendForm', {static: false}) sendForm !: NgForm;
+  @ContentChild('sendForm') sendForm !: NgForm;
   contacts = [
     {icon: 'fa fa-phone-square', content: '+381 61 627 91 51'},
     {icon: 'fa fa-envelope-square', content: 'antin502@gmail.com'},

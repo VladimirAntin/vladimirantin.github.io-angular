@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Group, GroupService} from './group.service';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 import {LoginRoomComponent} from './login-room/login-room.component';
 import {Router} from "@angular/router";
 
