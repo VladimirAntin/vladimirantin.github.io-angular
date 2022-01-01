@@ -13,6 +13,7 @@ export class ReferencesComponent implements OnInit {
     {name: 'Github', action: () => openExternalLink('https://github.com/vladimirantin'), complete: false},
     {name: 'Gitlab', action: () => openExternalLink('https://gitlab.com/antin502'), complete: false},
     {name: 'npm', action: () => openExternalLink('https://npmjs.com/~antin502'), complete: false},
+    {name: 'LinkedIn', action: () => openExternalLink('https://www.linkedin.com/in/vladimir-antin'), complete: false},
   ];
   constructor() { }
 

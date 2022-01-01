@@ -1,11 +1,14 @@
 <div id="footer" class="text-light">
   <div class="container">
       <div class="text-left">
-          <button mat-icon-button *ngFor="let item of actions" (click)="item.action()" 
+          <button mat-icon-button *ngFor="let item of actions" (click)="item.action()"
           [matTooltip]="item.name" matTooltipClass="footer-tooltip">
               <mat-icon><span><i [class]="item.class"></i></span></mat-icon>
           </button>
       </div>
-      <div class="text-center"><i class="far fa-copyright"></i> {{currentYear | date: 'yyyy'}} Vladimir Antin</div>
+      <div class="text-center"><i class="far fa-copyright"></i> {{currentYear | date: 'yyyy'}} Vladimir Antin
+        and
+        <a class="cursor-pointer text-white font-weight-bold" href="https://pages.github.com" target="_blank">github.io</a>
+      </div>
   </div>
 </div>

@@ -7,13 +7,20 @@ import {ngTyped} from '../../shared/variables';
 })
 export class InformationComponent implements OnInit {
 
-  complete = {
-    title: false,
-    backend: false,
-    frontend: false,
-    city: false,
-    country: false
-  };
+  complete: any = {};
+
+  content = [
+    {title: 'backend', children: [
+      {name: 'Spring boot', tag: 'java', after: 'title'},
+      {name: 'Symfony', tag: 'php', after: 'java'},
+      {name: 'Flask', tag: 'python', after: 'php'},
+    ]},
+    {title: 'frontend', children: [
+      {name: 'Angular', tag: 'typescript', after: 'python'},
+      {name: 'React', tag: 'javascript...typescript', after: 'typescript'},
+      {name: 'React native', tag: 'native', after: 'javascript...typescript'},
+    ]}
+  ]
 
   @Output() completeChange = new EventEmitter();
   constructor() { }

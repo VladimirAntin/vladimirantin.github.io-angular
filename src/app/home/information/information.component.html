@@ -8,29 +8,24 @@
       </p>
     </tag>
     <tag tagName="languages" [inline]="false" contentClass="ml-4">
-      <p class="ml-4">
-        <tag tagName="backend">
-          <span *ngIf="complete.title" class="text-white">
-          <span class="mx-2 fa-2x"
-                [ng-typed]="text('Java')"
-                (complete)="complete.backend=true; allComplete()"></span>
-          </span>
-        </tag>
-      </p>
-      <p class="ml-4">
-        <tag tagName="frontend">
-          <span *ngIf="complete.backend" class="text-white">
-          <span class="mx-2 fa-2x"
-                [ng-typed]="text('Javascript')"
-                (complete)="complete.frontend=true"></span>
-          </span>
+      <p class="ml-4" *ngFor="let section of content">
+        <tag [tagName]="section.title" [inline]="false" contentClass="ml-4">
+          <p class="ml-4" *ngFor="let option of section.children">
+            <tag [tagName]="option.tag">
+              <span *ngIf="complete[option.after]" class="text-white">
+                <span class="mx-2 fa-2x"
+                [ng-typed]="text(option.name)"
+                (complete)="complete[option.tag]=true; allComplete()"></span>
+              </span>
+            </tag>
+          </p>
         </tag>
       </p>
     </tag>
     <tag tagName="location" [inline]="false" contentClass="ml-4">
       <p class="ml-4">
         <tag tagName="city">
-          <span *ngIf="complete.frontend" class="text-white">
+          <span *ngIf="complete.native" class="text-white">
           <span class="mx-2 fa-2x"
                 [ng-typed]="text('Novi Sad')"
                 (complete)="complete.city=true"></span>
