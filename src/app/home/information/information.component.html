@@ -11,8 +11,8 @@
       <p class="ml-4" *ngFor="let section of content">
         <tag [tagName]="section.title" [inline]="false" contentClass="ml-4">
           <p class="ml-4" *ngFor="let option of section.children">
-            <tag [tagName]="option.tag">
-              <span *ngIf="complete[option.after]" class="text-white">
+            <tag [tagName]="option.tag" [inline]="false" >
+              <span *ngIf="complete[option.after]" class="text-white ml-4">
                 <span class="mx-2 fa-2x"
                 [ng-typed]="text(option.name)"
                 (complete)="complete[option.tag]=true; allComplete()"></span>
