@@ -35,8 +35,8 @@
 
 <mat-drawer-container class="drawer-container" [hasBackdrop]="true" [ngClass]="{'open': drawerOpened}">
 	<mat-drawer #drawer [mode]="'side'" [(opened)]=drawerOpened>
-		<mat-list class="p-3">
-      <mat-list-item *ngFor="let n of navItems">
+		<mat-list class="py-3">
+      <mat-list-item *ngFor="let n of navItems" class="my-2">
         <button [routerLink]="[n.route]" (click)="drawer.toggle()"
                 routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact: true}"
                 class="btn btn-block btn-dark {{n.classes? n.classes: ''}}">
