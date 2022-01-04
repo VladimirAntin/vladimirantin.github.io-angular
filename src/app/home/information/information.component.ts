@@ -13,7 +13,6 @@ export class InformationComponent implements OnInit {
     {title: 'backend', children: [
       {name: 'Spring boot', tag: 'java', after: 'title'},
       {name: 'Symfony', tag: 'php', after: 'java'},
-      {name: 'Flask', tag: 'python', after: 'php'},
     ]},
     {title: 'frontend', children: [
       {name: 'Angular', tag: 'typescript', after: 'python'},
