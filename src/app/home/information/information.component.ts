@@ -15,7 +15,7 @@ export class InformationComponent implements OnInit {
       {name: 'Symfony', tag: 'php', after: 'java'},
     ]},
     {title: 'frontend', children: [
-      {name: 'Angular', tag: 'typescript', after: 'python'},
+      {name: 'Angular', tag: 'typescript', after: 'php'},
       {name: 'React', tag: 'javascript...typescript', after: 'typescript'},
       {name: 'React native', tag: 'native', after: 'javascript...typescript'},
     ]}
