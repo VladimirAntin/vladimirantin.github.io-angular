@@ -47,6 +47,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactmeComponent, data: {title: 'Contact me'}},
   { path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   { path: 'projects/spring-core', component: SpringCoreComponent, data: {title: 'Spring Core'}},
+  { path: 'projects/spring-core/:version', component: SpringCoreComponent, data: {title: 'Spring Core'}},
   { path: 'projects/ng-typed', component: NgTypedComponent, data: {title: 'Ng Typed'}},
   { path: 'projects/ng-multiselect', component: NgMultiselectComponent, data: {title: 'Ng Multiselect'}},
   { path: 'skills', component: SkillsComponent, data: {title: 'Skills'}},

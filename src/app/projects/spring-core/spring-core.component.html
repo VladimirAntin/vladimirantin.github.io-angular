@@ -9,7 +9,7 @@
   </ul>
   <div class="w-100 bg-light" id="project" *ngVar="{text: false} as complete">
     <h1 class="text-center text-primary contact m-2">./projects/spring-core</h1>
-    <mat-tab-group>
+    <mat-tab-group [selectedIndex]="activeIndex" (selectedIndexChange)="changeTab($event)">
       <mat-tab label="{{v.title}}" *ngFor="let v of versions">
         <div class="row pb-5 m-0">
           <div class="col-lg-4 col-sm-12">
