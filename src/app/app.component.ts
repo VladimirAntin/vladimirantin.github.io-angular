@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
           _title.setTitle(`Vladimir Antin | ${title}`);
         }
       });
-    this.clientHeight = (window.innerHeight / 100) * 90;
+    this.clientHeight = (window.innerHeight / 100) * 95;
     setTimeout(() => {
       this.giveMeFB();
     }, 20000);
