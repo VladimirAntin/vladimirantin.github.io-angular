@@ -1,12 +1,12 @@
-<div class="container-fluid center animated zoomIn mt-5" [ngStyle]="styleDIV">
+<div class="container-fluid center animate__animated animate__zoomIn mt-5" [ngStyle]="styleDIV">
   <div class="row mb-2 align-self-center">
     <div class="col-xl-4 col-lg-6 mt-2 center">
       <img class="img-thumbnail radius-2 shadow-lg" defaultImage="assets/img/load.gif" lazyLoad="assets/img/profile.jpg">
     </div>
     <div class="col-12 bg-light radius-2 opacity-9 mt-2">
         <div class="m-3" *ngIf="contactForm">
-            <p class="text-center animated flipInX"><b>Contact Me</b></p>
-            <p class="text-black-50 animated zoomInDown">
+            <p class="text-center animate__animated animate__flipInX"><b>Contact Me</b></p>
+            <p class="text-black-50 animate__animated animate__zoomInDown">
               <span>
                 I'm happy to answer any questions you have or provide you with an estimate.
                 Just send me a message in the form below with any questions you may have.
@@ -14,7 +14,7 @@
             </p>
             <div class="row">
               <div *ngFor="let c of contacts"
-                      class="animated zoomInRight contact text-black-50 col-lg-6 col-md-12">
+                      class="animate__animated animate__zoomInRight contact text-black-50 col-lg-6 col-md-12">
                 <i class="{{c.icon}}"></i>
                 <i class="ml-2">{{c.content}}</i>
               </div>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="row justify-content-center bg-light radius-2 opacity-9" *ngIf="contactForm">
-    <form class="col m-4 animated zoomInUp" autocomplete="off" name="sendForm" role="form"
+    <form class="col m-4 animate__animated animate__zoomInUp" autocomplete="off" name="sendForm" role="form"
           novalidate #sendForm="ngForm" (submit)="send()">
       <div class="row">
         <div class="col-12">
