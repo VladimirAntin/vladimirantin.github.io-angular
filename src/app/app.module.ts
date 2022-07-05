@@ -16,16 +16,15 @@ import { ParticlesComponent } from './particles/particles.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ParticlesComponent
-  ],
-  imports: [
-    BrowserModule, SharedModule, HomeModule, ProjectsModule, SkillsModule, FooterModule,
-    NavModule, ContactmeModule, HttpClientModule, RoomModule, CvModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: []
+    declarations: [
+        AppComponent,
+        ParticlesComponent
+    ],
+    imports: [
+        BrowserModule, SharedModule, HomeModule, ProjectsModule, SkillsModule, FooterModule,
+        NavModule, ContactmeModule, HttpClientModule, RoomModule, CvModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

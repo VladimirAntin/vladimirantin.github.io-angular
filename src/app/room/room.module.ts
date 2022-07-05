@@ -6,11 +6,10 @@ import {RoomComponent} from './room.component';
 import { LoginRoomComponent } from './login-room/login-room.component';
 
 @NgModule({
-  imports: [
-    CommonModule, SharedModule
-  ],
-  declarations: [RoomComponent, LiveChatComponent, LoginRoomComponent],
-  exports: [RoomComponent, LiveChatComponent, LoginRoomComponent],
-  entryComponents: [LoginRoomComponent]
+    imports: [
+        CommonModule, SharedModule
+    ],
+    declarations: [RoomComponent, LiveChatComponent, LoginRoomComponent],
+    exports: [RoomComponent, LiveChatComponent, LoginRoomComponent]
 })
 export class RoomModule { }

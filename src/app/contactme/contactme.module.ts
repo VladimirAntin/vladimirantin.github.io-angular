@@ -5,17 +5,16 @@ import {SharedModule} from '../shared/shared.module';
 import { GiveMeFeedbackComponent } from './give-me-feedback/give-me-feedback.component';
 
 @NgModule({
-  imports: [
-    CommonModule, SharedModule
-  ],
-  declarations: [
-    ContactmeComponent,
-    GiveMeFeedbackComponent
-  ],
-  exports: [
-    ContactmeComponent,
-    GiveMeFeedbackComponent
-  ],
-  entryComponents: [GiveMeFeedbackComponent]
+    imports: [
+        CommonModule, SharedModule
+    ],
+    declarations: [
+        ContactmeComponent,
+        GiveMeFeedbackComponent
+    ],
+    exports: [
+        ContactmeComponent,
+        GiveMeFeedbackComponent
+    ]
 })
 export class ContactmeModule { }
