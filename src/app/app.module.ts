@@ -13,6 +13,7 @@ import {HomeModule} from './home/home.module';
 import {RoomModule} from './room/room.module';
 import { CvModule } from './cv/cv.module';
 import { ParticlesComponent } from './particles/particles.component';
+import {CloudModule} from "./cloud/cloud.module";
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ParticlesComponent } from './particles/particles.component';
     ],
     imports: [
         BrowserModule, SharedModule, HomeModule, ProjectsModule, SkillsModule, FooterModule,
-        NavModule, ContactmeModule, HttpClientModule, RoomModule, CvModule
+        NavModule, ContactmeModule, HttpClientModule, RoomModule, CvModule, CloudModule
     ],
     providers: [],
     bootstrap: [AppComponent]

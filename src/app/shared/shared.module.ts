@@ -40,6 +40,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatListModule} from "@angular/material/list";
+import {CloudComponent} from "../cloud/cloud.component";
 
 
 const appRoutes: Routes = [
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
   { path: 'cv', component: CvComponent, data: {title: 'CV'}},
   { path: 'live-chat', component: RoomComponent, data: {title: 'Live-chat'}},
   { path: 'live-chat/:name', component: LiveChatComponent, data: {title: 'Live-chat'}},
+  { path: 'cloud/:key', component: CloudComponent, data: {title: 'Cloud'}},
   // {path: '**', component: HomeComponent, data: {title: 'Portfolio'}}
 ];
 
