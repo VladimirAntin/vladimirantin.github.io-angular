@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     this.clientHeight = (window.innerHeight / 100) * 95;
     setTimeout(() => {
       this.giveMeFB();
-    }, 20000);
+    }, 15000);
 
     // iconRegistry.addSvgIcon('python', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/tehnology/python.svg'));
   }
@@ -53,7 +53,10 @@ export class AppComponent implements OnInit {
 
   giveMeFB() {
     this.snackBar.openFromComponent(GiveMeFeedbackComponent, {
-      duration: 900000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: ['bg-light', 'm-2', 'border', 'border-info']
+      duration: 900000,
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+      panelClass: ['bg-light', 'm-2', 'border', 'border-info', 'min-w-50-vw']
     });
   }
 }

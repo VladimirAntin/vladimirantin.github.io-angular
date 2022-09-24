@@ -15,7 +15,7 @@ export class ContactService {
 
   constructor(private _http: HttpClient) { }
 
-  sendMessage(req: MessageInterface): Observable<MessageInterface> {
+  sendMessage(req: MessageInterface | any): Observable<MessageInterface> {
     const body = Object.keys(req)
       .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(req[k])).join('&');
     const httpOptions = {

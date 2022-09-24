@@ -11,3 +11,24 @@ button.active {
 button.active:hover {
   border-radius: unset;
 }
+
+
+.btn-outline-rating-1{color:$rating-1;border-color:$rating-1}
+.btn-outline-rating-1:hover{color:#fff;background-color:$rating-1;border-color:$rating-1}
+.btn-outline-rating-2{color:$rating-2;border-color:$rating-2}
+.btn-outline-rating-2:hover{color:#fff;background-color:$rating-2;border-color:$rating-2}
+.btn-outline-rating-3{color:$rating-3;border-color:$rating-3}
+.btn-outline-rating-3:hover{color:#fff;background-color:$rating-3;border-color:$rating-3}
+.btn-outline-rating-4{color:$rating-4;border-color:$rating-4}
+.btn-outline-rating-4:hover{color:#fff;background-color:$rating-4;border-color:$rating-4}
+.btn-outline-rating-5{color:$rating-5;border-color:$rating-5}
+.btn-outline-rating-5:hover{color:#fff;background-color:$rating-5;border-color:$rating-5}
+
+@media only screen and (min-width: $mobile-tablet) {
+  .btn-md-xl {
+    padding:.5rem 1rem;
+    font-size:2rem;
+    line-height:1.5;
+    border-radius:.3rem
+  }
+}
