@@ -15,7 +15,8 @@ export class GiveMeFeedbackComponent implements OnInit {
   sendObj: MessageInterface = {
     name: '',
     email: 'anonymous',
-    text: ''
+    text: '',
+    description: ''
   };
 
   private ip: string = '';
@@ -33,7 +34,7 @@ export class GiveMeFeedbackComponent implements OnInit {
   feedback(rating = 1) {
     this.sendObj.text = `Rating: ${rating}, ip: ${this.ip}`;
     const okRating = rating > 3;
-    this._contact.sendMessage({...this.sendObj, name: this.sendObj.name.trim() || 'anonymous', ip: this.ip}).subscribe( m => {
+    this._contact.sendMessage({...this.sendObj, name: this.sendObj.name.trim() || 'anonymous', ip: this.ip, description: this.sendObj.description}).subscribe( m => {
       this.snackBar.dismiss();
       let snack = this.snackBar.open(okRating? 'Thanks!': 'Why? Please give me feedback on contact page!', okRating? 'OK' : 'Open', {
         duration: 10000, verticalPosition: 'top'
