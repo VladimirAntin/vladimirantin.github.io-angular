@@ -16,14 +16,14 @@ export class SkillsComponent implements OnInit {
     {
       name: 'Frameworks and libraries',
       icon: 'icon-framework',
-      pattern: ['Spring boot', 'Symfony', 'Angular', 'NestJS', 'NextJS', 'React', 'React native'],
+      pattern: ['Spring boot', 'Micronaut', 'Symfony', 'Angular', 'NestJS', 'NextJS', 'React', 'React native', 'Expo'],
       spans: this.generateArray(21)
     },
-    {name: 'Database', icon: 'icon-db', pattern: ['MongoDB', 'MySQL'], spans: this.generateArray(13)},
+    {name: 'Database', icon: 'icon-db', pattern: ['MongoDB', 'MySQL', 'PostgreSQL'], spans: this.generateArray(13)},
     {
       name: 'Project Management',
       icon: 'icon-project-management',
-      pattern: ['maven', 'npm', 'composer'],
+      pattern: ['bun', 'maven', 'npm', 'composer', 'yarn', 'pnpm', 'gradle'],
       spans: this.generateArray(34)
     },
     {
@@ -43,7 +43,7 @@ export class SkillsComponent implements OnInit {
     {
       name: 'I am currently learning',
       icon: 'icon-learn',
-      pattern: ['oAuth', 'GraphQL', 'Electron', 'Photoshop', 'Illustrator', 'Python (Flask)', 'Docker', 'Web3', 'Yarn'],
+      pattern: ['oAuth', 'Microservices', 'GraphQL', 'Electron', 'Photoshop', 'Illustrator', 'Python (Flask)', 'Docker', 'Web3'],
       spans: this.generateArray(34)
     },
   ];

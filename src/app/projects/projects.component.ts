@@ -49,8 +49,8 @@ export class ProjectsComponent implements OnInit {
     },
     {
       img: 'assets/ebook/ebook-project.png',
-      name: 'eBook (Heroku)',
-      onclick: () => this.open('https://ebook-antin.herokuapp.com/'),
+      name: 'eBook',
+      onclick: () => {/*this.open('https://ebook-antin.herokuapp.com/')*/},
       ngTyped: false,
       style: {},
       load: false,
@@ -62,12 +62,17 @@ export class ProjectsComponent implements OnInit {
     },
     {
       img: 'assets/elearning/elearning-project.png',
-      name: 'eLearning (Heroku)',
-      onclick: () => this.open('https://elearning-antin.herokuapp.com/'),
+      name: 'eLearning',
+      onclick: () => {
+        /*this.open('https://elearning-antin.herokuapp.com/')*/
+      },
       ngTyped: false,
       style: {},
       load: false,
-      external: [],
+      external: [
+        { onclick: () => this.open('https://github.com/VladimirAntin/eo'), name: 'GitHub', color: 'warning', icon: 'github' }
+
+      ],
       text: 'eLearning is web application. Application created with Spring Boot framework, Angular framework and use websockets for live chat.'
     },
   ];
