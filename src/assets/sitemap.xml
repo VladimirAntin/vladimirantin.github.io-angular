@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vladimirantin.netlify.com</loc>
+    <loc>https://vladimirantin.netlify.app</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/contact</loc>
+    <loc>https://vladimirantin.netlify.app/contact</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/skills</loc>
+    <loc>https://vladimirantin.netlify.app/skills</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/cv</loc>
+    <loc>https://vladimirantin.netlify.app/cv</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/projects</loc>
+    <loc>https://vladimirantin.netlify.app/projects</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/projects/spring-core</loc>
+    <loc>https://vladimirantin.netlify.app/projects/spring-core</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/projects/ng-multiselect</loc>
+    <loc>https://vladimirantin.netlify.app/projects/ng-multiselect</loc>
   </url>
   <url>
-    <loc>https://vladimirantin.netlify.com/projects/ng-typed</loc>
+    <loc>https://vladimirantin.netlify.app/projects/ng-typed</loc>
   </url>
 </urlset>
