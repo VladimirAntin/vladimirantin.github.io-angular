@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vladimirantin.netlify.com</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/skills</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/cv</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/projects</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/projects/spring-core</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/projects/ng-multiselect</loc>
+  </url>
+  <url>
+    <loc>https://vladimirantin.netlify.com/projects/ng-typed</loc>
+  </url>
+</urlset>
