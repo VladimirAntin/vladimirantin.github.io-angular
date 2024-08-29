@@ -7,7 +7,15 @@ import {Router} from '@angular/router';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: { img: string, name: string, style?, onclick: () => void, text?, external?: any[], ngTyped: boolean, load: boolean }[] = [
+  projects: { img: string, name: string, style?, onclick?: () => void, text?, external?: any[], ngTyped: boolean, load: boolean, link?: string }[] = [
+    {
+      img: 'assets/website.png',
+      ngTyped: false,
+      name: 'Personal website',
+      link: 'https://vladimirantin.github.io',
+      load: false,
+      text: 'This is personal website in NextJS'
+    },
     {
       img: 'assets/icons/tech/java.svg',
       ngTyped: false,

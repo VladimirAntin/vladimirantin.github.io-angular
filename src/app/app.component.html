@@ -1,4 +1,8 @@
-<div [ngStyle]="{'min-height': clientHeight + 'px'}" class="row mw-100">
+<div
+  [ngStyle]="{height: '50px', width: '100vw', 'background-color': 'white', position: 'fixed', display: 'flex', 'justify-content': 'center', 'align-items': 'center', top: 0, left: 0, 'z-index': 9999}">
+  <p [ngStyle]="{'font-size': '30px', 'font-weight': 800}">Website is deprecated, please visit new website on link: <a href="https://vladimirantin.github.io" target="_blank">https://vladimirantin.github.io</a> </p>
+</div>
+<div [ngStyle]="{'min-height': clientHeight + 'px', 'margin-top': '50px'}" class="row mw-100">
     <app-nav class="col-lg-2 col-md-12"></app-nav>
     <div class="col-xl-8 col-lg-10 col-md-12">
         <router-outlet></router-outlet>
